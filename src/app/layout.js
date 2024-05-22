@@ -1,5 +1,8 @@
 import { DM_Serif_Display, Work_Sans } from "next/font/google";
 import "./globals.css";
+
+import { Footer } from "./Components/Footer.js";
+
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -14,6 +17,7 @@ const work_sans = Work_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-work-sans",
+  weight: "400",
 });
 
 export const metadata = {
@@ -29,6 +33,7 @@ export default function RootLayout({ children }) {
     >
       <body className="app-container mt-8">
         {children}
+        <Footer />
         <SpeedInsights />
         <Analytics />
       </body>

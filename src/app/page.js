@@ -5,9 +5,6 @@ import { animated, useSpring } from "@react-spring/web";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-// Immport assets
-import { ReactComponent as SkytellerLogo } from "./skyteller-logo-white.svg";
-
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
@@ -133,7 +130,12 @@ export default function Home() {
         </header>
         <div className="lg:grid grid-flow-row gap-16 grid-cols-5">
           <aside className="skyteller-cover mx-auto w-full mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-indigo-950 items-center justify-center h-96">
-            {/* <SkytellerLogo /> */}
+            <Image
+              src="images/skyteller-logo-white.svg"
+              width="98"
+              height="94"
+              alt="Skyteller logo"
+            />
           </aside>
           <article className="col-span-2 flex flex-col justify-center">
             <h3>Skyteller</h3>
@@ -176,11 +178,6 @@ export default function Home() {
       <section className="content-container grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-8 lg:gap-24">
         <div className="col-span-1">
           <div className="flex items-center">
-            {/* <img
-              src="./images/kunal-profile.jpg"
-              alt="Profile"
-              className="rounded-full h-24 w-24 mb-4 mr-4 border-4 border-white shadow-xl"
-            /> */}
             <h2>About</h2>
           </div>
           <p>
