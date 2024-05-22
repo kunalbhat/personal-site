@@ -2,32 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply font-sans;
+  background-image: linear-gradient(
+    35deg,
+    hsl(2deg 100% 93%) 0%,
+    hsl(356deg 97% 93%) 21%,
+    hsl(349deg 91% 93%) 30%,
+    hsl(343deg 82% 93%) 39%,
+    hsl(336deg 72% 93%) 46%,
+    hsl(327deg 61% 93%) 54%,
+    hsl(316deg 49% 93%) 61%,
+    hsl(302deg 38% 93%) 69%,
+    hsl(285deg 40% 94%) 79%,
+    hsl(270deg 43% 95%) 100%
+  );
+
+  @apply bg-no-repeat bg-fixed;
+  margin: 0;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app-container {
+  @apply py-8 md:py-16;
+}
+
+.content-container {
+  @apply max-w-7xl px-8 md:px-16 mx-auto;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display;
+}
+
+h1 {
+  @apply text-5xl md:text-7xl mb-12;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl font-semibold;
+}
+
+h4 {
+  @apply mb-4;
+}
+
+h5 {
+  @apply my-1;
+}
+
+p {
+  @apply text-base mt-2 mb-6 leading-relaxed;
+}
+
+ul {
+  @apply mb-6;
+}
+
+ul li {
+  @apply text-lg list-disc list-inside;
+}
+
+dl dt {
+  @apply mt-6 font-bold;
+}
+
+dl dd {
+  @apply mb-6;
+}
+
+p a,
+li a {
+  @apply text-indigo-600 hover:text-indigo-700 hover:underline;
+}
+
+section {
+  @apply my-12 md:my-24;
+}
+
+.section-header {
+  @apply pb-8 lg:px-12;
+}
+
+.case-study {
+  @apply bg-gray-100 rounded-2xl px-8 py-10 md:py-20 lg:py-8 flex flex-col h-full items-center justify-center text-center mb-6 lg:mb-0 transition-all shadow-xl hover:shadow-2xl;
+}
+
+.case-study.magic {
+  background-image: linear-gradient(
+    45deg,
+    hsl(309deg 75% 78%) 0%,
+    hsl(297deg 65% 74%) 7%,
+    hsl(286deg 72% 73%) 13%,
+    hsl(278deg 79% 71%) 20%,
+    hsl(271deg 85% 69%) 27%,
+    hsl(266deg 90% 66%) 33%,
+    hsl(262deg 95% 63%) 40%,
+    hsl(260deg 98% 58%) 47%,
+    hsl(252deg 100% 60%) 53%,
+    hsl(241deg 99% 67%) 60%,
+    hsl(231deg 98% 68%) 67%,
+    hsl(223deg 97% 68%) 73%,
+    hsl(216deg 96% 68%) 80%,
+    hsl(210deg 96% 67%) 87%,
+    hsl(204deg 95% 67%) 93%,
+    hsl(199deg 94% 67%) 100%
+  );
+  @apply bg-[#2a64f6] text-white;
+}
+
+.case-study.galactic {
+  @apply bg-[#2f2846] text-white;
+}
+
+.case-study.vsa,
+.case-study.modest {
+  @apply bg-gray-950 text-white;
+}
+
+.case-study.dscout {
+  @apply bg-[#0b73eb] text-white;
+}
+
+.case-study.gravitytank {
+  @apply bg-[#00a1e1] text-white;
+}
+
+.case-study.paypal {
+  @apply bg-[#ffd140];
+}
+
+.case-study p {
+  @apply text-base mb-0;
+}
+
+.skyteller-cover {
+  background-image: url("/images/skyteller-background.png");
+  @apply bg-contain shadow-2xl;
+}
+
+.skyteller-cover.focus {
+  @apply mx-auto transition-all z-20;
+}
+
+.braintree-cover {
+  background-image: url("/images/braintree-dashboard.gif");
+  @apply bg-contain shadow-2xl bg-center bg-no-repeat;
+}
+
+.site-footer {
+  @apply mt-8 md:mt-24 md:py-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left;
+}
+
+.button {
+  @apply bg-white rounded-xl px-3 py-2 flex items-center justify-center w-fit shadow-md hover:shadow-xl transition-shadow;
+}
+
+.section-divider {
+  background-image: url("/images/curve-decoration.svg");
+  @apply w-full h-24 bg-left-top bg-cover bg-no-repeat opacity-10;
+}
+
+.tags-list {
+  @apply flex flex-wrap gap-4;
+}
+
+.tags-list li {
+  @apply bg-white shadow-xl px-3 py-1 text-sm rounded-lg list-none flex items-center justify-center text-center hover:drop-shadow-2xl drop-shadow-md;
 }
