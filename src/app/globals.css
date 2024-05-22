@@ -182,3 +182,7 @@ section {
 .tags-list li {
   @apply bg-white shadow-xl px-3 py-1 text-sm rounded-lg list-none flex items-center justify-center text-center hover:drop-shadow-2xl drop-shadow-md;
 }
+
+.social-icon {
+  @apply shadow-lg rounded-full hover:shadow-xl;
+}

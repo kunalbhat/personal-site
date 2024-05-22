@@ -1,9 +1,13 @@
+// React and Next utils
 "use client";
-
-// React utils
-import { animated, useSpring } from "@react-spring/web";
-import Image from "next/image";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+
+// Libraries
+import { animated, useSpring } from "@react-spring/web";
+import { SocialIcon } from "react-social-icons/component";
+import "react-social-icons/github";
+import "react-social-icons/linkedin";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -207,23 +211,22 @@ export default function Home() {
             spend a lot of time attempting to dream up a daily word game that
             the NYT purchases for a modest sum.
           </p>
-          <p>
-            <a
-              href="https://www.github.com/kunalbhat"
+          <div className="flex gap-2">
+            <SocialIcon
+              url="https://www.github.com/kunalbhat"
+              bgColor="white"
+              fgColor="black"
               target="_blank"
-              rel="noreferrer"
-            >
-              Github
-            </a>
-            <br />
-            <a
-              href="https://www.linkedin.com/in/kunal-s-bhat"
+              className="social-icon"
+            />
+            <SocialIcon
+              url="https://www.linkedin.com/in/kunal-s-bhat"
+              bgColor="white"
+              fgColor="black"
               target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-          </p>
+              className="social-icon"
+            />
+          </div>
         </div>
         <div className="col-span-1">
           <h2>Resume</h2>
