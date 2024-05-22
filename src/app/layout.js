@@ -22,7 +22,7 @@ const work_sans = Work_Sans({
 
 export const metadata = {
   title: "Kunal Bhat - Product-minded builder",
-  description: "Kunal is a highly technical, fullstack designer.",
+  description: "Kunal is a highly technical, fullstack designer",
 };
 
 export default function RootLayout({ children }) {
