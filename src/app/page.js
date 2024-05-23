@@ -27,6 +27,7 @@ export default function Home() {
     "SQL",
     "APIs",
     "React",
+    "Next.js",
     "Figma",
     "ProtoPie",
     "Research synthesis",
@@ -75,7 +76,7 @@ export default function Home() {
           </h3>
         </animated.div>
       </section>
-      <div className="section-divider -mt-6" />
+      <div className="section-divider -mt-4" />
       <section className="content-container mt-6">
         <header className="section-header">
           <h2>Experience</h2>
@@ -152,7 +153,7 @@ export default function Home() {
               off-ramp contract.
             </p>
             <p className="button font-bold italic text-sm mt-6 -ml-2">
-              Case study coming soon.
+              Case study coming soon
             </p>
           </article>
         </div>
@@ -163,19 +164,44 @@ export default function Home() {
             <h3>Braintree Control Panel</h3>
             <h5>Braintree / PayPal</h5>
             <p className="mb-0">
-              I led the redesign and rebuild of Braintree's control panel
-              &ndash; the primary tool Braintree merchants use to manage their
-              payments.
+              As the product manager for merchant experience, I led the redesign
+              of Braintree's payments dashboard.
             </p>
             <p className="mb-0">
               This project was a multi-year, cross-organizational effort that
-              affected every stakeholder in the organization.
+              affected every stakeholder in the organization and the global base
+              of Braintree's merchants.
             </p>
             <p className="button font-bold italic text-sm mt-6 -ml-2">
-              Case study coming soon.
+              Case study coming soon
             </p>
           </article>
           <aside className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></aside>
+        </div>
+      </section>
+      <div className="section-divider"></div>
+      <section className="content-container grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-8 lg:gap-24">
+        <div className="col-span-1">
+          <h2>My Process</h2>
+          <p>
+            These articles showcase my expertise as a designer, product manager,
+            and engineer, reflecting my passion for various aspects of the
+            design process.
+          </p>
+        </div>
+        <div className="case-study col-span-1">
+          <h3>Reverse Enginnering</h3>
+          <p>
+            My approach to heuristics and breaking down existing experiences
+            with a technical focuscl.
+          </p>
+        </div>
+        <div className="case-study col-span-1">
+          <h3>Over-Enginnering</h3>
+          <p>
+            How I identify real-world problems, think through workflows, and
+            lightweight technical design.
+          </p>
         </div>
       </section>
       <div className="section-divider"></div>
