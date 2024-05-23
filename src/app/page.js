@@ -179,7 +179,7 @@ export default function Home() {
           <aside className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></aside>
         </div>
       </section>
-      <div className="section-divider"></div>
+      {/* <div className="section-divider"></div>
       <section className="content-container grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-8 lg:gap-24">
         <div className="col-span-1">
           <h2>My Process</h2>
@@ -203,7 +203,7 @@ export default function Home() {
             lightweight technical design.
           </p>
         </div>
-      </section>
+      </section> */}
       <div className="section-divider"></div>
       <section className="content-container grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-8 lg:gap-24">
         <div className="col-span-1">
