@@ -56,7 +56,7 @@ h3 {
 }
 
 h4 {
-  @apply mb-4;
+  @apply text-base font-semibold;
 }
 
 h5 {
@@ -146,6 +146,19 @@ section {
 
 .case-study p {
   @apply text-base mb-0;
+}
+
+.case-study.daily-dispatch,
+.case-study.reverse-engineering {
+  @apply overflow-hidden w-[320px] h-[200px];
+}
+
+.case-study.daily-dispatch {
+  @apply bg-[#f6f1f6];
+}
+
+.case-study.reverse-engineering {
+  @apply bg-[#b1a8f9];
 }
 
 .skyteller-cover {

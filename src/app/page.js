@@ -8,6 +8,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { SocialIcon } from "react-social-icons/component";
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -131,7 +132,7 @@ export default function Home() {
       <div className="section-divider"></div>
       <section className="content-container">
         <header className="section-header">
-          <h2>Projects</h2>
+          <h2>Big Projects</h2>
         </header>
         <div className="lg:grid grid-flow-row gap-16 grid-cols-5">
           <aside className="skyteller-cover mx-auto w-full mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-indigo-950 items-center justify-center h-96">
@@ -169,8 +170,8 @@ export default function Home() {
             </p>
             <p className="mb-0">
               This project was a multi-year, cross-organizational effort that
-              affected every stakeholder in the organization and the global base
-              of Braintree's merchants.
+              affected every stakeholder in the organization and Braintree's
+              global merchant base.
             </p>
             <p className="button font-bold italic text-sm mt-6 -ml-2">
               Case study coming soon
@@ -179,31 +180,64 @@ export default function Home() {
           <aside className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></aside>
         </div>
       </section>
-      {/* <div className="section-divider"></div>
+      <div className="section-divider"></div>
       <section className="content-container grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-8 lg:gap-24">
         <div className="col-span-1">
-          <h2>My Process</h2>
+          <h2>Small Projects</h2>
           <p>
-            These articles showcase my expertise as a designer, product manager,
-            and engineer, reflecting my passion for various aspects of the
-            design process.
+            These articles showcase my passion for various aspects of the design
+            process and my thinking as a designer, product manager, and
+            engineer.
           </p>
         </div>
-        <div className="case-study col-span-1">
-          <h3>Reverse Enginnering</h3>
-          <p>
-            My approach to heuristics and breaking down existing experiences
-            with a technical focuscl.
-          </p>
+        <div className="col-span-1">
+          <span className="case-study reverse-engineering">
+            <Image
+              src="/images/connections-cover.png"
+              width="150"
+              height="150"
+              alt="Daily Dispatch app cover"
+              className="relative"
+            />
+          </span>
+          <h4 className="mt-4">Reverse Engineering: Connections</h4>
+          <p>I break down an existing experience with a technical focus.</p>
+          <a
+            href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold underline flex gap-1 items-center"
+          >
+            Read on Notion
+            <ArrowUpRightIcon class="h-4 w-4" />
+          </a>
         </div>
-        <div className="case-study col-span-1">
-          <h3>Over-Enginnering</h3>
+        <div className="col-span-1">
+          <span className="case-study daily-dispatch">
+            <Image
+              src="/images/dailydispatch-cover.png"
+              width="396"
+              height="860"
+              alt="Daily Dispatch app cover"
+              className="relative mt-96 hover:mt-72 transition-all"
+            />
+          </span>
+          <h4 className="mt-4">Over-Engineered: Daily Dispatch</h4>
           <p>
-            How I identify real-world problems, think through workflows, and
-            lightweight technical design.
+            I design a hypothetical app end-to-end based on a simple workflow
+            problem.
           </p>
+          <a
+            href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold underline flex gap-1 items-center"
+          >
+            Read on Notion
+            <ArrowUpRightIcon class="h-4 w-4" />
+          </a>
         </div>
-      </section> */}
+      </section>
       <div className="section-divider"></div>
       <section className="content-container grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-8 lg:gap-24">
         <div className="col-span-1">
