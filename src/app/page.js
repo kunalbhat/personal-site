@@ -137,12 +137,13 @@ export default function Home() {
           <h2>Big Projects</h2>
         </header>
         <div className="lg:grid grid-flow-row gap-16 grid-cols-5">
-          <aside className="skyteller-cover mx-auto w-full mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-indigo-950 items-center justify-center h-96">
+          <aside className="skyteller-cover overflow-hidden mx-auto w-full mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-indigo-950 items-center justify-center h-96">
             <Image
-              src="images/skyteller-logo-white.svg"
-              width="98"
-              height="94"
-              alt="Skyteller logo"
+              src="/images/skyteller.gif"
+              width="341"
+              height="713"
+              alt="Skyteller animation"
+              className="scale-75"
             />
           </aside>
           <article className="col-span-2 flex flex-col justify-center">
