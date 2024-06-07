@@ -149,7 +149,8 @@ section {
 }
 
 .case-study.daily-dispatch,
-.case-study.reverse-engineering {
+.case-study.reverse-engineering,
+.case-study.maze-of-games {
   @apply overflow-hidden w-[320px] h-[200px];
 }
 
@@ -159,6 +160,11 @@ section {
 
 .case-study.reverse-engineering {
   @apply bg-[#b1a8f9];
+}
+
+.case-study.maze-of-games {
+  background-image: url("/images/maze-of-games-cover.png");
+  @apply bg-[#2A2834] bg-contain bg-center;
 }
 
 .skyteller-cover {

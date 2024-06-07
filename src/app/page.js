@@ -31,7 +31,6 @@ export default function Home() {
     "Next.js",
     "Figma",
     "ProtoPie",
-    "Research synthesis",
     "High fidelity prototyping",
     "Miro",
     "VSCode",
@@ -40,6 +39,7 @@ export default function Home() {
     "User research",
     "User testing",
     "Research analysis",
+    "Research synthesis",
     "Firebase",
     "Design systems",
     "Systems thinking",
@@ -47,11 +47,13 @@ export default function Home() {
     "CSS",
     "JavaScript",
     "Tailwind",
+    "Interaction design",
     "Information architecture",
     "Heuristics",
     "Git",
     "FigJam",
     "Journey mapping",
+    "web3",
   ];
 
   const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
@@ -191,37 +193,85 @@ export default function Home() {
           </p>
         </div>
         <div className="col-span-1">
-          <span className="case-study reverse-engineering">
-            <Image
-              src="/images/connections-cover.png"
-              width="150"
-              height="150"
-              alt="Daily Dispatch app cover"
-              className="relative"
-            />
-          </span>
-          <h4 className="mt-4">Reverse Engineering: Connections</h4>
-          <p>I break down an existing experience with a technical focus.</p>
+          <article>
+            <a
+              href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold underline flex gap-1 items-center"
+            >
+              <span className="case-study reverse-engineering">
+                <Image
+                  src="/images/connections-cover.png"
+                  width="150"
+                  height="150"
+                  alt="Daily Dispatch app cover"
+                  className="relative"
+                />
+              </span>
+            </a>
+            <h4 className="mt-4">Reverse Engineering: Connections</h4>
+            <p>I break down an existing experience with a technical focus.</p>
+            <a
+              href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold underline flex gap-1 items-center"
+            >
+              Read on Notion
+              <ArrowUpRightIcon className="h-4 w-4" />
+            </a>
+          </article>
+          <article className="mt-12">
+            <a
+              href="https://github.com/kunalbhat/maze-of-games"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold underline flex gap-1 items-center"
+            >
+              <span className="case-study maze-of-games"></span>
+            </a>
+            <h4 className="mt-4">Turn the Tables</h4>
+            <p>
+              I built a small tool to help me solve a puzzle from one of my
+              favorite choose your own adventure puzzle books:{" "}
+              <a
+                href="https://www.lonesharkgames.com/maze/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Maze of Games
+              </a>
+              .
+            </p>
+            <a
+              href="https://github.com/kunalbhat/maze-of-games"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold underline flex gap-1 items-center"
+            >
+              Read on Github
+              <ArrowUpRightIcon className="h-4 w-4" />
+            </a>
+          </article>
+        </div>
+        <div className="col-span-1">
           <a
-            href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+            href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
             target="_blank"
             rel="noreferrer"
             className="font-semibold underline flex gap-1 items-center"
           >
-            Read on Notion
-            <ArrowUpRightIcon class="h-4 w-4" />
+            <span className="case-study daily-dispatch">
+              <Image
+                src="/images/dailydispatch-cover.png"
+                width="396"
+                height="860"
+                alt="Daily Dispatch app cover"
+                className="relative mt-96 hover:mt-72 transition-all"
+              />
+            </span>
           </a>
-        </div>
-        <div className="col-span-1">
-          <span className="case-study daily-dispatch">
-            <Image
-              src="/images/dailydispatch-cover.png"
-              width="396"
-              height="860"
-              alt="Daily Dispatch app cover"
-              className="relative mt-96 hover:mt-72 transition-all"
-            />
-          </span>
           <h4 className="mt-4">Over-Engineered: Daily Dispatch</h4>
           <p>
             I design a hypothetical app end-to-end based on a simple workflow
@@ -234,7 +284,7 @@ export default function Home() {
             className="font-semibold underline flex gap-1 items-center"
           >
             Read on Notion
-            <ArrowUpRightIcon class="h-4 w-4" />
+            <ArrowUpRightIcon className="h-4 w-4" />
           </a>
         </div>
       </section>
