@@ -205,3 +205,8 @@ section {
 .social-icon {
   @apply shadow-lg rounded-full hover:shadow-xl;
 }
+
+dt,
+dd {
+  @apply my-0;
+}
