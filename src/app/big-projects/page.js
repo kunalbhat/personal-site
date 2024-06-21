@@ -76,6 +76,18 @@ export default function Portfolio() {
         <h2 className="my-12 text-center">
           Designed multiple approaches to onboarding
         </h2>
+        <div>
+          <Image
+            src="/images/skyteller-flow-1.png"
+            width="1820"
+            height="1460"
+            alt="Skyteller animation"
+            className="scale-75"
+          />
+        </div>
+        <h2 className="mt-12 text-center">
+          Designed multiple approaches to onboarding
+        </h2>
         <div className="grid grid-cols-3">
           <div>
             <Image
@@ -122,24 +134,59 @@ export default function Portfolio() {
       </section>
       <div className="section-divider -mt-4" />
       <section className="content-container md:grid md:grid-cols-2 md:gap-12">
-        <div className="col-span-1 pr-10">
+        <div>
           <h2 className="text-5xl">Braintree Control Panel</h2>
+          <p className="my-4 md:mt-8 mb-8 text-lg">
+            Managed and led the redesign and rebuild of Braintree's merchant
+            dashboard.
+          </p>
+          <p>
+            <strong>
+              Role: Product Manager, Merchant Experience &ndash;
+              Braintree/PayPal
+            </strong>
+          </p>
         </div>
-        <div className="col-span-3 pr-10">
+        <div className="col-span-3 bg-white px-12 py-16">
           <Image
-            src="/images/braintree-cover.png"
-            width="1820"
-            height="1460"
-            alt="Skyteller animation"
-            className="scale-75"
+            src="/images/control-panel-ui.jpg"
+            width="1600"
+            height="1200"
+            alt="Braintree Control Panel"
+            className="scale-90 border-gray-200 border shadow-2xl"
           />
-          <Image
-            src="/images/braintree-dashboard.gif"
-            width="1820"
-            height="1460"
-            alt="Skyteller animation"
-            className="scale-75"
-          />
+        </div>
+      </section>
+      <section className="content-container items-center md:grid md:grid-cols-2 md:gap-12">
+        <div className="col-span-1 justify-center flex">
+          <div className="h-[32rem] w-[32rem] block rounded-full overflow-hidden shadow-xl">
+            <Image
+              src="/images/control-panel-sql.png"
+              width="1080"
+              height="1536"
+              alt="Braintree Control Panel"
+              className="scale-150 ml-32"
+            />
+          </div>
+        </div>
+        <div className="col-span-1 pr-10">
+          <h2>Placeholder</h2>
+        </div>
+      </section>
+      <section className="content-container items-center md:grid md:grid-cols-2 md:gap-12">
+        <div className="col-span-1 justify-center flex">
+          <div className="h-[32rem] w-[32rem] block rounded-full overflow-hidden shadow-xl">
+            <Image
+              src="/images/control-panel-sql.png"
+              width="1080"
+              height="1536"
+              alt="Braintree Control Panel"
+              className="scale-150 ml-32"
+            />
+          </div>
+        </div>
+        <div className="col-span-1 pr-10">
+          <h2>Placeholder</h2>
         </div>
       </section>
     </>
