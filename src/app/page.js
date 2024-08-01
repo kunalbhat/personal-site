@@ -67,18 +67,17 @@ export default function Home() {
   return (
     <>
       <div className="content-container">
-        <div className="grid grid-cols-2">
-          <div className="col-span-1">
+        <div className="grid grid-cols-3">
+          <div className="col-span-2">
             <h1 className="mb-4">Kunal Bhat</h1>
             <h2>Senior Product Designer</h2>
-            <p>
+            <p className="mt-12 text-xl leading-relaxed">
               I combine 15+ years of building and delivering excellent
               experiences in roles as a product designer, product manager, and
               frontend engineer. I'm a systems thinker, technically oriented,
               and highly comfortable in new and ambiguous problem spaces.
             </p>
           </div>
-          <div className="col-span-1"></div>
         </div>
       </div>
     </>
