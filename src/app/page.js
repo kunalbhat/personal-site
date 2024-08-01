@@ -85,12 +85,17 @@ export default function Home() {
           <h2>Experience</h2>
         </header>
         <div className="lg:grid grid-cols-3 gap-8">
+          <div className="case-study aura transition-all col-span-1">
+            <h3>Aura Frames</h3>
+            <h6>Senior Product Designer</h6>
+            <p>
+              Designing experiences for the internet's favorite digital frames.
+            </p>
+          </div>
           <div className="case-study magic transition-all col-span-1">
             <h3>Magic+Might</h3>
             <h6>Design Director</h6>
-            <p>
-              We make strategy tangible through inspired products and services.
-            </p>
+            <p>I designed mobile experiences for self-driving cars.</p>
           </div>
           <div className="case-study galactic transition-all col-span-1">
             <h3>Galactic</h3>
@@ -156,9 +161,6 @@ export default function Home() {
               off-ramp straight from your wallet or your personal Skyteller
               off-ramp contract.
             </p>
-            <p className="button font-bold italic text-sm mt-6 -ml-2">
-              Case study coming soon
-            </p>
           </article>
         </div>
       </section>
@@ -175,9 +177,6 @@ export default function Home() {
               This project was a multi-year, cross-organizational effort that
               affected every stakeholder in the organization and Braintree's
               global merchant base.
-            </p>
-            <p className="button font-bold italic text-sm mt-6 -ml-2">
-              Case study coming soon
             </p>
           </article>
           <aside className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></aside>
@@ -343,11 +342,17 @@ export default function Home() {
           <h2>Resume</h2>
           <p>A more detailed account of my career.</p>
           <dl>
+            <dt>Aura Home, Inc.</dt>
+            <dd>
+              Senior Product Designer
+              <br />
+              2024 &ndash; Present
+            </dd>
             <dt>Magic+Might</dt>
             <dd>
               Design Director
               <br />
-              2023 &ndash; Present
+              2023 &ndash; 2024
             </dd>
             <dt>Galactic</dt>
             <dd>

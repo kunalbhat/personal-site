@@ -123,6 +123,10 @@ section {
   @apply bg-[#2a64f6] text-white;
 }
 
+.case-study.aura {
+  @apply bg-[#9cd1ef];
+}
+
 .case-study.galactic {
   @apply bg-[#2f2846] text-white;
 }
