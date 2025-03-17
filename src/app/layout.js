@@ -1,39 +1,34 @@
-import { DM_Serif_Display, Work_Sans } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
 
-import { Footer } from "./Components/Footer.js";
+import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
-const dm_serif_display = DM_Serif_Display({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-dm-serif-display",
-  weight: "400",
 });
 
-const work_sans = Work_Sans({
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-work-sans",
-  weight: "400",
 });
 
 export const metadata = {
-  title: "Kunal Bhat - Product-minded builder",
-  description: "Kunal is a highly technical, fullstack designer",
+  title: "Kunal Bhat - Product Designer",
+  description:
+    "Kunal is a technically-oriented, fullstack product designer in Chicago with 15 years of experience.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${dm_serif_display.variable} ${work_sans.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="app-container mt-8">
+      <body className="content-container">
         {children}
-        <Footer />
         <SpeedInsights />
         <Analytics />
       </body>
