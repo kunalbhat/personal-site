@@ -37,6 +37,56 @@ a {
   @apply h-12 border-b border-b-gray-200 flex items-center my-2 pb-2;
 }
 
+.experience-list li.active {
+  @apply relative;
+}
+
+.experience-list li.active::before {
+  content: "";
+  @apply inline-block h-2 w-2 bg-blue-700 rounded-full absolute -left-6;
+}
+
 .icon {
   @apply bg-white h-10 w-10 flex items-center;
+}
+
+.social-icon {
+  @apply rounded-full;
+}
+
+.skyteller-cover {
+  background-image: url("/images/skyteller-background.png");
+  @apply bg-contain shadow-2xl;
+}
+
+.skyteller-cover.focus {
+  @apply mx-auto transition-all z-20;
+}
+
+.braintree-cover {
+  background-image: url("/images/braintree-dashboard.gif");
+  @apply bg-contain shadow-2xl bg-center bg-no-repeat;
+}
+
+.case-study p {
+  @apply text-base mb-0;
+}
+
+.case-study.daily-dispatch,
+.case-study.reverse-engineering,
+.case-study.maze-of-games {
+  @apply overflow-hidden w-[320px] h-[200px];
+}
+
+.case-study.daily-dispatch {
+  @apply bg-[#f6f1f6];
+}
+
+.case-study.reverse-engineering {
+  @apply bg-[#b1a8f9];
+}
+
+.case-study.maze-of-games {
+  background-image: url("/images/maze-of-games-cover.png");
+  @apply bg-[#2A2834] bg-contain bg-center;
 }

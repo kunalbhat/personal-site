@@ -5,6 +5,8 @@ import Image from "next/image";
 
 // Libraries
 import { animated, useSpring } from "@react-spring/web";
+import { SocialIcon } from "react-social-icons/component";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
 
@@ -55,7 +57,23 @@ export default function Home() {
                 Technical product designer with 15+ years in roles as a
                 designer, product manager, and engineer.
               </p>
-              <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
+              {/* <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span> */}
+              <div className="flex gap-2 my-8">
+                <SocialIcon
+                  url="https://www.github.com/kunalbhat"
+                  bgColor="white"
+                  fgColor="black"
+                  target="_blank"
+                  className="social-icon"
+                />
+                <SocialIcon
+                  url="https://www.linkedin.com/in/kunal-s-bhat"
+                  bgColor="white"
+                  fgColor="black"
+                  target="_blank"
+                  className="social-icon"
+                />
+              </div>
             </animated.div>
           </section>
         </div>
@@ -64,7 +82,7 @@ export default function Home() {
             <section>
               <h3>Experience</h3>
               <ul className="experience-list">
-                <li>
+                <li className="active">
                   <span className="icon">
                     <Image
                       src="/images/icon-tv-stand.png"
@@ -78,6 +96,14 @@ export default function Home() {
                     <a href="https://www.auraframes.com" target="_blank">
                       Aura Home
                     </a>
+                  </span>
+                  <span className="icon ml-2">
+                    <Image
+                      src="/images/icon-arrow-link.png"
+                      width="24"
+                      height="24"
+                      alt="External link icon"
+                    />
                   </span>
                 </li>
                 <li>
@@ -95,7 +121,7 @@ export default function Home() {
                       Magic+Might
                     </a>
                   </span>
-                  <span className="icon">
+                  <span className="icon ml-2">
                     <Image
                       src="/images/icon-arrow-link.png"
                       width="24"
@@ -103,9 +129,9 @@ export default function Home() {
                       alt="External link icon"
                     />
                   </span>
-                  <span className="lg:block hidden text-gray-400 ml-4">
+                  {/* <span className="lg:block hidden text-gray-400 ml-4">
                     I designed experiences for self-driving cars.
-                  </span>
+                  </span> */}
                 </li>
                 <li>
                   <span className="icon">
@@ -127,7 +153,24 @@ export default function Home() {
                       alt="PayPal / Braintree"
                     />
                   </span>
-                  <span>PM @ PayPal / Braintree</span>
+                  <span>
+                    PM @{" "}
+                    <a
+                      href="https://www.paypal.com/us/braintree"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      PayPal / Braintree
+                    </a>
+                  </span>
+                  <span className="icon ml-2">
+                    <Image
+                      src="/images/icon-arrow-link.png"
+                      width="24"
+                      height="24"
+                      alt="External link icon"
+                    />
+                  </span>
                 </li>
                 <li>
                   <span className="icon">
@@ -175,6 +218,108 @@ export default function Home() {
               alt="Skyteller animation"
               className="scale-75"
             />
+          </section>
+
+          <section className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></section>
+
+          <section className="grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-4 lg:gap-8">
+            <div className="col-span-1">
+              <article>
+                <a
+                  href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold underline flex gap-1 items-center"
+                >
+                  <span className="case-study reverse-engineering">
+                    <Image
+                      src="/images/connections-cover.png"
+                      width="150"
+                      height="150"
+                      alt="Daily Dispatch app cover"
+                      className="relative"
+                    />
+                  </span>
+                </a>
+                <h4 className="mt-4">Reverse Engineering: Connections</h4>
+                <p>
+                  I break down an existing experience with a technical focus.
+                </p>
+                <a
+                  href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold underline flex gap-1 items-center"
+                >
+                  Read on Notion
+                  <ArrowUpRightIcon className="h-4 w-4" />
+                </a>
+              </article>
+              <article className="mt-12">
+                <a
+                  href="https://github.com/kunalbhat/maze-of-games"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold underline flex gap-1 items-center"
+                >
+                  <span className="case-study maze-of-games"></span>
+                </a>
+                <h4 className="mt-4">Turn the Tables</h4>
+                <p>
+                  I built a small tool to help me solve a puzzle from one of my
+                  favorite choose your own adventure puzzle books:{" "}
+                  <a
+                    href="https://www.lonesharkgames.com/maze/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Maze of Games
+                  </a>
+                  .
+                </p>
+                <a
+                  href="https://github.com/kunalbhat/maze-of-games"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold underline flex gap-1 items-center"
+                >
+                  Read on Github
+                  <ArrowUpRightIcon className="h-4 w-4" />
+                </a>
+              </article>
+            </div>
+            <div className="col-span-1">
+              <a
+                href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold underline flex gap-1 items-center"
+              >
+                <span className="case-study daily-dispatch">
+                  <Image
+                    src="/images/dailydispatch-cover.png"
+                    width="396"
+                    height="860"
+                    alt="Daily Dispatch app cover"
+                    className="relative mt-96 hover:mt-72 transition-all"
+                  />
+                </span>
+              </a>
+              <h4 className="mt-4">Over-Engineered: Daily Dispatch</h4>
+              <p>
+                I design a hypothetical app end-to-end based on a simple
+                workflow problem.
+              </p>
+              <a
+                href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold underline flex gap-1 items-center"
+              >
+                Read on Notion
+                <ArrowUpRightIcon className="h-4 w-4" />
+              </a>
+            </div>
           </section>
         </div>
       </div>
