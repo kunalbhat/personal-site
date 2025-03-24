@@ -24,6 +24,10 @@ h3 {
   @apply text-2xl font-bold mb-8;
 }
 
+h4 {
+  @apply text-lg font-bold my-4;
+}
+
 p,
 ul li {
   @apply text-lg font-medium;

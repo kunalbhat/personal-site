@@ -12,6 +12,7 @@ import "react-social-icons/linkedin";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
+  const [isLight, setIsLight] = useState(true);
 
   const styles = useSpring({
     from: {
@@ -40,7 +41,7 @@ export default function Home() {
           />
         </span>
       </div>
-      <div className="lg:grid grid-cols-3 gap-24">
+      <div className="md:grid grid-cols-3 gap-24">
         <div>
           <section className="mb-8 text-center md:text-left">
             <animated.div style={styles}>
@@ -49,16 +50,16 @@ export default function Home() {
                 height="64"
                 width="64"
                 alt="Kunal Bhat"
-                className="rounded-full mb-4 mx-auto lg:mx-0"
+                className="rounded-full mb-4 mx-auto md:mx-0"
               />
               <h1>Kunal Bhat</h1>
               <h2>Product Designer</h2>
-              <p className="mt-12">
+              <p className="mt-12 mx-8 md:mx-0">
                 Technical product designer with 15+ years in roles as a
                 designer, product manager, and engineer.
               </p>
               {/* <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span> */}
-              <div className="flex gap-2 my-8">
+              <div className="flex gap-2 my-8 w-full justify-center md:justify-start">
                 <SocialIcon
                   url="https://www.github.com/kunalbhat"
                   bgColor="white"
@@ -210,19 +211,44 @@ export default function Home() {
           </div>
           <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
           <h3>Projects</h3>
-          <section className="skyteller-cover overflow-hidden mx-auto w-full mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-indigo-950 items-center justify-center h-96">
-            <Image
-              src="/images/skyteller.gif"
-              width="341"
-              height="713"
-              alt="Skyteller animation"
-              className="scale-75"
-            />
+          <section className="mb-8 lg:mb-16">
+            <div className="overflow-hidden relative mx-auto w-full flex col-span-3 shadow-lg rounded-2xl bg-[#F9F8F6] items-center justify-center h-96">
+              <Image
+                src="/images/aura-captions-phone-3.gif"
+                width="341"
+                height="713"
+                alt="Aura app - captions animation"
+                className="relative left-20 top-6"
+              />
+              <Image
+                src="/images/aura-captions-frame.png"
+                width="400"
+                height="300"
+                alt="Aura app - captions on frame"
+                className="relative top-1 -right-32"
+              />
+            </div>
+            {/* <h4>Aura Frames &ndash; Captions v1</h4> */}
           </section>
 
-          <section className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></section>
+          <section className="mb-8 lg:mb-16">
+            <div className="skyteller-cover overflow-hidden mx-auto w-full mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-indigo-950 items-center justify-center h-96">
+              <Image
+                src="/images/skyteller.gif"
+                width="341"
+                height="713"
+                alt="Skyteller animation"
+                className="scale-75"
+              />
+            </div>
+            {/* <h4>Skyteller &ndash; Crypto offramp</h4> */}
+          </section>
 
-          <section className="grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-4 lg:gap-8">
+          <section className="mb-8 lg:mb-16">
+            <div className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></div>
+          </section>
+
+          {/* <section className="grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-4 lg:gap-8">
             <div className="col-span-1">
               <article>
                 <a
@@ -320,7 +346,24 @@ export default function Home() {
                 <ArrowUpRightIcon className="h-4 w-4" />
               </a>
             </div>
-          </section>
+          </section> */}
+          <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
+          <h3>Experiments</h3>
+
+          <ul>
+            <li className="flex items-center gap-4 my-8">
+              <span className="bg-gray-200 rounded-lg block h-12 w-12"></span>
+              <span>Reverse Engineering &ndash; Connections by NYT Games</span>
+            </li>
+            <li className="flex items-center gap-4 my-8">
+              <span className="bg-gray-200 rounded-lg block h-12 w-12"></span>
+              <span>Over-engineering &ndash; Daily Dispatch app</span>
+            </li>
+            <li className="flex items-center gap-4 my-8">
+              <span className="bg-gray-200 rounded-lg block h-12 w-12"></span>
+              <span>Turn the Tables &ndash; Codebreaking puzzle</span>
+            </li>
+          </ul>
         </div>
       </div>
     </>
