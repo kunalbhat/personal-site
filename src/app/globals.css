@@ -8,7 +8,7 @@ body {
 
 /* Layout */
 .content-container {
-  @apply lg:max-w-7xl mx-4 lg:mx-auto my-8 lg:mt-24;
+  @apply lg:max-w-6xl mx-4 lg:mx-auto my-8 lg:mt-24;
 }
 
 /* Type */
@@ -17,9 +17,26 @@ h1 {
 }
 
 h2 {
-  @apply text-2xl;
+  @apply text-4xl font-bold;
 }
 
-p {
-  @apply text-xl;
+h3 {
+  @apply text-2xl font-bold mb-8;
+}
+
+p,
+ul li {
+  @apply text-lg font-medium;
+}
+
+a {
+  @apply underline underline-offset-2 hover:underline-offset-4 transition-all;
+}
+
+.experience-list li {
+  @apply h-12 border-b border-b-gray-200 flex items-center my-2 pb-2;
+}
+
+.icon {
+  @apply bg-white h-10 w-10 flex items-center;
 }
