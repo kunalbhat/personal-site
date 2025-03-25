@@ -6,13 +6,12 @@ import Image from "next/image";
 // Libraries
 import { animated, useSpring } from "@react-spring/web";
 import { SocialIcon } from "react-social-icons/component";
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+// import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-  const [isLight, setIsLight] = useState(true);
 
   const styles = useSpring({
     from: {
