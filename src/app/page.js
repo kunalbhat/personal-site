@@ -42,7 +42,7 @@ export default function Home() {
       </div>
       <div className="md:grid grid-cols-3 gap-24">
         <div>
-          <section className="mb-8 text-center md:text-left">
+          <section className="mb-36 md:mb-8 text-center md:text-left">
             <animated.div style={styles}>
               <Image
                 src="/images/kunal-bhat-avatar-2.jpg"
