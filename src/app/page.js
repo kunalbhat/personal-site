@@ -24,6 +24,42 @@ export default function Home() {
     },
   });
 
+  const tagsList = [
+    "SQL",
+    "APIs",
+    "React",
+    "Next.js",
+    "Figma",
+    "ProtoPie",
+    "High fidelity prototyping",
+    "Miro",
+    "VSCode",
+    "Mixpanel",
+    "Looker",
+    "User research",
+    "User testing",
+    "Research analysis",
+    "Research synthesis",
+    "Firebase",
+    "Design systems",
+    "Systems thinking",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Tailwind",
+    "Interaction design",
+    "Information architecture",
+    "Heuristics",
+    "Git",
+    "FigJam",
+    "Journey mapping",
+    "web3",
+  ];
+
+  const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
+
+  const shuffledList = shuffle(tagsList);
+
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -78,8 +114,8 @@ export default function Home() {
           </section>
         </div>
         <div className="col-span-2">
-          <div className="">
-            <section>
+          <div className="md:grid grid-cols-2 gap-8">
+            <section className="col-span-1">
               <h3>Experience</h3>
               <ul className="experience-list">
                 <li className="active">
@@ -96,8 +132,6 @@ export default function Home() {
                     <a href="https://www.auraframes.com" target="_blank">
                       Aura Home
                     </a>
-                    <br />
-                    Hello
                   </span>
                   {/* <span className="icon ml-2">
                     <Image
@@ -205,6 +239,18 @@ export default function Home() {
                   <span>IXD @ gravitytank</span>
                 </li>
               </ul>
+            </section>
+            <section className="col-span-1">
+              <h3>How I Work</h3>
+              {isClient ? (
+                <ul className="grid tag-list">
+                  {shuffledList.map((value, key) => {
+                    return <li key={key}>{value}</li>;
+                  })}
+                </ul>
+              ) : (
+                "Loading..."
+              )}
             </section>
           </div>
           <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>

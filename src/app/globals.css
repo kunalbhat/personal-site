@@ -38,7 +38,7 @@ a {
 }
 
 .experience-list li {
-  @apply border-b border-b-gray-200 flex items-start my-2 pb-2;
+  @apply h-12 border-b border-b-gray-200 flex items-center my-2 pb-2;
 }
 
 .experience-list li.active {
@@ -47,15 +47,15 @@ a {
 
 .experience-list li.active::before {
   content: "";
-  @apply inline-block h-2 w-2 bg-blue-700 rounded-full absolute -left-6 top-3;
+  @apply inline-block h-2 w-2 bg-blue-700 rounded-full absolute -left-6;
 }
 
 .icon {
-  @apply bg-white h-8 w-10 flex items-center;
+  @apply bg-white h-10 w-10 flex items-center;
 }
 
 .social-icon {
-  @apply rounded-full border border-gray-200 hover:shadow-md;
+  @apply rounded-full border border-gray-300 hover:shadow-md;
 }
 
 .skyteller-cover {
@@ -75,4 +75,12 @@ a {
 .case-study.maze-of-games {
   background-image: url("/images/maze-of-games-cover.png");
   @apply bg-[#2A2834] bg-contain bg-center;
+}
+
+.tag-list {
+  @apply flex flex-wrap gap-2;
+}
+
+.tag-list li {
+  @apply text-sm bg-violet-200 rounded-md px-2 py-1;
 }
