@@ -82,5 +82,5 @@ a {
 }
 
 .tag-list li {
-  @apply text-sm bg-violet-200 rounded-md px-2 py-1;
+  @apply text-sm bg-violet-100 rounded-md px-2 py-1;
 }

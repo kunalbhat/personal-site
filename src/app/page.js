@@ -32,11 +32,12 @@ export default function Home() {
     "Figma",
     "ProtoPie",
     "High fidelity prototyping",
+    "Metabase",
     "Miro",
     "VSCode",
     "Mixpanel",
     "Looker",
-    "User research",
+    "User interviews",
     "User testing",
     "Research analysis",
     "Research synthesis",
@@ -394,18 +395,54 @@ export default function Home() {
           <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
           <h3>Experiments</h3>
 
-          <ul>
-            <li className="flex items-center gap-4 my-8">
-              <span className="bg-gray-200 rounded-lg block h-12 w-12"></span>
-              <span>Reverse Engineering &ndash; Connections by NYT Games</span>
+          <ul className="grid grid-cols-3 gap-12">
+            <li className="col-span-1 flex flex-col gap-4">
+              <span className="bg-stone-100 rounded-2xl block h-48 w-full overflow-hidden">
+                <Image
+                  src="/images/dailydispatch-cover.png"
+                  width="396"
+                  height="860"
+                  alt="Daily Dispatch app cover"
+                  className="relative w-3/4 top-6 mx-auto"
+                />
+              </span>
+              <span>
+                <b>Over-Engineered: Daily Dispatch</b>
+                <br />I design a hypothetical app end-to-end based on a simple
+                workflow problem.
+              </span>
             </li>
-            <li className="flex items-center gap-4 my-8">
-              <span className="bg-gray-200 rounded-lg block h-12 w-12"></span>
-              <span>Over-engineering &ndash; Daily Dispatch app</span>
+            <li className="col-span-1 flex flex-col gap-4">
+              <span className="bg-stone-100 rounded-2xl block h-48 w-full overflow-hidden">
+                <Image
+                  src="/images/dailydispatch-cover.png"
+                  width="396"
+                  height="860"
+                  alt="Daily Dispatch app cover"
+                  className="relative w-3/4 top-6 mx-auto"
+                />
+              </span>
+              <span>
+                <b>Over-Engineered: Daily Dispatch</b>
+                <br />I design a hypothetical app end-to-end based on a simple
+                workflow problem.
+              </span>
             </li>
-            <li className="flex items-center gap-4 my-8">
-              <span className="bg-gray-200 rounded-lg block h-12 w-12"></span>
-              <span>Turn the Tables &ndash; Codebreaking puzzle</span>
+            <li className="col-span-1 flex flex-col gap-4">
+              <span className="bg-stone-100 rounded-2xl block h-48 w-full overflow-hidden">
+                <Image
+                  src="/images/dailydispatch-cover.png"
+                  width="396"
+                  height="860"
+                  alt="Daily Dispatch app cover"
+                  className="relative w-3/4 top-6 mx-auto"
+                />
+              </span>
+              <span>
+                <b>Over-Engineered: Daily Dispatch</b>
+                <br />I design a hypothetical app end-to-end based on a simple
+                workflow problem.
+              </span>
             </li>
           </ul>
         </div>
