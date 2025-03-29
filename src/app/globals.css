@@ -38,7 +38,7 @@ a {
 }
 
 .experience-list li {
-  @apply h-12 border-b border-b-gray-200 flex items-center my-2 pb-2;
+  @apply border-b border-b-gray-200 flex items-start my-2 pb-2;
 }
 
 .experience-list li.active {
@@ -47,15 +47,15 @@ a {
 
 .experience-list li.active::before {
   content: "";
-  @apply inline-block h-2 w-2 bg-blue-700 rounded-full absolute -left-6;
+  @apply inline-block h-2 w-2 bg-blue-700 rounded-full absolute -left-6 top-3;
 }
 
 .icon {
-  @apply bg-white h-10 w-10 flex items-center;
+  @apply bg-white h-8 w-10 flex items-center;
 }
 
 .social-icon {
-  @apply rounded-full;
+  @apply rounded-full border border-gray-200 hover:shadow-md;
 }
 
 .skyteller-cover {
@@ -70,24 +70,6 @@ a {
 .braintree-cover {
   background-image: url("/images/braintree-dashboard.gif");
   @apply bg-contain shadow-2xl bg-center bg-no-repeat;
-}
-
-.case-study p {
-  @apply text-base mb-0;
-}
-
-.case-study.daily-dispatch,
-.case-study.reverse-engineering,
-.case-study.maze-of-games {
-  @apply overflow-hidden w-[320px] h-[200px];
-}
-
-.case-study.daily-dispatch {
-  @apply bg-[#f6f1f6];
-}
-
-.case-study.reverse-engineering {
-  @apply bg-[#b1a8f9];
 }
 
 .case-study.maze-of-games {

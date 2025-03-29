@@ -87,7 +87,7 @@ export default function Home() {
                     <Image
                       src="/images/icon-tv-stand.png"
                       width="24"
-                      height="24"
+                      height="16"
                       alt="Aura Home"
                     />
                   </span>
@@ -96,15 +96,17 @@ export default function Home() {
                     <a href="https://www.auraframes.com" target="_blank">
                       Aura Home
                     </a>
+                    <br />
+                    Hello
                   </span>
-                  <span className="icon ml-2">
+                  {/* <span className="icon ml-2">
                     <Image
                       src="/images/icon-arrow-link.png"
                       width="24"
                       height="24"
                       alt="External link icon"
                     />
-                  </span>
+                  </span> */}
                 </li>
                 <li>
                   <span className="icon">
@@ -121,16 +123,13 @@ export default function Home() {
                       Magic+Might
                     </a>
                   </span>
-                  <span className="icon ml-2">
+                  {/* <span className="icon ml-2">
                     <Image
                       src="/images/icon-arrow-link.png"
                       width="24"
                       height="24"
                       alt="External link icon"
                     />
-                  </span>
-                  {/* <span className="lg:block hidden text-gray-400 ml-4">
-                    I designed experiences for self-driving cars.
                   </span> */}
                 </li>
                 <li>
@@ -163,14 +162,14 @@ export default function Home() {
                       PayPal / Braintree
                     </a>
                   </span>
-                  <span className="icon ml-2">
+                  {/* <span className="icon ml-2">
                     <Image
                       src="/images/icon-arrow-link.png"
                       width="24"
                       height="24"
                       alt="External link icon"
                     />
-                  </span>
+                  </span> */}
                 </li>
                 <li>
                   <span className="icon">
