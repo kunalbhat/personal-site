@@ -232,17 +232,31 @@ export default function Home() {
                 className="scale-75"
               />
             </div>
+            <div className="p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0">
+              <h4>Skyteller</h4>
+              <p>
+                Skyteller started as a dream to turn crypto into cash in just
+                one click, and to make the whole crypto world more accessible
+                and user-friendly. We built a bridge to your bank, allowing you
+                to off-ramp straight from your wallet or your personal Skyteller
+                off-ramp contract.
+              </p>
+            </div>
           </div>
 
           <div className="mb-8 lg:mb-16">
-            <div className="braintree-cover"></div>
-            <h4>Braintree Control Panel</h4>
-            <p>
-              As the product manager for merchant experience, I led the redesign
-              of Braintree's payments dashboard. This project was a multi-year,
-              cross-organizational effort that affected every stakeholder in the
-              organization and Braintree's global merchant base.
-            </p>
+            <div className="braintree-cover" />
+
+            <div className="p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0">
+              <h4>Braintree Control Panel</h4>
+              <p>
+                As the product manager for merchant experience, I led the
+                redesign of Braintree's payments dashboard. This project was a
+                multi-year, cross-organizational effort that affected every
+                stakeholder in the organization and Braintree's global merchant
+                base.
+              </p>
+            </div>
           </div>
 
           <div className="separator"></div>
@@ -254,31 +268,83 @@ export default function Home() {
             engineer.
           </p>
 
-          <ul className="flex flex-col gap-12">
-            <li className="col-span-1 flex items-center gap-12 my-12">
-              <span className="bg-stone-100 rounded-full shadow-sm block h-48 w-48 overflow-hidden">
+          <section className="flex flex-col gap-4 mt-8">
+            <article className="md:grid grid-cols-4 items-center my-4">
+              <div className="project-thumbnail col-span-1">
                 <Image
-                  src="/images/dailydispatch-cover.png"
-                  width="396"
-                  height="860"
-                  alt="Daily Dispatch app cover"
-                  className="relative w-3/4 top-6 mx-auto"
+                  src="/images/maze-of-games-cover.png"
+                  width="200"
+                  height="200"
+                  alt="Turn the Tables"
                 />
-              </span>
-              <span>
+              </div>
+              <div className="col-span-3">
                 <h4>Reverse Engineering: Connections</h4>
                 <p>
                   I break down an existing experience with a technical focus.
                 </p>
-                <a
-                  href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
-                  target="_blank"
-                >
-                  Read on Notion
-                </a>
-              </span>
-            </li>
-          </ul>
+                <p>
+                  <a
+                    href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+                    target="_blank"
+                  >
+                    Read on Notion
+                  </a>
+                </p>
+              </div>
+            </article>
+            <article className="md:grid grid-cols-4 items-center my-4">
+              <div className="project-thumbnail">
+                <Image
+                  src="/images/maze-of-games-cover.png"
+                  width="200"
+                  height="200"
+                  alt="Turn the Tables"
+                />
+              </div>
+              <div className="col-span-3">
+                <h4>Over-Engineered: Daily Dispatch</h4>
+                <p>
+                  I design a hypothetical app end-to-end based on a simple
+                  workflow problem.
+                </p>
+                <p>
+                  <a
+                    href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
+                    target="_blank"
+                  >
+                    Read on Notion
+                  </a>
+                </p>
+              </div>
+            </article>
+            <article className="md:grid grid-cols-4 items-center my-4">
+              <div className="project-thumbnail">
+                <Image
+                  src="/images/maze-of-games-cover.png"
+                  width="640"
+                  height="400"
+                  alt="Turn the Tables"
+                />
+              </div>
+              <div className="col-span-3">
+                <h4>Turn the Tables</h4>
+                <p>
+                  I built a small tool to help me solve a puzzle from one of my
+                  favorite choose your own adventure puzzle books: Maze of
+                  Games.
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/kunalbhat/maze-of-games"
+                    target="_blank"
+                  >
+                    Read on Github
+                  </a>
+                </p>
+              </div>
+            </article>
+          </section>
 
           <div className="separator"></div>
 
@@ -294,7 +360,15 @@ export default function Home() {
               "Loading..."
             )}
           </section>
-          <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
+
+          <div className="separator"></div>
+
+          <footer>
+            <p>
+              &copy; 2025 Kunal Bhat &ndash; Built in React &ndash; Deployed
+              with Vercel
+            </p>
+          </footer>
         </div>
       </div>
     </>
