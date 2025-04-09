@@ -21,11 +21,11 @@ h2 {
 }
 
 h3 {
-  @apply text-2xl font-bold mb-8;
+  @apply text-2xl font-bold mb-4;
 }
 
 h4 {
-  @apply text-lg font-bold my-4;
+  @apply text-lg font-bold;
 }
 
 p,
@@ -60,7 +60,7 @@ a {
 
 .skyteller-cover {
   background-image: url("/images/skyteller-background.png");
-  @apply bg-contain shadow-2xl;
+  @apply bg-contain shadow-xl overflow-hidden mx-auto w-full mb-8 lg:mb-0 flex col-span-3 rounded-2xl bg-indigo-950 items-center justify-center h-96;
 }
 
 .skyteller-cover.focus {
@@ -69,7 +69,7 @@ a {
 
 .braintree-cover {
   background-image: url("/images/braintree-dashboard.gif");
-  @apply bg-contain shadow-2xl bg-center bg-no-repeat;
+  @apply bg-contain shadow-xl bg-center bg-no-repeat  mb-8 lg:mb-0 flex col-span-3 rounded-2xl bg-white items-center justify-center h-80 md:h-96;
 }
 
 .case-study.maze-of-games {
@@ -83,4 +83,8 @@ a {
 
 .tag-list li {
   @apply text-sm bg-violet-100 rounded-md px-2 py-1;
+}
+
+.separator {
+  @apply bg-black rounded-lg block h-2 w-6 rotate-45 my-12 hover:-rotate-45 transition-transform;
 }

@@ -94,7 +94,6 @@ export default function Home() {
                 Technical product designer with 15+ years in roles as a
                 designer, product manager, and engineer.
               </p>
-              {/* <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span> */}
               <div className="flex gap-2 my-8 w-full justify-center md:justify-start">
                 <SocialIcon
                   url="https://www.github.com/kunalbhat"
@@ -115,169 +114,116 @@ export default function Home() {
           </section>
         </div>
         <div className="col-span-2">
-          <div className="md:grid grid-cols-2 gap-8">
-            <section className="col-span-1">
-              <h3>Experience</h3>
-              <ul className="experience-list">
-                <li className="active">
-                  <span className="icon">
-                    <Image
-                      src="/images/icon-tv-stand.png"
-                      width="24"
-                      height="16"
-                      alt="Aura Home"
-                    />
-                  </span>
-                  <span>
-                    Product Design @{" "}
-                    <a href="https://www.auraframes.com" target="_blank">
-                      Aura Home
-                    </a>
-                  </span>
-                  {/* <span className="icon ml-2">
-                    <Image
-                      src="/images/icon-arrow-link.png"
-                      width="24"
-                      height="24"
-                      alt="External link icon"
-                    />
-                  </span> */}
-                </li>
-                <li>
-                  <span className="icon">
-                    <Image
-                      src="/images/icon-car.png"
-                      width="24"
-                      height="24"
-                      alt="Magic+Might"
-                    />
-                  </span>
-                  <span>
-                    Design @{" "}
-                    <a href="https://www.magicandmight.com" target="_blank">
-                      Magic+Might
-                    </a>
-                  </span>
-                  {/* <span className="icon ml-2">
-                    <Image
-                      src="/images/icon-arrow-link.png"
-                      width="24"
-                      height="24"
-                      alt="External link icon"
-                    />
-                  </span> */}
-                </li>
-                <li>
-                  <span className="icon">
-                    <Image
-                      src="/images/icon-crypto.png"
-                      width="24"
-                      height="24"
-                      alt="Galactic"
-                    />
-                  </span>
-                  <span>Engineering @ Galactic</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <Image
-                      src="/images/icon-identity.png"
-                      width="24"
-                      height="24"
-                      alt="PayPal / Braintree"
-                    />
-                  </span>
-                  <span>
-                    PM @{" "}
-                    <a
-                      href="https://www.paypal.com/us/braintree"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      PayPal / Braintree
-                    </a>
-                  </span>
-                  {/* <span className="icon ml-2">
-                    <Image
-                      src="/images/icon-arrow-link.png"
-                      width="24"
-                      height="24"
-                      alt="External link icon"
-                    />
-                  </span> */}
-                </li>
-                <li>
-                  <span className="icon">
-                    <Image
-                      src="/images/icon-cart.png"
-                      width="24"
-                      height="24"
-                      alt="Modest"
-                    />
-                  </span>
-                  <span>Design @ Modest</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <Image
-                      src="/images/icon-user.png"
-                      width="24"
-                      height="24"
-                      alt="dscout"
-                    />
-                  </span>
-                  <span>Design @ dscout</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <Image
-                      src="/images/icon-tv.png"
-                      width="24"
-                      height="24"
-                      alt="gravitytank"
-                    />
-                  </span>
-                  <span>IXD @ gravitytank</span>
-                </li>
-              </ul>
-            </section>
-            <section className="col-span-1">
-              <h3>How I Work</h3>
-              {isClient ? (
-                <ul className="grid tag-list">
-                  {shuffledList.map((value, key) => {
-                    return <li key={key}>{value}</li>;
-                  })}
-                </ul>
-              ) : (
-                "Loading..."
-              )}
-            </section>
-          </div>
-          <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
-          <h3>Projects</h3>
-          <section className="mb-8 lg:mb-16">
-            <div className="overflow-hidden relative mx-auto w-full flex col-span-3 shadow-lg rounded-2xl bg-[#F9F8F6] items-center justify-center h-96">
-              <Image
-                src="/images/aura-captions-phone-3.gif"
-                width="341"
-                height="713"
-                alt="Aura app - captions animation"
-                className="relative left-20 top-6"
-              />
-              <Image
-                src="/images/aura-captions-frame.png"
-                width="400"
-                height="300"
-                alt="Aura app - captions on frame"
-                className="relative top-1 -right-32"
-              />
-            </div>
-            {/* <h4>Aura Frames &ndash; Captions v1</h4> */}
+          <section>
+            <h3>Experience</h3>
+            <ul className="experience-list">
+              <li className="active">
+                <span className="icon">
+                  <Image
+                    src="/images/icon-tv-stand.png"
+                    width="24"
+                    height="16"
+                    alt="Aura Home"
+                  />
+                </span>
+                <span>
+                  Product Design @{" "}
+                  <a href="https://www.auraframes.com" target="_blank">
+                    Aura Home
+                  </a>
+                </span>
+              </li>
+              <li>
+                <span className="icon">
+                  <Image
+                    src="/images/icon-car.png"
+                    width="24"
+                    height="24"
+                    alt="Magic+Might"
+                  />
+                </span>
+                <span>
+                  Design @{" "}
+                  <a href="https://www.magicandmight.com" target="_blank">
+                    Magic+Might
+                  </a>
+                  <i>
+                    I designed mobile app experiences for self-driving cars.
+                  </i>
+                </span>
+              </li>
+              <li>
+                <span className="icon">
+                  <Image
+                    src="/images/icon-crypto.png"
+                    width="24"
+                    height="24"
+                    alt="Galactic"
+                  />
+                </span>
+                <span>Engineering @ Galactic</span>
+              </li>
+              <li>
+                <span className="icon">
+                  <Image
+                    src="/images/icon-identity.png"
+                    width="24"
+                    height="24"
+                    alt="PayPal / Braintree"
+                  />
+                </span>
+                <span>
+                  PM @{" "}
+                  <a
+                    href="https://www.paypal.com/us/braintree"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    PayPal / Braintree
+                  </a>
+                </span>
+              </li>
+              <li>
+                <span className="icon">
+                  <Image
+                    src="/images/icon-cart.png"
+                    width="24"
+                    height="24"
+                    alt="Modest"
+                  />
+                </span>
+                <span>Design @ Modest</span>
+              </li>
+              <li>
+                <span className="icon">
+                  <Image
+                    src="/images/icon-user.png"
+                    width="24"
+                    height="24"
+                    alt="dscout"
+                  />
+                </span>
+                <span>Design @ dscout</span>
+              </li>
+              <li>
+                <span className="icon">
+                  <Image
+                    src="/images/icon-tv.png"
+                    width="24"
+                    height="24"
+                    alt="gravitytank"
+                  />
+                </span>
+                <span>IXD @ gravitytank</span>
+              </li>
+            </ul>
           </section>
 
-          <section className="mb-8 lg:mb-16">
-            <div className="skyteller-cover overflow-hidden mx-auto w-full mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-indigo-950 items-center justify-center h-96">
+          <div className="separator"></div>
+
+          <h3>What I've built</h3>
+          <div className="mb-8 lg:mb-16">
+            <div className="skyteller-cover">
               <Image
                 src="/images/skyteller.gif"
                 width="341"
@@ -286,165 +232,69 @@ export default function Home() {
                 className="scale-75"
               />
             </div>
-            {/* <h4>Skyteller &ndash; Crypto offramp</h4> */}
-          </section>
+          </div>
 
-          <section className="mb-8 lg:mb-16">
-            <div className="braintree-cover mb-8 lg:mb-0 flex col-span-3 shadow-xl rounded-2xl bg-white items-center justify-center h-80 md:h-96"></div>
-          </section>
+          <div className="mb-8 lg:mb-16">
+            <div className="braintree-cover"></div>
+            <h4>Braintree Control Panel</h4>
+            <p>
+              As the product manager for merchant experience, I led the redesign
+              of Braintree's payments dashboard. This project was a multi-year,
+              cross-organizational effort that affected every stakeholder in the
+              organization and Braintree's global merchant base.
+            </p>
+          </div>
 
-          {/* <section className="grid-flow-row grid lg:grid-flow-col lg:grid-cols-3 gap-4 lg:gap-8">
-            <div className="col-span-1">
-              <article>
-                <a
-                  href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold underline flex gap-1 items-center"
-                >
-                  <span className="case-study reverse-engineering">
-                    <Image
-                      src="/images/connections-cover.png"
-                      width="150"
-                      height="150"
-                      alt="Daily Dispatch app cover"
-                      className="relative"
-                    />
-                  </span>
-                </a>
-                <h4 className="mt-4">Reverse Engineering: Connections</h4>
+          <div className="separator"></div>
+
+          <h3>How I think</h3>
+          <p>
+            These articles showcase my passion for various aspects of the design
+            process and my thinking as a designer, product manager, and
+            engineer.
+          </p>
+
+          <ul className="flex flex-col gap-12">
+            <li className="col-span-1 flex items-center gap-12 my-12">
+              <span className="bg-stone-100 rounded-full shadow-sm block h-48 w-48 overflow-hidden">
+                <Image
+                  src="/images/dailydispatch-cover.png"
+                  width="396"
+                  height="860"
+                  alt="Daily Dispatch app cover"
+                  className="relative w-3/4 top-6 mx-auto"
+                />
+              </span>
+              <span>
+                <h4>Reverse Engineering: Connections</h4>
                 <p>
                   I break down an existing experience with a technical focus.
                 </p>
                 <a
                   href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
                   target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold underline flex gap-1 items-center"
                 >
                   Read on Notion
-                  <ArrowUpRightIcon className="h-4 w-4" />
                 </a>
-              </article>
-              <article className="mt-12">
-                <a
-                  href="https://github.com/kunalbhat/maze-of-games"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold underline flex gap-1 items-center"
-                >
-                  <span className="case-study maze-of-games"></span>
-                </a>
-                <h4 className="mt-4">Turn the Tables</h4>
-                <p>
-                  I built a small tool to help me solve a puzzle from one of my
-                  favorite choose your own adventure puzzle books:{" "}
-                  <a
-                    href="https://www.lonesharkgames.com/maze/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Maze of Games
-                  </a>
-                  .
-                </p>
-                <a
-                  href="https://github.com/kunalbhat/maze-of-games"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold underline flex gap-1 items-center"
-                >
-                  Read on Github
-                  <ArrowUpRightIcon className="h-4 w-4" />
-                </a>
-              </article>
-            </div>
-            <div className="col-span-1">
-              <a
-                href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
-                target="_blank"
-                rel="noreferrer"
-                className="font-semibold underline flex gap-1 items-center"
-              >
-                <span className="case-study daily-dispatch">
-                  <Image
-                    src="/images/dailydispatch-cover.png"
-                    width="396"
-                    height="860"
-                    alt="Daily Dispatch app cover"
-                    className="relative mt-96 hover:mt-72 transition-all"
-                  />
-                </span>
-              </a>
-              <h4 className="mt-4">Over-Engineered: Daily Dispatch</h4>
-              <p>
-                I design a hypothetical app end-to-end based on a simple
-                workflow problem.
-              </p>
-              <a
-                href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
-                target="_blank"
-                rel="noreferrer"
-                className="font-semibold underline flex gap-1 items-center"
-              >
-                Read on Notion
-                <ArrowUpRightIcon className="h-4 w-4" />
-              </a>
-            </div>
-          </section> */}
-          <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
-          <h3>Experiments</h3>
-
-          <ul className="grid grid-cols-3 gap-12">
-            <li className="col-span-1 flex flex-col gap-4">
-              <span className="bg-stone-100 rounded-2xl block h-48 w-full overflow-hidden">
-                <Image
-                  src="/images/dailydispatch-cover.png"
-                  width="396"
-                  height="860"
-                  alt="Daily Dispatch app cover"
-                  className="relative w-3/4 top-6 mx-auto"
-                />
-              </span>
-              <span>
-                <b>Over-Engineered: Daily Dispatch</b>
-                <br />I design a hypothetical app end-to-end based on a simple
-                workflow problem.
-              </span>
-            </li>
-            <li className="col-span-1 flex flex-col gap-4">
-              <span className="bg-stone-100 rounded-2xl block h-48 w-full overflow-hidden">
-                <Image
-                  src="/images/dailydispatch-cover.png"
-                  width="396"
-                  height="860"
-                  alt="Daily Dispatch app cover"
-                  className="relative w-3/4 top-6 mx-auto"
-                />
-              </span>
-              <span>
-                <b>Over-Engineered: Daily Dispatch</b>
-                <br />I design a hypothetical app end-to-end based on a simple
-                workflow problem.
-              </span>
-            </li>
-            <li className="col-span-1 flex flex-col gap-4">
-              <span className="bg-stone-100 rounded-2xl block h-48 w-full overflow-hidden">
-                <Image
-                  src="/images/dailydispatch-cover.png"
-                  width="396"
-                  height="860"
-                  alt="Daily Dispatch app cover"
-                  className="relative w-3/4 top-6 mx-auto"
-                />
-              </span>
-              <span>
-                <b>Over-Engineered: Daily Dispatch</b>
-                <br />I design a hypothetical app end-to-end based on a simple
-                workflow problem.
               </span>
             </li>
           </ul>
+
+          <div className="separator"></div>
+
+          <section className="col-span-1">
+            <h3>How I work</h3>
+            {isClient ? (
+              <ul className="grid tag-list">
+                {shuffledList.map((value, key) => {
+                  return <li key={key}>{value}</li>;
+                })}
+              </ul>
+            ) : (
+              "Loading..."
+            )}
+          </section>
+          <span className="bg-black rounded-lg block h-2 w-6 rotate-45 my-12"></span>
         </div>
       </div>
     </>
