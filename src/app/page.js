@@ -269,7 +269,7 @@ export default function Home() {
           </p>
 
           <section className="flex flex-col gap-4 mt-8">
-            <article className="md:grid grid-cols-4 items-center my-4">
+            <article className="grid grid-cols-4 items-center my-4">
               <div className="project-thumbnail col-span-1">
                 <Image
                   src="/images/maze-of-games-cover.png"
@@ -293,7 +293,7 @@ export default function Home() {
                 </p>
               </div>
             </article>
-            <article className="md:grid grid-cols-4 items-center my-4">
+            <article className="grid grid-cols-4 items-center my-4">
               <div className="project-thumbnail">
                 <Image
                   src="/images/maze-of-games-cover.png"
@@ -318,7 +318,7 @@ export default function Home() {
                 </p>
               </div>
             </article>
-            <article className="md:grid grid-cols-4 items-center my-4">
+            <article className="grid grid-cols-4 items-center my-4">
               <div className="project-thumbnail">
                 <Image
                   src="/images/maze-of-games-cover.png"
