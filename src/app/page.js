@@ -147,9 +147,6 @@ export default function Home() {
                   <a href="https://www.magicandmight.com" target="_blank">
                     Magic+Might
                   </a>
-                  <i>
-                    I designed mobile app experiences for self-driving cars.
-                  </i>
                 </span>
               </li>
               <li>
@@ -250,8 +247,8 @@ export default function Home() {
             <div className="p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0">
               <h4>Braintree Control Panel</h4>
               <p>
-                As the product manager for merchant experience, I led the
-                redesign of Braintree's payments dashboard. This project was a
+                As product manager for merchant experience, I led the redesign
+                of Braintree's payments dashboard. This project was a
                 multi-year, cross-organizational effort that affected every
                 stakeholder in the organization and Braintree's global merchant
                 base.
@@ -269,16 +266,18 @@ export default function Home() {
           </p>
 
           <section className="flex flex-col gap-4 mt-8">
-            <article className="grid grid-cols-4 items-center my-4">
-              <div className="project-thumbnail col-span-1">
-                <Image
-                  src="/images/maze-of-games-cover.png"
-                  width="200"
-                  height="200"
-                  alt="Turn the Tables"
-                />
+            <article className="flex gap-8 items-center my-4">
+              <div className="w-1/5">
+                <div className="project-thumbnail">
+                  <Image
+                    src="/images/connections-cover.png"
+                    width="640"
+                    height="400"
+                    alt="Turn the Tables"
+                  />
+                </div>
               </div>
-              <div className="col-span-3">
+              <div className="w-4/5">
                 <h4>Reverse Engineering: Connections</h4>
                 <p>
                   I break down an existing experience with a technical focus.
@@ -293,16 +292,18 @@ export default function Home() {
                 </p>
               </div>
             </article>
-            <article className="grid grid-cols-4 items-center my-4">
-              <div className="project-thumbnail">
-                <Image
-                  src="/images/maze-of-games-cover.png"
-                  width="200"
-                  height="200"
-                  alt="Turn the Tables"
-                />
+            <article className="flex gap-8 items-center my-4">
+              <div className="w-1/5">
+                <div className="project-thumbnail">
+                  <Image
+                    src="/images/dailydispatch-cover.png"
+                    width="640"
+                    height="400"
+                    alt="Turn the Tables"
+                  />
+                </div>
               </div>
-              <div className="col-span-3">
+              <div className="w-4/5">
                 <h4>Over-Engineered: Daily Dispatch</h4>
                 <p>
                   I design a hypothetical app end-to-end based on a simple
@@ -318,16 +319,19 @@ export default function Home() {
                 </p>
               </div>
             </article>
-            <article className="grid grid-cols-4 items-center my-4">
-              <div className="project-thumbnail">
-                <Image
-                  src="/images/maze-of-games-cover.png"
-                  width="640"
-                  height="400"
-                  alt="Turn the Tables"
-                />
+            <article className="flex gap-8 items-center my-4">
+              <div className="w-1/5">
+                <div className="project-thumbnail">
+                  <Image
+                    src="/images/maze-of-games-cover.png"
+                    width="640"
+                    height="400"
+                    alt="Turn the Tables"
+                    className="w-full"
+                  />
+                </div>
               </div>
-              <div className="col-span-3">
+              <div className="w-4/5">
                 <h4>Turn the Tables</h4>
                 <p>
                   I built a small tool to help me solve a puzzle from one of my
