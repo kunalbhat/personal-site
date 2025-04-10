@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
-  @apply bg-white font-sans;
+  @apply bg-white font-sans dark:bg-[#101010] dark:text-[#efe5d4];
 }
 
 /* Layout */
@@ -38,7 +40,7 @@ a {
 }
 
 .experience-list li {
-  @apply h-12 border-b border-b-gray-200 flex items-center my-2 pb-2;
+  @apply h-12 border-b border-b-gray-200 dark:border-b-gray-800 flex items-center my-2 pb-2;
 }
 
 .experience-list li.active {
@@ -51,11 +53,11 @@ a {
 }
 
 .icon {
-  @apply bg-white h-10 w-10 flex items-center;
+  @apply bg-white dark:bg-transparent h-10 w-10 flex items-center dark:text-[#efe5d4];
 }
 
 .social-icon {
-  @apply rounded-full border border-gray-300 hover:shadow-md;
+  @apply rounded-full border border-gray-300 dark:border-gray-800 hover:shadow-md;
 }
 
 .skyteller-cover {
@@ -82,7 +84,7 @@ a {
 }
 
 .tag-list li {
-  @apply text-sm bg-violet-100 rounded-md px-2 py-1;
+  @apply text-sm bg-violet-100 dark:bg-violet-700 rounded-md px-2 py-1;
 }
 
 .separator {
@@ -90,5 +92,5 @@ a {
 }
 
 .project-thumbnail {
-  @apply bg-stone-100 rounded-md shadow-sm h-32 w-32 block overflow-hidden;
+  @apply bg-stone-100 rounded-md shadow-sm h-16 w-16 md:h-32 md:w-32 block overflow-hidden;
 }
