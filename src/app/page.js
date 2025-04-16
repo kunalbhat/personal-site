@@ -67,19 +67,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="h-10 mb-8 flex justify-end lg:absolute right-4 top-4">
-        <span className="flex items-center justify-center h-10 w-10 bg-purple-50 hover:bg-purple-100 rounded-full cursor-pointer">
-          <Image
-            src="/images/icon-moon.png"
-            width="24"
-            height="24"
-            alt="Aura Home"
-          />
-        </span>
-      </div>
       <div className="md:grid grid-cols-3 gap-24">
-        <div>
-          <section className="mb-24 md:mb-8 text-center md:text-left">
+        <aside>
+          <section className="mb-24 md:mb-8 md:fixed md:w-96 md:pr-12 text-center md:text-left">
             <animated.div style={styles}>
               <Image
                 src="/images/kunal-bhat-avatar-2.jpg"
@@ -112,12 +102,12 @@ export default function Home() {
               </div>
             </animated.div>
           </section>
-        </div>
-        <div className="col-span-2">
-          <section>
+        </aside>
+        <main className="col-span-2">
+          <section aria-label="Work Experience">
             <h3>Experience</h3>
             <ul className="experience-list">
-              <li className="active">
+              <li className="active" aria-current="true">
                 <span className="icon">
                   <Image
                     src="/images/icon-tv-stand.png"
@@ -126,13 +116,24 @@ export default function Home() {
                     alt="Aura Home"
                   />
                 </span>
-                <span>
-                  Product Design @{" "}
-                  <a href="https://www.auraframes.com" target="_blank">
-                    Aura Home
-                  </a>
-                </span>
+                <div className="experience-content">
+                  <span className="font-bold">
+                    Product Design @{" "}
+                    <a
+                      href="https://www.auraframes.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Aura Home
+                    </a>
+                  </span>
+                  <p>
+                    Currently designing experiences for the internet's favorite
+                    digital frame.
+                  </p>
+                </div>
               </li>
+
               <li>
                 <span className="icon">
                   <Image
@@ -142,13 +143,23 @@ export default function Home() {
                     alt="Magic+Might"
                   />
                 </span>
-                <span>
-                  Design @{" "}
-                  <a href="https://www.magicandmight.com" target="_blank">
-                    Magic+Might
-                  </a>
-                </span>
+                <div className="experience-content">
+                  <span className="font-bold">
+                    Design @{" "}
+                    <a
+                      href="https://www.magicandmight.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Magic+Might
+                    </a>
+                  </span>
+                  <p className="font-normal">
+                    Designed mobile app experiences for self-driving cars.
+                  </p>
+                </div>
               </li>
+
               <li>
                 <span className="icon">
                   <Image
@@ -158,8 +169,12 @@ export default function Home() {
                     alt="Galactic"
                   />
                 </span>
-                <span>Engineering @ Galactic</span>
+                <div className="experience-content">
+                  <span className="font-bold">Engineering @ Galactic</span>
+                  <p>Built a crypto off-ramp product for web3 users.</p>
+                </div>
               </li>
+
               <li>
                 <span className="icon">
                   <Image
@@ -169,17 +184,23 @@ export default function Home() {
                     alt="PayPal / Braintree"
                   />
                 </span>
-                <span>
-                  PM @{" "}
-                  <a
-                    href="https://www.paypal.com/us/braintree"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    PayPal / Braintree
-                  </a>
-                </span>
+                <div className="experience-content">
+                  <span className="font-bold">
+                    PM @{" "}
+                    <a
+                      href="https://www.paypal.com/us/braintree"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      PayPal / Braintree
+                    </a>
+                  </span>
+                  <p>
+                    Launched a new version of the Braintree merchant dashboard.
+                  </p>
+                </div>
               </li>
+
               <li>
                 <span className="icon">
                   <Image
@@ -189,8 +210,15 @@ export default function Home() {
                     alt="Modest"
                   />
                 </span>
-                <span>Design @ Modest</span>
+                <div className="experience-content">
+                  <span className="font-bold">Design @ Modest</span>
+                  <p>
+                    Designed commerce experiences for mobile checkout (acq by
+                    PayPal).
+                  </p>
+                </div>
               </li>
+
               <li>
                 <span className="icon">
                   <Image
@@ -200,8 +228,24 @@ export default function Home() {
                     alt="dscout"
                   />
                 </span>
-                <span>Design @ dscout</span>
+                <div className="experience-content">
+                  <span className="font-bold">
+                    Design @{" "}
+                    <a
+                      href="https://www.dscout.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      dscout
+                    </a>
+                  </span>
+                  <p>
+                    Designed and built the first major iterations of dscout's
+                    user research platform.
+                  </p>
+                </div>
               </li>
+
               <li>
                 <span className="icon">
                   <Image
@@ -211,7 +255,13 @@ export default function Home() {
                     alt="gravitytank"
                   />
                 </span>
-                <span>IXD @ gravitytank</span>
+                <div className="experience-content">
+                  <span className="font-bold">IXD @ gravitytank</span>
+                  <p>
+                    Designed future experiences for the consumer electronics
+                    space.
+                  </p>
+                </div>
               </li>
             </ul>
           </section>
@@ -265,92 +315,83 @@ export default function Home() {
             engineer.
           </p>
 
-          <section className="flex flex-col gap-4 mt-8">
-            <article className="flex gap-8 items-center my-4">
-              <div className="w-1/5">
-                <div className="project-thumbnail">
-                  <Image
-                    src="/images/connections-cover.png"
-                    width="640"
-                    height="400"
-                    alt="Turn the Tables"
-                  />
-                </div>
-              </div>
-              <div className="w-4/5">
-                <h4>Reverse Engineering: Connections</h4>
-                <p>
-                  I break down an existing experience with a technical focus.
-                </p>
-                <p>
-                  <a
-                    href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
-                    target="_blank"
-                  >
-                    Read on Notion
-                  </a>
-                </p>
-              </div>
+          <section className="md:grid grid-cols-3 gap-4 text-center">
+            <article className="small-projects-item">
+              <Image
+                src="/images/connections-icon.png"
+                width="64"
+                height="64"
+                alt="NYT: Connections"
+              />
+              <h4>Reverse Engineering: Connections</h4>
+              <p>I break down an existing experience with a technical focus.</p>
+              <p className="my-4">
+                <a
+                  href="https://kunalbhat.notion.site/Reverse-Engineering-Connections-by-NYT-b325a3ed84a14ddb90322887aa1cb7be"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read on Notion
+                </a>
+              </p>
             </article>
-            <article className="flex gap-8 items-center my-4">
-              <div className="w-1/5">
-                <div className="project-thumbnail">
-                  <Image
-                    src="/images/dailydispatch-cover.png"
-                    width="640"
-                    height="400"
-                    alt="Turn the Tables"
-                  />
-                </div>
-              </div>
-              <div className="w-4/5">
-                <h4>Over-Engineered: Daily Dispatch</h4>
-                <p>
-                  I design a hypothetical app end-to-end based on a simple
-                  workflow problem.
-                </p>
-                <p>
-                  <a
-                    href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
-                    target="_blank"
-                  >
-                    Read on Notion
-                  </a>
-                </p>
-              </div>
+            <article className="small-projects-item">
+              <Image
+                src="/images/connections-icon.png"
+                width="64"
+                height="64"
+                alt="NYT: Connections"
+              />
+              <h4>
+                Over-Engineered: <br />
+                Daily Dispatch
+              </h4>
+              <p>
+                I design a hypothetical app end-to-end based on a simple
+                workflow problem.
+              </p>
+              <p className="my-4">
+                <a
+                  href="https://kunalbhat.notion.site/Over-Engineered-Daily-Dispatch-50afca922c22419981a167f097f8870a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read on Notion
+                </a>
+              </p>
             </article>
-            <article className="flex gap-8 items-center my-4">
-              <div className="w-1/5">
-                <div className="project-thumbnail">
-                  <Image
-                    src="/images/maze-of-games-cover.png"
-                    width="640"
-                    height="400"
-                    alt="Turn the Tables"
-                    className="w-full"
-                  />
-                </div>
-              </div>
-              <div className="w-4/5">
-                <h4>Turn the Tables</h4>
-                <p>
-                  I built a small tool to help me solve a puzzle from one of my
-                  favorite choose your own adventure puzzle books: Maze of
-                  Games.
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/kunalbhat/maze-of-games"
-                    target="_blank"
-                  >
-                    Read on Github
-                  </a>
-                </p>
-              </div>
+            <article className="small-projects-item">
+              <Image
+                src="/images/connections-icon.png"
+                width="64"
+                height="64"
+                alt="NYT: Connections"
+              />
+              <h4>Turn the Tables</h4>
+              <p>
+                I built a small tool to help me solve a puzzle from{" "}
+                <a
+                  href="https://lonesharkgames.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Maze of Games
+                </a>
+                .
+              </p>
+              <p className="my-4">
+                <a
+                  href="https://github.com/kunalbhat/maze-of-games"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read on Github
+                </a>
+              </p>
             </article>
           </section>
 
-          <div className="separator"></div>
+          <div className="separator" />
 
           <section className="col-span-1">
             <h3>How I work</h3>
@@ -373,7 +414,7 @@ export default function Home() {
               with Vercel
             </p>
           </footer>
-        </div>
+        </main>
       </div>
     </>
   );

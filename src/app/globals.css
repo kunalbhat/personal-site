@@ -40,7 +40,7 @@ a {
 }
 
 .experience-list li {
-  @apply h-12 border-b border-b-gray-200 dark:border-b-gray-800 flex items-center my-2 pb-2;
+  @apply h-20 border-b border-b-gray-200 dark:border-b-gray-800 flex items-center my-2 pb-2;
 }
 
 .experience-list li.active {
@@ -49,11 +49,15 @@ a {
 
 .experience-list li.active::before {
   content: "";
-  @apply inline-block h-2 w-2 bg-blue-700 rounded-full absolute -left-6;
+  @apply inline-block h-2 w-2 bg-blue-700 rounded-full absolute -left-6 animate-blink;
+}
+
+.experience-content p {
+  @apply text-gray-500;
 }
 
 .icon {
-  @apply bg-white dark:bg-transparent h-10 w-10 flex items-center dark:text-[#efe5d4];
+  @apply dark:bg-transparent bg-purple-50 rounded-full justify-center mr-4 h-12 w-12 flex items-center dark:text-[#efe5d4];
 }
 
 .social-icon {
@@ -88,9 +92,13 @@ a {
 }
 
 .separator {
-  @apply bg-black rounded-lg block h-2 w-6 rotate-45 my-12 md:my-16 hover:-rotate-45 transition-transform;
+  @apply bg-black dark:bg-[#efe5d4] rounded-lg block h-2 w-6 rotate-45 my-12 md:my-16 hover:-rotate-45 transition-transform;
 }
 
 .project-thumbnail {
-  @apply bg-stone-100 rounded-md shadow-sm h-16 w-16 md:h-32 md:w-32 block overflow-hidden;
+  @apply bg-stone-100 rounded-md shadow-sm h-16 w-16 md:h-32 md:w-32 overflow-hidden;
+}
+
+.small-projects-item {
+  @apply flex flex-col items-center my-4 border border-gray-200 rounded-2xl shadow-sm px-4 py-8;
 }
