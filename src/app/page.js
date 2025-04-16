@@ -337,10 +337,10 @@ export default function Home() {
             </article>
             <article className="small-projects-item">
               <Image
-                src="/images/connections-icon.png"
+                src="/images/dailydispatch-icon.svg"
                 width="64"
                 height="64"
-                alt="NYT: Connections"
+                alt="Daily Dispatch"
               />
               <h4>
                 Over-Engineered: <br />
@@ -362,10 +362,10 @@ export default function Home() {
             </article>
             <article className="small-projects-item">
               <Image
-                src="/images/connections-icon.png"
+                src="/images/maze-of-games-icon.svg"
                 width="64"
                 height="64"
-                alt="NYT: Connections"
+                alt="Maze of Games tool>"
               />
               <h4>Turn the Tables</h4>
               <p>
