@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Kunal Bhat",
     images: [
       {
-        url: "https://kunalbhat.com/og-image.jpg",
+        url: "https://kunalbhat.com/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Kunal Bhat - Product Designer",
