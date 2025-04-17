@@ -78,9 +78,11 @@ export default function Home() {
                 alt="Kunal Bhat"
                 className="rounded-full mb-4 mx-auto md:mx-0"
               />
-              <h1>Kunal Bhat</h1>
-              <h2>Product Designer</h2>
-              <p className="mt-12 mx-8 md:mx-0">
+              <h1>
+                Kunal Bhat <br />
+                Product Designer
+              </h1>
+              <p className="mt-8 mx-8 md:mx-0">
                 Technical product designer with 15+ years in roles as a
                 designer, product manager, and engineer.
               </p>
@@ -105,7 +107,7 @@ export default function Home() {
         </aside>
         <main className="col-span-2">
           <section aria-label="Work Experience">
-            <h3>Experience</h3>
+            <h2>Experience</h2>
             <ul className="experience-list">
               <li className="active" aria-current="true">
                 <span className="icon">
@@ -133,7 +135,6 @@ export default function Home() {
                   </p>
                 </div>
               </li>
-
               <li>
                 <span className="icon">
                   <Image
@@ -157,7 +158,6 @@ export default function Home() {
                   <p>Designed mobile app experiences for self-driving cars.</p>
                 </div>
               </li>
-
               <li>
                 <span className="icon">
                   <Image
@@ -172,7 +172,6 @@ export default function Home() {
                   <p>Built a crypto off-ramp product for web3 users.</p>
                 </div>
               </li>
-
               <li>
                 <span className="icon">
                   <Image
@@ -198,7 +197,6 @@ export default function Home() {
                   </p>
                 </div>
               </li>
-
               <li>
                 <span className="icon">
                   <Image
@@ -216,7 +214,6 @@ export default function Home() {
                   </p>
                 </div>
               </li>
-
               <li>
                 <span className="icon">
                   <Image
@@ -243,7 +240,6 @@ export default function Home() {
                   </p>
                 </div>
               </li>
-
               <li>
                 <span className="icon">
                   <Image
@@ -266,8 +262,11 @@ export default function Home() {
 
           <div className="separator"></div>
 
-          <h3>What I've built</h3>
+          <h2>What I've built</h2>
           <div className="mb-8 lg:mb-16">
+            <header className="mt-8 mb-4">
+              <h3>Skyteller @ Galactic</h3>
+            </header>
             <div className="skyteller-cover">
               <Image
                 src="/images/skyteller.gif"
@@ -278,7 +277,6 @@ export default function Home() {
               />
             </div>
             <div className="p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0">
-              <h4>Skyteller</h4>
               <p>
                 Skyteller started as a dream to turn crypto into cash in just
                 one click, and to make the whole crypto world more accessible
@@ -290,10 +288,12 @@ export default function Home() {
           </div>
 
           <div className="mb-8 lg:mb-16">
+            <header className="mt-8 mb-4">
+              <h3>Braintree Control Panel @ Braintree / PayPal</h3>
+            </header>
             <div className="braintree-cover" />
 
             <div className="p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0">
-              <h4>Braintree Control Panel</h4>
               <p>
                 As product manager for merchant experience, I led the redesign
                 of Braintree's payments dashboard. This project was a
@@ -306,7 +306,7 @@ export default function Home() {
 
           <div className="separator"></div>
 
-          <h3>How I think</h3>
+          <h2>How I think</h2>
           <p>
             These articles showcase my passion for various aspects of the design
             process and my thinking as a designer, product manager, and
@@ -321,7 +321,7 @@ export default function Home() {
                 height="64"
                 alt="NYT: Connections"
               />
-              <h4>Reverse Engineering: Connections</h4>
+              <h3>Reverse Engineering: Connections</h3>
               <p>I break down an existing experience with a technical focus.</p>
               <p className="my-4">
                 <a
@@ -340,10 +340,10 @@ export default function Home() {
                 height="64"
                 alt="Daily Dispatch"
               />
-              <h4>
-                Over-Engineered: <br />
+              <h3>
+                Over-Engineered: <br className="md:block hidden" />
                 Daily Dispatch
-              </h4>
+              </h3>
               <p>
                 I design a hypothetical app end-to-end based on a workflow
                 problem.
@@ -365,16 +365,17 @@ export default function Home() {
                 height="64"
                 alt="Maze of Games tool>"
               />
-              <h4>
-                Maze of Games: <br />
+              <h3>
+                Maze of Games: <br className="md:block hidden" />
                 Turn the Tables
-              </h4>
+              </h3>
               <p>
                 I built a small tool to help me solve a puzzle from{" "}
                 <a
                   href="https://lonesharkgames.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="no-underline"
                 >
                   Maze of Games
                 </a>
@@ -395,7 +396,13 @@ export default function Home() {
           <div className="separator" />
 
           <section className="col-span-1">
-            <h3>How I work</h3>
+            <header className="mb-8">
+              <h2>How I work</h2>
+              <p>
+                Tools and activities I use often and am highly comfortable with.
+              </p>
+            </header>
+
             {isClient ? (
               <ul className="grid tag-list">
                 {shuffledList.map((value, key) => {

@@ -19,15 +19,11 @@ h1 {
 }
 
 h2 {
-  @apply text-4xl font-bold;
-}
-
-h3 {
   @apply text-2xl font-bold mb-4;
 }
 
-h4 {
-  @apply text-lg font-bold;
+h3 {
+  @apply text-xl font-bold;
 }
 
 p,
