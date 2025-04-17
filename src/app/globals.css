@@ -39,8 +39,12 @@ a {
   @apply underline underline-offset-2 hover:underline-offset-4 transition-all;
 }
 
+.experience-list {
+  @apply mt-8;
+}
+
 .experience-list li {
-  @apply h-20 border-b border-b-gray-200 dark:border-b-gray-800 flex items-center my-2 pb-2;
+  @apply md:h-20 border-b border-b-gray-200 dark:border-b-gray-800 flex items-center my-2 pb-2;
 }
 
 .experience-list li.active {
@@ -53,7 +57,7 @@ a {
 }
 
 .experience-content p {
-  @apply text-gray-500;
+  @apply text-gray-500 md:block hidden;
 }
 
 .icon {

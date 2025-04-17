@@ -154,9 +154,7 @@ export default function Home() {
                       Magic+Might
                     </a>
                   </span>
-                  <p className="font-normal">
-                    Designed mobile app experiences for self-driving cars.
-                  </p>
+                  <p>Designed mobile app experiences for self-driving cars.</p>
                 </div>
               </li>
 
@@ -315,7 +313,7 @@ export default function Home() {
             engineer.
           </p>
 
-          <section className="md:grid grid-cols-3 gap-4 text-center">
+          <section className="md:grid grid-cols-3 gap-4 text-center mt-8">
             <article className="small-projects-item">
               <Image
                 src="/images/connections-icon.png"
@@ -347,8 +345,8 @@ export default function Home() {
                 Daily Dispatch
               </h4>
               <p>
-                I design a hypothetical app end-to-end based on a simple
-                workflow problem.
+                I design a hypothetical app end-to-end based on a workflow
+                problem.
               </p>
               <p className="my-4">
                 <a
@@ -367,7 +365,10 @@ export default function Home() {
                 height="64"
                 alt="Maze of Games tool>"
               />
-              <h4>Turn the Tables</h4>
+              <h4>
+                Maze of Games: <br />
+                Turn the Tables
+              </h4>
               <p>
                 I built a small tool to help me solve a puzzle from{" "}
                 <a
