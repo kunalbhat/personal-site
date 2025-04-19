@@ -61,7 +61,11 @@ a {
 }
 
 .social-icon {
-  @apply rounded-full border border-gray-300 dark:border-gray-800 hover:shadow-md;
+  @apply rounded-full border border-gray-200 dark:border-gray-800 hover:shadow-md;
+}
+
+.aura-cover {
+  @apply overflow-hidden relative mx-auto w-full border border-gray-200 border-b-0 rounded-2xl rounded-b-none flex col-span-3  bg-[#F9F8F6] items-center justify-center h-96;
 }
 
 .skyteller-cover {
@@ -101,4 +105,8 @@ a {
 
 .small-projects-item {
   @apply flex flex-col items-center my-4 border border-gray-200 rounded-2xl shadow-sm px-4 py-8;
+}
+
+.project-description {
+  @apply p-6 md:p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0;
 }
