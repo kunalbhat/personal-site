@@ -310,11 +310,12 @@ export default function Home() {
             </header>
             <div className="aura-cover">
               <Image
-                src="/images/aura-captions-phone-3.gif"
+                src="/images/aura-captions-phone.gif"
                 width="341"
                 height="713"
                 alt="Aura app - captions animation"
                 className="relative left-24 top-20 md:left-20 md:top-6"
+                unoptimized
               />
               <Image
                 src="/images/aura-captions-frame.png"
