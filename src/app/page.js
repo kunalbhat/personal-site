@@ -120,7 +120,6 @@ export default function Home() {
             </animated.div>
           </section>
         </aside>
-
         <main className="main-content">
           <section aria-label="Work Experience">
             <h2>Experience</h2>
