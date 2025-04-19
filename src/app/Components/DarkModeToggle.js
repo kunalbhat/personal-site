@@ -1,12 +1,13 @@
+"use client"; // Needed if using app/ directory in Next.js 13+
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false); // Track if component has mounted
+  const [mounted, setMounted] = useState(false); // Prevent SSR mismatch
 
   useEffect(() => {
-    // Safe to access localStorage now
     const storedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
@@ -22,7 +23,7 @@ export default function DarkModeToggle() {
   useEffect(() => {
     if (!mounted) return;
 
-    const root = window.document.documentElement;
+    const root = document.documentElement;
 
     if (isDark) {
       root.classList.add("dark");
@@ -33,7 +34,7 @@ export default function DarkModeToggle() {
     }
   }, [isDark, mounted]);
 
-  if (!mounted) return null; // Avoid mismatches during SSR
+  if (!mounted) return null;
 
   return (
     <button
