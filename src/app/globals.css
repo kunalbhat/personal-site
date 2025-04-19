@@ -6,17 +6,33 @@
 
 /* Base Styles */
 body {
-  @apply bg-white font-sans dark:bg-[#101010] dark:text-[#efe5d4];
+  @apply font-sans bg-white text-[#101010] dark:bg-[#101010] dark:text-[#efe5d4];
 }
 
 /* Layout */
-.content-container {
-  @apply lg:max-w-6xl mx-4 lg:mx-auto my-8 lg:mt-24;
+.app-container {
+  @apply lg:grid md:grid-cols-3 md:gap-24 lg:max-w-6xl mx-4 lg:mx-auto my-8 lg:mt-24;
+}
+
+.sidebar {
+  @apply my-24 lg:mt-0 lg:mb-8 lg:fixed lg:w-96 lg:pr-12 text-center lg:text-left;
+}
+
+.sidebar p {
+  @apply mt-8 mx-8 lg:mx-0;
+}
+
+.sidebar .social-icons {
+  @apply flex gap-2 my-8 w-full justify-center lg:justify-start;
+}
+
+.main-content {
+  @apply col-span-2;
 }
 
 /* Typography */
 h1 {
-  @apply text-4xl font-bold leading-snug;
+  @apply text-4xl font-bold;
 }
 
 h2 {
@@ -88,12 +104,6 @@ a {
   @apply bg-contain bg-center bg-no-repeat bg-white h-80 md:h-96;
 }
 
-/* Case Study */
-.case-study.maze-of-games {
-  background-image: url("/images/maze-of-games-cover.png");
-  @apply bg-[#2A2834] bg-contain bg-center;
-}
-
 /* Tag List */
 .tag-list {
   @apply flex flex-wrap gap-2;
@@ -108,17 +118,24 @@ a {
   @apply bg-black dark:bg-[#efe5d4] rounded-lg block h-2 w-6 rotate-45 my-12 md:my-16 hover:-rotate-45 transition-transform;
 }
 
-/* Project Thumbnails */
-.project-thumbnail {
-  @apply bg-stone-100 rounded-md shadow-sm h-16 w-16 md:h-32 md:w-32 overflow-hidden;
+/* Project Description */
+.project-content {
+  @apply mb-8 lg:mb-16;
+}
+
+.project-header {
+  @apply mt-8 mb-4 flex items-center gap-2;
+}
+
+.project-description {
+  @apply p-6 md:p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0 dark:bg-transparent;
 }
 
 /* Small Projects */
-.small-projects-item {
-  @apply flex flex-col items-center my-4 border border-gray-200 rounded-2xl shadow-sm px-4 py-8;
+.small-project-content {
+  @apply md:grid grid-cols-3 gap-4 text-center mt-8;
 }
 
-/* Project Description */
-.project-description {
-  @apply p-6 md:p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0 dark:bg-transparent;
+.small-project-item {
+  @apply flex flex-col items-center my-4 border border-gray-200 rounded-2xl shadow-sm px-4 py-8;
 }

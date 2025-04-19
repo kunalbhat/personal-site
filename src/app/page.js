@@ -10,7 +10,9 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
 
+// Components
 import DarkModeToggle from "./Components/DarkModeToggle";
+import ChessIcon from "./Components/ChessIcon";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -71,27 +73,27 @@ export default function Home() {
 
   return (
     <>
-      <div className="md:grid grid-cols-3 gap-24">
+      <div className="app-container">
         <DarkModeToggle />
         <aside>
-          <section className="my-24 md:mt-0 md:mb-8 md:fixed md:w-96 md:pr-12 text-center md:text-left">
+          <section className="sidebar">
             <animated.div style={styles}>
               <Image
                 src="/images/kunal-bhat-avatar.jpg"
                 height="64"
                 width="64"
                 alt="Kunal Bhat"
-                className="rounded-full mb-4 mx-auto md:mx-0"
+                className="rounded-full mb-4 mx-auto lg:mx-0"
               />
               <h1>
                 Kunal Bhat <br />
                 Product Designer
               </h1>
-              <p className="mt-8 mx-8 md:mx-0">
+              <p>
                 Technical product designer with 15+ years in roles as a
                 designer, product manager, and engineer.
               </p>
-              <div className="flex gap-2 my-8 w-full justify-center md:justify-start">
+              <div className="social-icons">
                 <SocialIcon
                   url="https://www.github.com/kunalbhat"
                   bgColor="white"
@@ -112,34 +114,14 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg
-                    className="scale-50"
-                    style={{
-                      width: "50px",
-                      height: "50px",
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.0"
-                      viewBox="0 0 100 100"
-                    >
-                      <path
-                        d="M49.98 16c-5 0-9.025 3.82-9.025 8.555 0 2.695 1.31 5.11 3.364 6.681-6.054 2-10.338 7.09-10.338 13.077 0 5.255 3.3 9.829 8.204 12.222C30.655 60.517 22.25 72.38 22.25 87.289c0 .58.016 1.139.041 1.711h55.42c.025-.572.041-1.131.041-1.711 0-14.909-8.406-26.772-19.936-30.754 4.904-2.393 8.204-6.967 8.204-12.222 0-5.986-4.284-11.077-10.338-13.077 2.054-1.571 3.364-3.986 3.364-6.68C59.045 19.82 54.98 16 49.98 16z"
-                        color="#000"
-                        stroke="#000"
-                        strokeWidth="2"
-                        overflow="visible"
-                        style={{ marker: "none" }}
-                      ></path>
-                    </svg>
-                  </svg>
+                  <ChessIcon />
                 </a>
               </div>
             </animated.div>
           </section>
         </aside>
-        <main className="col-span-2">
+
+        <main className="main-content">
           <section aria-label="Work Experience">
             <h2>Experience</h2>
             <ul className="experience-list">
@@ -297,8 +279,8 @@ export default function Home() {
           <div className="separator"></div>
 
           <h2>What I've built</h2>
-          <div className="mb-8 lg:mb-16">
-            <header className="mt-8 mb-4 flex items-center gap-2">
+          <div className="project-content">
+            <header className="project-header">
               <h3>Aura Frames App</h3>
               <a
                 href="https://apps.apple.com/us/app/aura-frames/id990062908"
@@ -340,8 +322,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mb-8 lg:mb-16">
-            <header className="mt-8 mb-4">
+          <div className="project-content">
+            <header className="project-header">
               <h3>Skyteller @ Galactic</h3>
             </header>
             <div className="skyteller-cover">
@@ -369,8 +351,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mb-8 lg:mb-16">
-            <header className="mt-8 mb-4 flex items-center gap-4">
+          <div className="project-content">
+            <header className="project-header">
               <h3>Braintree Control Panel @ Braintree / PayPal</h3>
               <span>
                 <a href="https://www.paypal.com/us/braintree">
@@ -404,8 +386,8 @@ export default function Home() {
             engineer.
           </p>
 
-          <section className="md:grid grid-cols-3 gap-4 text-center mt-8">
-            <article className="small-projects-item">
+          <section className="small-project-content">
+            <article className="small-project-item">
               <Image
                 src="/images/connections-icon.png"
                 width="64"
@@ -424,7 +406,7 @@ export default function Home() {
                 </a>
               </p>
             </article>
-            <article className="small-projects-item">
+            <article className="small-project-item">
               <Image
                 src="/images/dailydispatch-icon.svg"
                 width="64"
@@ -449,7 +431,7 @@ export default function Home() {
                 </a>
               </p>
             </article>
-            <article className="small-projects-item">
+            <article className="small-project-item">
               <Image
                 src="/images/maze-of-games-icon.svg"
                 width="64"
