@@ -4,6 +4,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Base Styles */
 body {
   @apply bg-white font-sans dark:bg-[#101010] dark:text-[#efe5d4];
 }
@@ -13,7 +14,7 @@ body {
   @apply lg:max-w-6xl mx-4 lg:mx-auto my-8 lg:mt-24;
 }
 
-/* Type */
+/* Typography */
 h1 {
   @apply text-4xl font-bold leading-snug;
 }
@@ -35,6 +36,7 @@ a {
   @apply underline underline-offset-2 hover:underline-offset-4 transition-all;
 }
 
+/* Experience List */
 .experience-list {
   @apply mt-8;
 }
@@ -53,60 +55,70 @@ a {
 }
 
 .experience-content p {
-  @apply text-gray-500 md:block hidden;
+  @apply text-gray-500 dark:text-yellow-50 md:block hidden;
 }
 
+/* Icons */
 .icon {
-  @apply dark:bg-transparent bg-purple-50 rounded-full justify-center mr-4 h-12 w-12 flex items-center dark:text-[#efe5d4];
+  @apply bg-purple-50 rounded-full justify-center mr-4 h-12 w-12 flex items-center dark:invert;
 }
 
 .social-icon {
-  @apply rounded-full border border-gray-200 dark:border-gray-800 hover:shadow-md;
+  @apply rounded-full border border-gray-200 dark:border-gray-800 hover:shadow-md dark:invert;
+}
+
+/* Project Covers */
+.aura-cover,
+.skyteller-cover,
+.braintree-cover {
+  @apply overflow-hidden mx-auto w-full rounded-b-none border border-gray-200 border-b-0 flex col-span-3 rounded-2xl items-center justify-center;
 }
 
 .aura-cover {
-  @apply overflow-hidden relative mx-auto w-full border border-gray-200 border-b-0 rounded-2xl rounded-b-none flex col-span-3  bg-[#F9F8F6] items-center justify-center h-96;
+  @apply relative bg-[#F9F8F6] h-96;
 }
 
 .skyteller-cover {
   background-image: url("/images/skyteller-background.png");
-  @apply bg-contain overflow-hidden mx-auto w-full rounded-b-none border border-gray-200 border-b-0 flex col-span-3 rounded-2xl bg-indigo-950 items-center justify-center h-96;
-}
-
-.skyteller-cover.focus {
-  @apply mx-auto transition-all z-20;
+  @apply bg-contain bg-indigo-950 h-96;
 }
 
 .braintree-cover {
   background-image: url("/images/braintree-dashboard.gif");
-  @apply bg-contain rounded-b-none border border-gray-200 border-b-0 bg-center bg-no-repeat flex col-span-3 rounded-2xl bg-white items-center justify-center h-80 md:h-96;
+  @apply bg-contain bg-center bg-no-repeat bg-white h-80 md:h-96;
 }
 
+/* Case Study */
 .case-study.maze-of-games {
   background-image: url("/images/maze-of-games-cover.png");
   @apply bg-[#2A2834] bg-contain bg-center;
 }
 
+/* Tag List */
 .tag-list {
   @apply flex flex-wrap gap-2;
 }
 
 .tag-list li {
-  @apply text-sm bg-violet-100 dark:bg-violet-700 rounded-md px-2 py-1;
+  @apply text-sm bg-violet-100 dark:bg-violet-200 dark:text-black rounded-md px-2 py-1;
 }
 
+/* Separator */
 .separator {
   @apply bg-black dark:bg-[#efe5d4] rounded-lg block h-2 w-6 rotate-45 my-12 md:my-16 hover:-rotate-45 transition-transform;
 }
 
+/* Project Thumbnails */
 .project-thumbnail {
   @apply bg-stone-100 rounded-md shadow-sm h-16 w-16 md:h-32 md:w-32 overflow-hidden;
 }
 
+/* Small Projects */
 .small-projects-item {
   @apply flex flex-col items-center my-4 border border-gray-200 rounded-2xl shadow-sm px-4 py-8;
 }
 
+/* Project Description */
 .project-description {
-  @apply p-6 md:p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0;
+  @apply p-6 md:p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0 dark:bg-transparent;
 }

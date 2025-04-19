@@ -10,6 +10,8 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
 
+import DarkModeToggle from "./Components/DarkModeToggle";
+
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
@@ -70,6 +72,7 @@ export default function Home() {
   return (
     <>
       <div className="md:grid grid-cols-3 gap-24">
+        <DarkModeToggle />
         <aside>
           <section className="my-24 md:mt-0 md:mb-8 md:fixed md:w-96 md:pr-12 text-center md:text-left">
             <animated.div style={styles}>
@@ -321,7 +324,7 @@ export default function Home() {
                 className="relative top-1 -right-32"
               />
             </div>
-            <div className="p-6 md:p-8 border border-gray-200 bg-white shadow-sm rounded-2xl rounded-t-none z-10 border-t-0">
+            <div className="project-description">
               <ul className="tag-list mb-4">
                 <li>iOS</li>
                 <li>Android</li>
