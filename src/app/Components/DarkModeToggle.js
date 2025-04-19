@@ -2,16 +2,28 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(() => {
-    return (
-      localStorage.getItem("theme") === "dark" ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-        !localStorage.getItem("theme"))
-    );
-  });
+  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false); // Track if component has mounted
 
   useEffect(() => {
+    // Safe to access localStorage now
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+      setIsDark(true);
+    }
+
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     const root = window.document.documentElement;
+
     if (isDark) {
       root.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -19,7 +31,9 @@ export default function DarkModeToggle() {
       root.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [isDark]);
+  }, [isDark, mounted]);
+
+  if (!mounted) return null; // Avoid mismatches during SSR
 
   return (
     <button
