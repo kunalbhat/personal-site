@@ -39,7 +39,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="p-2 border dark:border-yellow-50 rounded-full text-sm fixed top-4 right-4"
+      className="p-2 border dark:border-yellow-50 rounded-full text-sm absolute top-4 right-4"
     >
       {isDark ? (
         <Image
