@@ -130,7 +130,7 @@ export default function Home() {
                     src="/images/icon-tv.svg"
                     width="24"
                     height="16"
-                    alt="Aura Home"
+                    alt=""
                   />
                 </span>
                 <div className="experience-content">
@@ -156,7 +156,7 @@ export default function Home() {
                     src="/images/icon-car.svg"
                     width="24"
                     height="24"
-                    alt="Magic+Might"
+                    alt=""
                   />
                 </span>
                 <div className="experience-content">
@@ -179,7 +179,7 @@ export default function Home() {
                     src="/images/icon-crypto.svg"
                     width="24"
                     height="24"
-                    alt="Galactic"
+                    alt=""
                   />
                 </span>
                 <div className="experience-content">
@@ -193,7 +193,7 @@ export default function Home() {
                     src="/images/icon-identity.svg"
                     width="24"
                     height="24"
-                    alt="PayPal / Braintree"
+                    alt=""
                   />
                 </span>
                 <div className="experience-content">
@@ -218,7 +218,7 @@ export default function Home() {
                     src="/images/icon-cart.svg"
                     width="24"
                     height="24"
-                    alt="Modest"
+                    alt=""
                   />
                 </span>
                 <div className="experience-content">
@@ -235,7 +235,7 @@ export default function Home() {
                     src="/images/icon-user.svg"
                     width="24"
                     height="24"
-                    alt="dscout"
+                    alt=""
                   />
                 </span>
                 <div className="experience-content">
@@ -261,7 +261,7 @@ export default function Home() {
                     src="/images/icon-tv-stand.svg"
                     width="24"
                     height="24"
-                    alt="gravitytank"
+                    alt=""
                   />
                 </span>
                 <div className="experience-content">
