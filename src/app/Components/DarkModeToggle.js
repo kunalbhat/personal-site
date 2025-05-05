@@ -39,11 +39,17 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="p-2 border dark:border-yellow-50 rounded-full text-sm absolute top-4 right-4"
+      className={`p-2 border dark:border-yellow-50 rounded-full text-sm absolute top-4 right-4 transition-colors duration-300
+        ${
+          isDark
+            ? `hover:bg-slate-800`
+            : `hover:bg-purple-50 hover:border-purple-200`
+        }
+    `}
     >
       {isDark ? (
         <Image
-          src="/images/icon-sunrise.svg"
+          src="/images/icon-sun.svg"
           width="24"
           height="24"
           alt="Light mode"
@@ -51,7 +57,7 @@ export default function DarkModeToggle() {
         />
       ) : (
         <Image
-          src="/images/icon-sunset.svg"
+          src="/images/icon-moon.svg"
           width="24"
           height="24"
           alt="Dark mode"
