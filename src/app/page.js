@@ -332,6 +332,7 @@ export default function Home() {
                 height="713"
                 alt="Skyteller animation"
                 className="scale-75"
+                unoptimized
               />
             </div>
             <div className="project-description">
