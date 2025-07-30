@@ -17,7 +17,7 @@ export default function AppHeader() {
         <a href="/">Kunal Bhat</a>
       </span>
 
-      <ul className="app-menu bg-neutral-100 rounded-full justify-center items-center px-6 py-4 flex gap-12">
+      <ul className="app-menu bg-neutral-100 rounded-full justify-center items-center px-6 py-5 flex gap-12">
         <li>
           <a href="/">Home</a>
         </li>
