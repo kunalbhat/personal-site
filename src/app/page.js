@@ -11,8 +11,8 @@ import "react-social-icons/github";
 import "react-social-icons/linkedin";
 
 // Components
-import ChessIcon from "./components/ChessIcon";
-import PageTransition from "./components/PageTransition";
+import ChessIcon from "./Components/ChessIcon";
+import PageTransition from "./Components/PageTransition";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);

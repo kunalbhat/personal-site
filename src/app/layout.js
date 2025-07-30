@@ -5,7 +5,7 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
-import AppHeader from "./components/AppHeader";
+import AppHeader from "./Components/AppHeader";
 
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",

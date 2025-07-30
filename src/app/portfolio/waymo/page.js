@@ -1,6 +1,6 @@
 // React utilities
 import Image from "next/image";
-import PageTransition from "../../components/PageTransition";
+import PageTransition from "../../Components/PageTransition";
 
 export default function Waymo() {
   return (
