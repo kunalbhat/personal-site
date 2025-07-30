@@ -1,4 +1,4 @@
-"use client"; // Needed if using app/ directory in Next.js 13+
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -39,7 +39,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className={`p-2 border dark:border-yellow-50 rounded-full text-sm absolute top-4 right-4 transition-colors duration-300
+      className={`h-16 w-16 flex items-center justify-center bg-neutral-100 rounded-full text-sm transition-colors duration-300
         ${
           isDark
             ? `hover:bg-slate-800`

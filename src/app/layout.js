@@ -5,6 +5,8 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
+import AppHeader from "./components/AppHeader";
+
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
   subsets: ["latin"],
@@ -36,6 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${albertSans.variable} antialiased`}>
       <body>
+        <AppHeader />
         {children}
         <SpeedInsights />
         <Analytics />
