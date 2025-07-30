@@ -1,10 +1,10 @@
 // React utilities
 import Image from "next/image";
-import PageTransition from "../../Components/PageTransition";
+import PageContainer from "../../Components/PageContainer";
 
 export default function Waymo() {
   return (
-    <PageTransition>
+    <PageContainer>
       <div className="app-container">
         <header className="content-inset">
           <h1>Waymo</h1>
@@ -31,6 +31,6 @@ export default function Waymo() {
           <p>I'm a design leader who balances big-picture vision </p>
         </section>
       </div>
-    </PageTransition>
+    </PageContainer>
   );
 }

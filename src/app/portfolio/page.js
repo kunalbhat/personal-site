@@ -1,11 +1,11 @@
 // React utilities
 import Image from "next/image";
 import Link from "next/link";
-import PageTransition from "../Components/PageTransition";
+import PageContainer from "../Components/PageContainer";
 
 export default function Portfolio() {
   return (
-    <PageTransition>
+    <PageContainer>
       <div className="app-container">
         <header className="content-inset">
           <h1>Portfolio</h1>
@@ -27,6 +27,6 @@ export default function Portfolio() {
           </div>
         </section>
       </div>
-    </PageTransition>
+    </PageContainer>
   );
 }

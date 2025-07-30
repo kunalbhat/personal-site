@@ -1,8 +1,8 @@
-import PageTransition from "../Components/PageTransition";
+import PageContainer from "../Components/PageContainer";
 
 export default function About() {
   return (
-    <PageTransition>
+    <PageContainer>
       <div className="app-container">
         <header className="content-inset">
           <h1>About</h1>
@@ -11,6 +11,6 @@ export default function About() {
           <p>I'm a design leader who balances big-picture vision </p>
         </section>
       </div>
-    </PageTransition>
+    </PageContainer>
   );
 }

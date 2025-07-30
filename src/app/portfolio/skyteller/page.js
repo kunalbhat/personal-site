@@ -1,10 +1,10 @@
 // React utilities
 import Image from "next/image";
-import PageTransition from "../../Components/PageTransition";
+import PageContainer from "../../Components/PageContainer";
 
 export default function Skyteller() {
   return (
-    <PageTransition>
+    <PageContainer>
       <div className="app-container">
         <header className="content-inset">
           <h1>Skyteller</h1>
@@ -28,6 +28,6 @@ export default function Skyteller() {
           </figure>
         </section>
       </div>
-    </PageTransition>
+    </PageContainer>
   );
 }

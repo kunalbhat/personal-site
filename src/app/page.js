@@ -12,7 +12,7 @@ import "react-social-icons/linkedin";
 
 // Components
 import ChessIcon from "./Components/ChessIcon";
-import PageTransition from "./Components/PageTransition";
+import PageContainer from "./Components/PageContainer";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -72,12 +72,12 @@ export default function Home() {
   }, []);
 
   return (
-    <PageTransition>
+    <PageContainer>
       <div className="app-container">
         <header className="case-study-header mb-12 max-w-3xl mx-auto">
           <h1>Kunal is a...</h1>
         </header>
       </div>
-    </PageTransition>
+    </PageContainer>
   );
 }
