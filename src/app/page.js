@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 // Libraries
-import { animated, useSpring } from "@react-spring/web";
 import { SocialIcon } from "react-social-icons/component";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import "react-social-icons/github";
@@ -16,17 +15,6 @@ import PageContainer from "./Components/PageContainer";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-
-  const styles = useSpring({
-    from: {
-      opacity: 0,
-      y: 10,
-    },
-    to: {
-      opacity: 1,
-      y: 0,
-    },
-  });
 
   const tagsList = [
     "SQL",
@@ -74,9 +62,36 @@ export default function Home() {
   return (
     <PageContainer>
       <div className="app-container">
-        <header className="case-study-header mb-12 max-w-3xl mx-auto">
-          <h1>Kunal is a...</h1>
+        <header>
+          <h1 className="leading-snug">
+            I'm a technical product designer with 15+ years building excellent
+            experiences in roles as a designer, product manager, and engineer.
+          </h1>
         </header>
+        <section>
+          <p>
+            From 0-1 startups to enterprise scale, I'm highly comfortable with
+            ambiguity and leading through collaboration.
+          </p>
+        </section>
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid-item bg-[#a8d0ec] h-48 flex items-center justify-center rounded-2xl">
+            <Image
+              src="/images/aura-wordmark.svg"
+              alt="Aura wordmark"
+              width={160}
+              height={160}
+            />
+          </div>
+          <div className="grid-item bg-[#7dcbfa] h-48 flex items-center justify-center rounded-2xl">
+            <Image
+              src="/images/paypal-wordmark.svg"
+              alt="PayPal wordmark"
+              width={160}
+              height={160}
+            />
+          </div>
+        </section>
       </div>
     </PageContainer>
   );
