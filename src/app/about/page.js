@@ -1,4 +1,4 @@
-import PageTransition from "../components/PageTransition";
+import PageTransition from "../Components/PageTransition";
 
 export default function About() {
   return (
