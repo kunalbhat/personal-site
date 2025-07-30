@@ -1,7 +1,7 @@
 // React utilities
 import Image from "next/image";
 import Link from "next/link";
-import PageTransition from "../components/PageTransition";
+import PageTransition from "../Components/PageTransition";
 
 export default function Portfolio() {
   return (
