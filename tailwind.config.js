@@ -19,6 +19,9 @@ module.exports = {
       animation: {
         blink: "blink 2s infinite ease-in-out",
       },
+      transitionTimingFunction: {
+        buttery: "cubic-bezier(0.45, 0, 0.2, 1)",
+      },
     },
   },
   darkMode: "class",

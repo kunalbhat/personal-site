@@ -2,7 +2,7 @@
 import Image from "next/image";
 import PageContainer from "../../Components/PageContainer";
 
-export default function Skyteller() {
+export default function SkytellerPage() {
   return (
     <PageContainer>
       <div className="app-container">
