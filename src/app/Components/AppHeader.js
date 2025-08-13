@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import DarkModeToggle from "./DarkModeToggle";
 
@@ -47,8 +48,17 @@ export default function AppHeader() {
     >
       <div className="w-full flex justify-left">
         <span className="logo font-bold text-xl">
-          <Link href="/">
-            Kunal Bhat &ndash; <span>Product Designer</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/kunal-bhat-avatar.jpg"
+              alt="Kunal Bhat"
+              width={48}
+              height={48}
+              className="rounded-full inline-block mr-2 h-16 w-16 p-2 bg-neutral-100"
+            />
+            <span className="hidden md:inline-block">
+              Kunal Bhat &ndash;&nbsp;<span>Product Designer</span>
+            </span>
           </Link>
         </span>
       </div>

@@ -1,15 +1,14 @@
 // React utilities
 import Image from "next/image";
 import PageContainer from "../../Components/PageContainer";
+import PortfolioPageHeader from "../../Components/PortfolioPageHeader";
 
 export default function SkytellerPage() {
   return (
     <PageContainer>
       <div className="app-container">
-        <header className="content-inset">
-          <h1>Skyteller</h1>
-        </header>
-        <section className="my-12">
+        <PortfolioPageHeader title="Skyteller" />
+        <section>
           <figure className="w-full overflow-hidden">
             <div className="rounded-2xl bg-[#E0CDE4]">
               <Image

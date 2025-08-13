@@ -8,7 +8,18 @@ export default function About() {
           <h1>About</h1>
         </header>
         <section className="content-inset">
-          <p>I'm a design leader who balances big-picture vision </p>
+          <p>
+            I'm a product designer with a passion for creating intuitive and
+            engaging user experiences. With a background in both design and
+            technology, I bridge the gap between aesthetics and functionality to
+            deliver products that not only look great but also perform
+            seamlessly.
+          </p>
+          <p>
+            Over the years, I've had the opportunity to work on a variety of
+            projects, ranging from mobile apps to web platforms. My approach to
+            design is user-centric, focusing on understanding{" "}
+          </p>
         </section>
       </div>
     </PageContainer>

@@ -34,7 +34,7 @@ export default function AuraCaptionsPage() {
               className="relative hover:-translate-x-2 transition-transform duration-300"
             />
           </Link>
-          <h1>On-frame Captions for Aura</h1>
+          <h1>Aura &ndash; On-frame captions</h1>
         </header>
         <section>
           <figure className="w-full overflow-hidden h-[640px]">
@@ -74,7 +74,7 @@ export default function AuraCaptionsPage() {
               </div>
             </div>
             <figcaption className="text-sm bg-white text-gray-500 mt-2 pt-4 pb-8">
-              Core screens from the Skyteller app
+              Aura on-frame captions
             </figcaption>
           </figure>
         </section>

@@ -34,11 +34,31 @@ export default function Portfolio() {
                 height={400}
               />
             </Link>
-            <Link href="/portfolio/skyteller" className="portfolio-item">
-              <h2>Skyteller</h2>
+            <Link
+              href="/portfolio/skyteller"
+              className="portfolio-item bg-black w-full justify-center"
+            >
+              <Image
+                src="/images/skyteller.gif"
+                alt="Skyteller"
+                width={200}
+                height={600}
+                unoptimized
+                className="mx-auto mt-8"
+              />
             </Link>
-            <Link href="/portfolio/braintree" className="portfolio-item">
-              <h2>Braintree</h2>
+            <Link
+              href="/portfolio/braintree-dashboard"
+              className="portfolio-item flex items-center justify-center hover:bg-gray-400 transition-colors ease-in-out duration-500"
+            >
+              <Image
+                src="/images/braintree-dashboard.webp"
+                alt="My WebP image"
+                width={400}
+                height={400}
+                loading="lazy"
+                unoptimized // remove if using next/image optimization
+              />
             </Link>
           </div>
         </section>
