@@ -90,8 +90,8 @@ export default function Home() {
                 Product Designer
               </h1>
               <p>
-                Technical product designer with 15+ years in roles as a
-                designer, product manager, and engineer.
+                Technical product designer with 18 years in roles as a designer,
+                product manager, and engineer.
               </p>
               <div className="social-icons">
                 <SocialIcon
@@ -280,7 +280,7 @@ export default function Home() {
           <h2>What I've built</h2>
           <div className="project-content">
             <header className="project-header">
-              <h3>Aura Frames App</h3>
+              <h3>Aura Frames</h3>
               <a
                 href="https://apps.apple.com/us/app/aura-frames/id990062908"
                 target="_blank"
