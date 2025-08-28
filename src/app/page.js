@@ -64,7 +64,7 @@ export default function Home() {
       <div className="app-container">
         <header>
           <h1 className="leading-snug">
-            I'm a technical product designer with 18 years of building excellent
+            Technical product designer with 18 years of building excellent
             experiences in roles as a designer, product manager, and engineer.
           </h1>
         </header>
