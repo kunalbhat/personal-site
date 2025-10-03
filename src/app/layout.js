@@ -1,4 +1,4 @@
-import { Albert_Sans } from "next/font/google";
+import { Albert_Sans, Instrument_Serif } from "next/font/google";
 
 import "./globals.css";
 
@@ -10,6 +10,12 @@ import AppHeader from "./Components/AppHeader";
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
   subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -36,7 +42,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${albertSans.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${albertSans.variable} ${instrumentSerif.variable} antialiased`}
+    >
       <body>
         <AppHeader />
         {children}

@@ -62,36 +62,30 @@ export default function Home() {
   return (
     <PageContainer>
       <div className="app-container">
-        <header>
+        <header className="mb-16">
           <h1 className="leading-snug">
             Technical product designer with 18 years of building excellent
             experiences in roles as a designer, product manager, and engineer.
           </h1>
         </header>
-        {/* <section>
-          <p>
-            From 0-1 startups to enterprise scale, I'm highly comfortable with
-            ambiguity and leading through collaboration.
-          </p>
+        <section>
+          <h3 className="mb-12">Experience</h3>
+          <dl className="experience-list">
+            <dt>Aura Home</dt>
+            <dd>
+              Shipping experiences for the internet's favorite digital frame.
+            </dd>
+            <dt>Magic + Might</dt>
+            <dd>
+              Dove deep into the autonomous ride-hail problem space while
+              embedded with the Waymo design team.
+            </dd>
+            <dt>Galactic</dt>
+            <dd>Built a crypto off-ramp for web3 users.</dd>
+            <dt>PayPal / Braintree</dt>
+            <dd>I launched a redesign of the Braintree merchant dashboard.</dd>
+          </dl>
         </section>
-        <section className="grid grid-cols-1 md:grid-cols-6 gap-4">
-          <div className="grid-item bg-[#a8d0ec] flex items-center justify-center rounded-2xl">
-            <Image
-              src="/images/aura-wordmark.svg"
-              alt="Aura wordmark"
-              width={100}
-              height={160}
-            />
-          </div>
-          <div className="grid-item bg-[#7dcbfa] h-28 flex items-center justify-center rounded-2xl">
-            <Image
-              src="/images/paypal-wordmark.svg"
-              alt="PayPal wordmark"
-              width={80}
-              height={160}
-            />
-          </div>
-        </section> */}
       </div>
     </PageContainer>
   );

@@ -42,8 +42,8 @@ export default function DarkModeToggle() {
       className={`h-16 w-16 flex items-center justify-center bg-neutral-100 rounded-full text-sm transition-colors duration-300
         ${
           isDark
-            ? `hover:bg-slate-800`
-            : `hover:bg-purple-50 hover:border-purple-200`
+            ? `bg-neutral-800 hover:bg-neutral-700`
+            : `hover:bg-neutral-200 hover:border-purple-200`
         }
     `}
     >
