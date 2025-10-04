@@ -8,11 +8,13 @@ import { animated, useSpring } from "@react-spring/web";
 import { SocialIcon } from "react-social-icons/component";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import "react-social-icons/github";
+import "react-social-icons/instagram";
 import "react-social-icons/linkedin";
 
 // Components
 import DarkModeToggle from "./Components/DarkModeToggle";
 import ChessIcon from "./Components/ChessIcon";
+import StravaIcon from "./Components/StravaIcon";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -87,20 +89,28 @@ export default function Home() {
                 Product Designer
               </h1>
               <p>
-                Experienced enough to lead, hands-on enough to execute. I'm a
-                staff-level IC with 18 years in roles in design product
-                management, and engineering.
+                Experienced enough to lead, hands-on enough to build. A
+                staff-level IC with 18 years spanning design, product, and
+                engineering.
               </p>
               <div className="social-icons">
                 <SocialIcon
-                  url="https://www.github.com/kunalbhat"
+                  url="https://www.linkedin.com/in/kunal-s-bhat"
                   bgColor="white"
                   fgColor="black"
                   target="_blank"
                   className="social-icon"
                 />
                 <SocialIcon
-                  url="https://www.linkedin.com/in/kunal-s-bhat"
+                  url="https://www.instagram.com/kunalbhat"
+                  bgColor="white"
+                  fgColor="black"
+                  target="_blank"
+                  className="social-icon"
+                />
+
+                <SocialIcon
+                  url="https://www.github.com/kunalbhat"
                   bgColor="white"
                   fgColor="black"
                   target="_blank"
@@ -114,6 +124,14 @@ export default function Home() {
                 >
                   <ChessIcon />
                 </a>
+                {/* <a
+                  className="social-icon strava"
+                  href="https://www.strava.com/athletes/141809871"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <StravaIcon />
+                </a> */}
               </div>
             </animated.div>
           </section>

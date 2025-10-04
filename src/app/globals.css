@@ -83,6 +83,10 @@ a {
   @apply rounded-full border border-gray-200 dark:border-gray-800 hover:shadow-md dark:invert;
 }
 
+.social-icon.strava {
+  @apply w-12 flex items-center justify-center;
+}
+
 /* Project Covers */
 .aura-cover,
 .skyteller-cover,
