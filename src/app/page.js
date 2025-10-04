@@ -35,7 +35,6 @@ export default function Home() {
     "Generative prototyping",
     "AI-assisted research synthesis",
     "Automated journey mapping",
-    "Intelligent design systems",
     "Information architecture",
     "Systems thinking",
     "Interaction design",
@@ -51,6 +50,14 @@ export default function Home() {
     "Rapid prototyping with code",
     "Cross-functional facilitation",
     "AI-enhanced documentation",
+    "Research analysis",
+    "Design systems",
+    "APIs & integrations",
+    "Data-driven design (SQL/Looker/Metabase)",
+    "Prototyping tools (Figma, ProtoPie, FigJam, Play, Spline)",
+    "Frontend prototyping (React, CSS, HTML, JS)",
+    "Analytics & instrumentation (Mixpanel, Metabase)",
+    "Heuristic evaluation",
   ];
 
   const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
@@ -80,8 +87,9 @@ export default function Home() {
                 Product Designer
               </h1>
               <p>
-                Technical product designer with 18 years in roles as a designer,
-                product manager, and engineer.
+                Experienced enough to lead, hands-on enough to execute. I'm a
+                staff-level IC with 18 years in roles in design product
+                management, and engineering.
               </p>
               <div className="social-icons">
                 <SocialIcon
