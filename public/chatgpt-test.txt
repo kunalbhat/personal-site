@@ -1,7 +1,0 @@
-ChatGPT deploy test ✅
-
-Owner/Repo: kunalbhat/personal-site
-When: 2025-10-04 (America/Chicago)
-This file lives at /chatgpt-test.txt from /public/chatgpt-test.txt
-
-If you can read this at https://,your-site/chatgpt-test.txt then the GitHub ‘b Vercel pipeline is working.
