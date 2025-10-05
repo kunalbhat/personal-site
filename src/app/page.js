@@ -30,41 +30,70 @@ export default function Home() {
     },
   });
 
-  const tagsList = [
-    "AI workflows",
-    "Prompt engineering",
-    "Conversational UX",
-    "Generative prototyping",
-    "AI-assisted research synthesis",
-    "Automated journey mapping",
-    "Information architecture",
-    "Systems thinking",
-    "Interaction design",
-    "High-fidelity prototyping",
-    "Usability testing",
-    "End-to-end product ownership",
-    "Growth experimentation",
-    "User interviews",
-    "AI research co-pilot",
-    "Behavioral analytics",
-    "Experimentation frameworks",
-    "AI + developer workflows",
-    "Rapid prototyping with code",
-    "Cross-functional facilitation",
-    "AI-enhanced documentation",
-    "Research analysis",
-    "Design systems",
-    "APIs & integrations",
-    "Data-driven design (SQL/Looker/Metabase)",
-    "Prototyping tools (Figma, ProtoPie, FigJam, Play, Spline)",
-    "Frontend prototyping (React, CSS, HTML, JS)",
-    "Analytics & instrumentation (Mixpanel, Metabase)",
-    "Heuristic evaluation",
+  const workflowGroups = [
+    {
+      title: "Research & Insight",
+      blurb:
+        "Understand people and problems; transform signals into direction.",
+      items: [
+        "User interviews",
+        "Usability testing",
+        "Behavioral analytics",
+        "Analytics & instrumentation (Mixpanel, Metabase)",
+        "Research analysis",
+        "Heuristic evaluation",
+        "AI-assisted research synthesis",
+      ],
+    },
+    {
+      title: "Design & Prototyping",
+      blurb:
+        "Explore solutions fast; clarify structure, interactions, and systems.",
+      items: [
+        "Information architecture",
+        "Interaction design",
+        "Design systems",
+        "Generative prototyping",
+        "High-fidelity prototyping",
+        "Prototyping tools (Figma, ProtoPie, FigJam, Play, Spline)",
+        "Conversational UX",
+      ],
+    },
+    {
+      title: "Engineering & Integration",
+      blurb:
+        "Make it real quickly; connect services and production-adjacent code.",
+      items: [
+        "Frontend prototyping (React, CSS, HTML, JS)",
+        "Rapid prototyping with code",
+        "APIs & integrations",
+        "AI + developer workflows",
+        "AI workflows",
+        "Prompt engineering",
+      ],
+    },
+    {
+      title: "Measurement & Iteration",
+      blurb: "Ship, learn, and improve with experiments and data.",
+      items: [
+        "Growth experimentation",
+        "Experimentation frameworks",
+        "Data-driven design (SQL/Looker/Metabase)",
+        "Automated journey mapping",
+      ],
+    },
+    {
+      title: "Foundations & Ways of Working",
+      blurb: "How I operate across teams and stages.",
+      items: [
+        "Systems thinking",
+        "Cross-functional facilitation",
+        "End-to-end product ownership",
+        "AI-enhanced documentation",
+        "AI research co-pilot",
+      ],
+    },
   ];
-
-  const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5);
-
-  const shuffledList = shuffle(tagsList);
 
   useEffect(() => {
     setIsClient(true);
@@ -484,23 +513,29 @@ export default function Home() {
 
           <div className="separator" />
 
-          <section className="col-span-1">
-            <header className="mb-8">
-              <h2>How I work</h2>
-              <p>
-                Tools and activities I use often and am highly comfortable with.
-              </p>
-            </header>
+          <section className="how-i-work">
+            <h2>How I work</h2>
+            <p className="intro">
+              I'm a tool-agnostic builder who uses AI and adaptable workflows
+              across the product lifecycle. The groups below show how I move
+              from insight → prototype → integration → iteration.
+            </p>
 
-            {isClient ? (
-              <ul className="grid tag-list">
-                {shuffledList.map((value, key) => {
-                  return <li key={key}>{value}</li>;
-                })}
-              </ul>
-            ) : (
-              "Loading..."
-            )}
+            <div className="groups mt-8">
+              {workflowGroups.map((group) => (
+                <div key={group.title} className="group">
+                  <h3>{group.title}</h3>
+                  {group.blurb && <p className="blurb">{group.blurb}</p>}
+                  <ul className="tag-list mt-4 mb-12">
+                    {group.items.map((item) => (
+                      <li key={item} className="tag">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </section>
 
           <div className="separator"></div>
