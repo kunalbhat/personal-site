@@ -10,6 +10,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import DarkModeToggle from "./DarkModeToggle";
+import { useGridOverlay } from "./GridOverlayProvider";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -22,6 +23,7 @@ export default function AppHeader() {
   const reduce = useReducedMotion();
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { toggle, visible } = useGridOverlay();
 
   useEffect(() => setMounted(true), []);
 
@@ -93,21 +95,49 @@ export default function AppHeader() {
           </ul>
         </LayoutGroup>
 
-        {/* Right: toggles + hamburger */}
         <div className="flex items-center gap-2">
+          {/* Grid toggle */}
+          <button
+            onClick={toggle}
+            aria-label="Toggle grid overlay"
+            title="Toggle grid (⌘/Ctrl+G)"
+            className={`inline-flex h-10 w-10 items-center justify-center rounded-full transition
+      ${
+        visible
+          ? "bg-neutral-900 text-white dark:bg-white dark:text-black"
+          : "bg-neutral-200 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 hover:opacity-90"
+      }`}
+          >
+            {/* Simple grid icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-5 w-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z"
+              />
+            </svg>
+          </button>
+
+          {/* Dark mode toggle */}
           {mounted ? (
             <DarkModeToggle />
           ) : (
             <div className="w-10 h-10 animate-pulse rounded-full bg-neutral-100" />
           )}
 
-          {/* Hamburger visible on mobile */}
+          {/* Hamburger (mobile only) */}
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Open menu"
             className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800"
           >
-            <span className="sr-only">Menu</span>
             <div className="space-y-1.5">
               <div className="h-0.5 w-5 bg-current" />
               <div className="h-0.5 w-5 bg-current" />
