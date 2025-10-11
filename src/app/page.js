@@ -105,16 +105,7 @@ export default function Home() {
     <PageContainer>
       <div className="app-container">
         <header className="mb-16">
-          <HeroHeading
-            text="Product designer with deep experience in complex domains."
-            // optional tweaks:
-            // minSize="2rem"
-            // fluidSize="8vw"
-            // maxSize="6.5rem"
-            // stagger={0.08}
-            // duration={0.7}
-            className="text-black"
-          />
+          <HeroHeading text="Product designer with deep experience in complex domains." />
         </header>
 
         <section className="md:grid grid-cols-2 mb-16">
@@ -122,7 +113,7 @@ export default function Home() {
             variants={subheadVariant}
             initial="hidden"
             animate="show"
-            className="leading-tight"
+            className="leading-tight mb-4"
           >
             About
           </motion.h2>
@@ -143,7 +134,7 @@ export default function Home() {
             variants={subheadVariant}
             initial="hidden"
             animate="show"
-            className="leading-tight font-bold"
+            className="leading-tight mb-4"
           >
             Experience
           </motion.h2>

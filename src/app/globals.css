@@ -4,6 +4,61 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Base tokens (default = light) */
+:root {
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --muted: #6b7280;
+  --surface: #f6f7f8;
+  --border: #e5e7eb;
+  --accent: #111827; /* pill/nav background */
+}
+
+/* Dark */
+html.dark,
+html[data-theme="dark"] {
+  --bg: #0b0d10;
+  --fg: #f5f7fa;
+  --muted: #a3aab8;
+  --surface: #12151b;
+  --border: #2a2f3a;
+  --accent: #ffffff;
+}
+
+/* High Contrast (WCAG helper) */
+html[data-theme="high-contrast"] {
+  --bg: #000000;
+  --fg: #ffffff;
+  --muted: #d1d5db;
+  --surface: #000000;
+  --border: #4b5563;
+  --accent: #ffffff;
+}
+
+/* Color-blind–safe (Okabe–Ito palette base) */
+html[data-theme="colorblind"] {
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --muted: #4b5563;
+  --surface: #f7fafc;
+  --border: #e5e7eb;
+  /* Use Okabe–Ito colors for interactive accents, focus, links, etc. */
+  --accent: #0072b2; /* blue */
+  --accent-2: #009e73; /* teal */
+  --accent-3: #e69f00; /* orange */
+}
+
+/* App-wide base styles using tokens */
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.app-menu .active-pill {
+  background: var(--accent);
+}
+
 /* Base Styles */
 body {
   @apply font-sans bg-white text-[#101010] dark:bg-[#101010] dark:text-[#efe5d4];

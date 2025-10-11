@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import AppHeader from "./Components/AppHeader";
 import { GridOverlayProvider } from "@/app/Components/GridOverlayProvider";
+import { ThemeProvider } from "@/app/Components/ThemeProvider";
 
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
@@ -48,10 +49,12 @@ export default function RootLayout({ children }) {
     >
       <body>
         <GridOverlayProvider>
-          <AppHeader />
-          {children}
-          <SpeedInsights />
-          <Analytics />
+          <ThemeProvider>
+            <AppHeader />
+            {children}
+            <SpeedInsights />
+            <Analytics />
+          </ThemeProvider>
         </GridOverlayProvider>
       </body>
     </html>

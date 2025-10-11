@@ -2,38 +2,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-/**
- * Animated, responsive hero heading with balanced wrapping and word-stagger.
- *
- * Props:
- *  - text        (string, required)
- *  - as          (string) tag name, e.g. "h1" | "h2" …  default: "h1"
- *  - balance     (bool)   enable CSS text-wrap: balance default: true
- *  - minSize     (string) clamp() min font-size           default: "2.25rem"
- *  - fluidSize   (string) clamp() fluid vw                default: "9vw"
- *  - maxSize     (string) clamp() max font-size           default: "7rem"
- *  - weightClass (string) Tailwind weight class           default: "font-semibold"
- *  - lineHeight  (string|number)                          default: "0.95"
- *  - stagger     (number) seconds between words           default: 0.06
- *  - delay       (number) initial delay                   default: 0.05
- *  - duration    (number) per-word duration               default: 0.55
- *  - y           (number) initial translateY px           default: 16
- *  - className   (string) extra classes
- */
 export default function HeroHeading({
   text,
   as: Tag = "h1",
   balance = true,
-  minSize = "2.25rem",
-  fluidSize = "9vw",
-  maxSize = "7rem",
+  minSize = "3.2rem",
+  fluidSize = "6vw",
+  maxSize = "6.5rem",
   weightClass = "font-semibold",
   lineHeight = "0.95",
-  stagger = 0.06,
+  stagger = 0.08,
   delay = 0.05,
-  duration = 1.2,
+  duration = 0.9,
   y = 16,
   className = "",
+  // 👇 theme-aware default colors; override if you want
+  colorClass = "text-neutral-900 dark:text-yellow-50",
 }) {
   const words = String(text ?? "")
     .trim()
@@ -49,8 +33,8 @@ export default function HeroHeading({
     show: { opacity: 1, y: 0, transition: { duration, ease } },
   };
 
-  // ✅ motion.create() replaces deprecated motion()
-  const MotionTag = motion.create(Tag);
+  // FM v11 dynamic motion component
+  const MotionTag = motion.create ? motion.create(Tag) : motion(Tag);
 
   return (
     <MotionTag
@@ -59,9 +43,12 @@ export default function HeroHeading({
       animate="show"
       aria-label={text}
       className={[
+        colorClass, // 🎨 theme-aware color
         weightClass,
         balance ? "[text-wrap:balance]" : "",
         "leading-none tracking-normal",
+        "selection:bg-neutral-900/10 selection:text-inherit",
+        "dark:selection:bg-white/15",
         className,
       ].join(" ")}
       style={{

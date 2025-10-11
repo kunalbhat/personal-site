@@ -9,7 +9,7 @@ import {
   useReducedMotion,
   AnimatePresence,
 } from "framer-motion";
-import DarkModeToggle from "./DarkModeToggle";
+import ThemeToggle from "./ThemeToggle";
 import { useGridOverlay } from "./GridOverlayProvider";
 
 const navItems = [
@@ -129,7 +129,7 @@ export default function AppHeader() {
 
           {/* Dark mode toggle */}
           {mounted ? (
-            <DarkModeToggle />
+            <ThemeToggle />
           ) : (
             <div className="w-10 h-10 animate-pulse rounded-full bg-neutral-100" />
           )}
