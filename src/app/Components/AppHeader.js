@@ -55,9 +55,11 @@ export default function AppHeader() {
             alt="Kunal Bhat"
             width={40}
             height={40}
-            className="rounded-full bg-neutral-100 h-10 w-10"
+            className="rounded-full bg-neutral-100 h-12 w-12"
           />
-          <span className="hidden sm:inline font-semibold">Kunal Bhat</span>
+          <span className="hidden sm:inline font-semibold text-lg">
+            Kunal Bhat
+          </span>
         </Link>
 
         {/* Center: desktop nav */}
@@ -95,13 +97,13 @@ export default function AppHeader() {
           </ul>
         </LayoutGroup>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           {/* Grid toggle */}
           <button
             onClick={toggle}
             aria-label="Toggle grid overlay"
             title="Toggle grid (⌘/Ctrl+G)"
-            className={`inline-flex h-10 w-10 items-center justify-center rounded-full transition
+            className={`inline-flex h-12 w-12 items-center justify-center rounded-full transition
       ${
         visible
           ? "bg-neutral-900 text-white dark:bg-white dark:text-black"

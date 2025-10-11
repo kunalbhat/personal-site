@@ -14,6 +14,7 @@ import "react-social-icons/linkedin";
 import ChessIcon from "./Components/ChessIcon";
 import PageContainer from "./Components/PageContainer";
 import GridOverlay from "./Components/GridOverlay";
+import HeroHeading from "./Components/HeroHeading";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -104,26 +105,27 @@ export default function Home() {
     <PageContainer>
       <div className="app-container">
         <header className="mb-16">
-          <motion.h1
-            variants={linesContainer}
-            initial="hidden"
-            animate="show"
-            className="leading-none"
-          >
-            {headlineLines.map((text, i) => (
-              // outer span provides clipping; inner span carries the transform
-              <motion.span
-                key={i}
-                variants={lineVariant}
-                className="block overflow-hidden will-change-transform pb-[0.1em]"
-              >
-                <span className="inline-block">{text}</span>
-              </motion.span>
-            ))}
-          </motion.h1>
+          <HeroHeading
+            text="Product designer with deep experience in complex domains."
+            // optional tweaks:
+            // minSize="2rem"
+            // fluidSize="8vw"
+            // maxSize="6.5rem"
+            // stagger={0.08}
+            // duration={0.7}
+            className="text-black"
+          />
         </header>
 
-        <section className="max-w-3xl mb-16">
+        <section className="md:grid grid-cols-2 mb-16">
+          <motion.h2
+            variants={subheadVariant}
+            initial="hidden"
+            animate="show"
+            className="leading-tight"
+          >
+            About
+          </motion.h2>
           <motion.h2
             variants={subheadVariant}
             initial="hidden"
@@ -134,6 +136,24 @@ export default function Home() {
             as a designer, product manager, and engineer. I'm technically
             inclined, a systems thinker and highly comfortable in new and
             ambiguous problem spaces.
+          </motion.h2>
+        </section>
+        <section className="md:grid grid-cols-2 mb-16">
+          <motion.h2
+            variants={subheadVariant}
+            initial="hidden"
+            animate="show"
+            className="leading-tight font-bold"
+          >
+            Experience
+          </motion.h2>
+          <motion.h2
+            variants={subheadVariant}
+            initial="hidden"
+            animate="show"
+            className="leading-tight"
+          >
+            From startups to large enterprises, I thrive in 0 &rarr; 1
           </motion.h2>
         </section>
       </div>
