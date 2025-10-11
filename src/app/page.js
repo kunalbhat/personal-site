@@ -110,7 +110,8 @@ export default function Home() {
         <section>
           <header className="flex justify-between items-center">
             <div>
-              <h3>ChatGPT Nutrition Coach</h3>
+              <h3>Personal Project</h3>
+              <h2>ChatGPT Nutrition Coach</h2>
               <p>
                 I built an AI-powered nutrition coach to help lower my blood
                 sugar levels.
@@ -130,6 +131,38 @@ export default function Home() {
               alt="Screens from the A1C Tracker app"
               width={1152}
               height={576}
+              className="rounded-3xl object-cover object-top scale-90"
+              priority
+            />
+          </figure>
+          <figcaption className="mb-6 italic text-sm opacity-70">
+            A few of the tools and technologies I use regularly.
+          </figcaption>
+        </section>
+        <section>
+          <header className="flex justify-between items-center">
+            <div>
+              <h3>Waymo</h3>
+              <h2>Bringing personalization to Waymo</h2>
+              <p>
+                I built an AI-powered nutrition coach to help lower my blood
+                sugar levels.
+              </p>
+            </div>
+            <div>
+              <ul className="tag-list">
+                <li>ChatGPT</li>
+                <li>iOS</li>
+                <li>Prototype</li>
+              </ul>
+            </div>
+          </header>
+          <figure className="bg-neutral-100 rounded-3xl w-full py-12 items-center justify-center flex">
+            <Image
+              src={"/images/waymo-my-car.png"}
+              alt="Waymo personalization"
+              width={640}
+              height={360}
               className="rounded-3xl object-cover object-top scale-90"
               priority
             />
