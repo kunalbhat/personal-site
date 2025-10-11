@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-albert-sans)"],
-        serif: ["var(--font-instrument-serif)"],
+        serif: ["var(--font-lora-serif)"],
       },
       keyframes: {
         blink: {

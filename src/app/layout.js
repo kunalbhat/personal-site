@@ -1,4 +1,4 @@
-import { Albert_Sans, Instrument_Serif } from "next/font/google";
+import { Albert_Sans, Lora } from "next/font/google";
 
 import "./globals.css";
 
@@ -12,10 +12,9 @@ const albertSans = Albert_Sans({
   subsets: ["latin"],
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
+const loraSerif = Lora({
+  variable: "--font-lora-serif",
   subsets: ["latin"],
-  weight: ["400"],
 });
 
 export const metadata = {
@@ -44,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${albertSans.variable} ${instrumentSerif.variable} antialiased`}
+      className={`${albertSans.variable} ${loraSerif.variable} antialiased`}
     >
       <body>
         <AppHeader />

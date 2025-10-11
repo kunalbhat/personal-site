@@ -15,7 +15,7 @@ export default function PageContainer({ children, scrollTop = true }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="px-6 py-12 max-w-5xl mx-auto w-full"
+      className="px-6 py-12 max-w-8xl mx-auto w-full"
     >
       {children}
     </motion.main>

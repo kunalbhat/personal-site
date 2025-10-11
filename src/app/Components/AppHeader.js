@@ -43,7 +43,7 @@ export default function AppHeader() {
 
   return (
     <header
-      className="app-header fixed grid grid-cols-3 w-full justify-between px-8 py-6 items-center"
+      className="app-header fixed grid grid-cols-3 w-full justify-between p-8 items-center"
       style={{ opacity }}
     >
       <div className="w-full flex justify-left">
@@ -56,14 +56,12 @@ export default function AppHeader() {
               height={48}
               className="rounded-full inline-block mr-2 h-16 w-16 p-2 bg-neutral-100"
             />
-            <span className="hidden md:inline-block">
-              Kunal Bhat &ndash;&nbsp;<span>Product Designer</span>
-            </span>
+            <span className="hidden md:inline-block">Kunal Bhat</span>
           </Link>
         </span>
       </div>
       <div className="w-full flex justify-center">
-        <ul className="app-menu bg-neutral-100 dark:bg-neutral-800 rounded-full justify-center items-center flex space-x-4 px-4 py-5 w-fit">
+        <ul className="app-menu rounded-full justify-center items-center flex space-x-4 w-fit">
           {navItems.map(({ href, label }) => {
             const isActive = pathname === href;
             return (

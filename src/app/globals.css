@@ -11,20 +11,16 @@ body {
 
 /* Layout */
 .app-container {
-  @apply lg:grid md:gap-12 lg:max-w-6xl mx-4 lg:mx-auto my-8 pt-24;
-}
-
-.content-inset {
-  @apply max-w-3xl mx-auto w-full;
+  @apply lg:grid md:gap-12 lg:mx-auto my-8 pt-20;
 }
 
 /* Typography */
 h1 {
-  @apply font-serif lg:text-5xl text-3xl italic;
+  @apply font-sans font-semibold text-9xl;
 }
 
 h2 {
-  @apply lg:text-4xl text-2xl font-bold;
+  @apply font-serif text-3xl leading-normal;
 }
 
 h3 {

@@ -63,28 +63,17 @@ export default function Home() {
     <PageContainer>
       <div className="app-container">
         <header className="mb-16">
-          <h1 className="leading-snug">
-            Technical product designer with 18 years of building excellent
-            experiences in roles as a designer, product manager, and engineer.
+          <h1 className="leading-none">
+            Product designer with deep experience in complex domains.
           </h1>
         </header>
-        <section>
-          <h3 className="mb-12">Experience</h3>
-          <dl className="experience-list">
-            <dt>Aura Home</dt>
-            <dd>
-              Shipping experiences for the internet's favorite digital frame.
-            </dd>
-            <dt>Magic + Might</dt>
-            <dd>
-              Dove deep into the autonomous ride-hail problem space while
-              embedded with the Waymo design team.
-            </dd>
-            <dt>Galactic</dt>
-            <dd>Built a crypto off-ramp for web3 users.</dd>
-            <dt>PayPal / Braintree</dt>
-            <dd>I launched a redesign of the Braintree merchant dashboard.</dd>
-          </dl>
+        <section className="max-w-3xl mb-16">
+          <h2 className="leading-tight">
+            I'm a staff-level IC with 18 years of experience building in roles
+            as a designer, product manager, and engineer. I'm technically
+            inclined, a systems thinker and highly comfortable in new and
+            ambiguous problem spaces.
+          </h2>
         </section>
       </div>
     </PageContainer>
