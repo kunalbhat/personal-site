@@ -107,7 +107,37 @@ export default function Home() {
         <header className="mb-16">
           <HeroHeading text="Product designer with deep experience in complex domains." />
         </header>
-
+        <section>
+          <header className="flex justify-between items-center">
+            <div>
+              <h3>ChatGPT Nutrition Coach</h3>
+              <p>
+                I built an AI-powered nutrition coach to help lower my blood
+                sugar levels.
+              </p>
+            </div>
+            <div>
+              <ul className="tag-list">
+                <li>ChatGPT</li>
+                <li>iOS</li>
+                <li>Prototype</li>
+              </ul>
+            </div>
+          </header>
+          <figure className="bg-neutral-100 rounded-3xl w-full py-12 items-center justify-center flex">
+            <Image
+              src="/images/a1c-tracker-screens.png"
+              alt="Screens from the A1C Tracker app"
+              width={1152}
+              height={576}
+              className="rounded-3xl object-cover object-top scale-90"
+              priority
+            />
+          </figure>
+          <figcaption className="mb-6 italic text-sm opacity-70">
+            A few of the tools and technologies I use regularly.
+          </figcaption>
+        </section>
         <section className="md:grid grid-cols-2 mb-16">
           <motion.h2
             variants={subheadVariant}
