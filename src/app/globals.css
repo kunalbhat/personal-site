@@ -16,7 +16,7 @@ body {
 
 /* Typography */
 h1 {
-  @apply font-sans font-semibold text-9xl;
+  @apply font-sans font-semibold text-6xl md:text-8xl lg:text-9xl;
 }
 
 h2 {
