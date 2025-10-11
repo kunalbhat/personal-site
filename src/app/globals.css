@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-  @apply font-serif text-3xl leading-normal;
+  @apply font-serif text-2xl lg:text-3xl leading-normal;
 }
 
 h3 {

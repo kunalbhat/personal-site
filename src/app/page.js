@@ -13,6 +13,7 @@ import "react-social-icons/linkedin";
 // Components
 import ChessIcon from "./Components/ChessIcon";
 import PageContainer from "./Components/PageContainer";
+import GridOverlay from "./Components/GridOverlay";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -136,6 +137,7 @@ export default function Home() {
           </motion.h2>
         </section>
       </div>
+      <GridOverlay columns={12} gutter={24} baseline={24} />
     </PageContainer>
   );
 }
