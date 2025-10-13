@@ -107,7 +107,7 @@ export default function AppHeader() {
       ${
         visible
           ? "bg-neutral-900 text-white dark:bg-white dark:text-black"
-          : "bg-neutral-200 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 hover:opacity-90"
+          : "text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 hover:opacity-90"
       }`}
           >
             {/* Simple grid icon */}
@@ -131,7 +131,7 @@ export default function AppHeader() {
           {mounted ? (
             <ThemeToggle />
           ) : (
-            <div className="w-10 h-10 animate-pulse rounded-full bg-neutral-100" />
+            <div className="w-12 h-12 animate-pulse rounded-full" />
           )}
 
           {/* Hamburger (mobile only) */}

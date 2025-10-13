@@ -22,12 +22,10 @@ export default function About() {
             </p>
           </div>
           <div>
-            <h3 className="mb-4"></h3>
-            <p className="font-serif"></p>
-          </div>
-          <div>
-            <h3>Ambient Me</h3>
-            <p>Get to know me through my hobbies and live activities.</p>
+            <h3 className="mb-4">Ambient Me</h3>
+            <p className="font-serif">
+              Get to know me through my hobbies and live activities.
+            </p>
             <SpotifyNowPlaying />
           </div>
         </section>

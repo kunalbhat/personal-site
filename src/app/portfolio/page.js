@@ -9,7 +9,7 @@ export default function Portfolio() {
     <PageContainer>
       <div className="app-container">
         <header>
-          <HeroHeading text="Portfolio" />
+          <HeroHeading text="What I've built" />
         </header>
         <section className="my-24">
           <header className="flex justify-between items-center">
@@ -41,7 +41,7 @@ export default function Portfolio() {
             A few of the tools and technologies I use regularly.
           </figcaption>
         </section>
-        <section>
+        {/* <section>
           <header className="flex justify-between items-center">
             <div>
               <h3>Waymo &ndash; My Car</h3>
@@ -69,32 +69,30 @@ export default function Portfolio() {
           <figcaption className="mb-6 italic text-sm opacity-70">
             A few of the tools and technologies I use regularly.
           </figcaption>
-        </section>
-        <section className="grid grid-cols-3 gap-12">
-          <div className="col-span-1">
+        </section> */}
+        <section className="mb-24">
+          <header className="flex justify-between items-center">
             <div>
-              <h3>TRMNL &ndash; Spotify Recently Dashboard</h3>
+              <h3>Spotify Dashboard for TMRNL</h3>
               <p>
-                Built a TRMNL dashboard app that renders a dynamic “Recently
-                Played” album grid from my Spotify activity, powered by a
-                serverless Node.js endpoint on Vercel that outputs a clean JSON
-                feed in TRMNL's schema. Optimized for a semi-static screen
-                without webhooks, it passively updates with album art and
-                metadata as I listen.
+                A Spotify Recently Played plug-in for TRMNL, an ambient e-ink
+                display.
               </p>
             </div>
             <div>
               <ul className="tag-list">
+                <li>ChatGPT</li>
                 <li>iOS</li>
+                <li>Prototype</li>
               </ul>
             </div>
-          </div>
-          <figure className="bg-neutral-100 rounded-3xl w-full py-12 items-center justify-center flex col-span-2">
+          </header>
+          <figure className="bg-fuchsia-50 rounded-3xl w-full py-12 items-center justify-center flex col-span-2">
             <Image
               src={"/images/trmnl-spotify.png"}
               alt="TMRNL Ambient Display"
               width={960}
-              height={640}
+              height={840}
               className="object-fit object-top scale-90"
               priority
             />

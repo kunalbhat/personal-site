@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
  * - Supports your TRMNL list: { items: [{ title, subtitle, image_url, meta }] }
  * - Supports Spotify "currently playing": { is_playing, item: { ... } }
  */
-export default function SpotifyNowPlaying({ limit = 9, refreshMs = 300_000 }) {
+export default function SpotifyNowPlaying({ limit = 5, refreshMs = 300_000 }) {
   const [view, setView] = useState({ status: "idle" }); // idle | loading | ok | err
   const [model, setModel] = useState(null); // { label, isPlaying, tracks:[{title,artist,albumImageUrl}] }
 
@@ -57,33 +57,33 @@ export default function SpotifyNowPlaying({ limit = 9, refreshMs = 300_000 }) {
   const list = Array.isArray(tracks) ? tracks.slice(0, limit) : [];
 
   return (
-    <div className="p-3 rounded-xl border border-neutral-200 dark:border-neutral-700">
-      <div className="flex items-center justify-between mb-2">
-        <div className="text-xs font-medium">
+    <div>
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-sm font-medium">
           {isPlaying ? (
             <span className="text-green-500 animate-pulse">• LIVE</span>
           ) : (
             <span className="text-neutral-400">
-              {label || "Recently played"}
+              {label || "Recently played on Spotify"}
             </span>
           )}
         </div>
       </div>
 
-      <ul className="space-y-2">
+      <ul className="space-y-4">
         {list.map((t, idx) => (
           <li
             key={`${t.title || "track"}-${idx}`}
-            className="flex items-center gap-3"
+            className="flex items-center gap-4"
           >
             {t.albumImageUrl ? (
               <img
                 src={t.albumImageUrl}
                 alt={t.title || "Album art"}
-                className="w-12 h-12 rounded-md object-cover flex-none"
+                className="w-10 h-10 rounded-md object-cover flex-none"
               />
             ) : (
-              <div className="w-12 h-12 rounded-md bg-neutral-100 dark:bg-neutral-800 flex-none" />
+              <div className="w-10 h-10 rounded-md bg-neutral-100 dark:bg-neutral-800 flex-none" />
             )}
             <div className="min-w-0">
               <div className="text-sm font-semibold truncate">
@@ -115,7 +115,7 @@ function normalizeToListModel(p) {
       artist: it?.subtitle ?? null,
       albumImageUrl: it?.image_url ?? null,
     }));
-    return { isPlaying: false, label: "Recently played", tracks };
+    return { isPlaying: false, label: "Recently played on Spotify", tracks };
   }
 
   // Spotify Web API: currently playing
@@ -146,7 +146,7 @@ function normalizeToListModel(p) {
   ) {
     return {
       isPlaying: !!p.isPlaying,
-      label: p.isPlaying ? "Now playing" : "Recently played",
+      label: p.isPlaying ? "Now playing" : "Recently played on Spotify",
       tracks: [
         {
           title: p.title ?? null,

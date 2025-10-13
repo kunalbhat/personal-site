@@ -17,7 +17,7 @@ export default function ThemeToggle() {
           setOpen((o) => !o);
         }}
         aria-label="Change theme"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800"
+        className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800"
         title="Tap to cycle themes. Hold to open menu."
       >
         {/* simple glyph that follows tokens */}
