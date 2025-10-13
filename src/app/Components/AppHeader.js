@@ -49,15 +49,18 @@ export default function AppHeader() {
     >
       <div className="mx-auto max-w-8xl flex items-center justify-between">
         {/* Left: brand */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="flex items-center gap-2 transition-colors hover:opacity-90"
+        >
           <Image
             src="/images/kunal-bhat-avatar.jpg"
             alt="Kunal Bhat"
             width={40}
             height={40}
-            className="rounded-full bg-neutral-100 h-12 w-12"
+            className="rounded-full h-12 w-12 border border-[var(--border)] bg-[var(--surface)] object-cover"
           />
-          <span className="hidden sm:inline font-semibold text-lg">
+          <span className="hidden sm:inline font-semibold text-lg text-[var(--accent)]">
             Kunal Bhat
           </span>
         </Link>
@@ -77,17 +80,27 @@ export default function AppHeader() {
                           ? { duration: 0.12 }
                           : { type: "spring", stiffness: 520, damping: 40 }
                       }
-                      className="absolute inset-0 rounded-full bg-neutral-900 dark:bg-white"
+                      className="absolute inset-0 rounded-full "
                     />
                   )}
                   <Link
                     href={href}
-                    className={`relative z-10 px-4 py-2 rounded-full font-semibold transition-colors
-                      ${
-                        active
-                          ? "text-white dark:text-black"
-                          : "text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white"
-                      }`}
+                    className={`nav-pill ${
+                      active ? "is-active" : ""
+                    } relative z-10 px-4 py-2 rounded-full font-semibold transition-colors
+    ${
+      active
+        ? "text-[var(--accent)]"
+        : "text-[var(--muted)] hover:text-[var(--fg)]"
+    }`}
+                    style={
+                      active
+                        ? {
+                            background: "var(--pill-bg)",
+                            boxShadow: "inset 0 0 0 1px var(--pill-ring)",
+                          }
+                        : undefined
+                    }
                   >
                     {label}
                   </Link>

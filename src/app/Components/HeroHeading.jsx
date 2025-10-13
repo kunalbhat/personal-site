@@ -8,33 +8,41 @@ import {
 } from "framer-motion";
 
 export default function HeroHeading({
-  /** original props */
+  /** content */
   text,
   as: Tag = "h1",
   balance = true,
+
+  /** type scale */
   minSize = "4.2rem",
   fluidSize = "7.5vw",
   maxSize = "7.5rem",
-  weightClass = "font-semibold",
   lineHeight = "0.95",
+
+  /** weight + classes */
+  weightClass = "font-semibold",
+  className = "",
+
+  /** animations */
   stagger = 0.08,
   delay = 0.05,
   duration = 0.9,
   y = 16,
-  className = "",
-  colorClass = "text-neutral-900 dark:text-yellow-50",
 
-  /** new: shrink-on-scroll controls */
-  shrinkOnScroll = false, // toggle effect
-  scrollStart = 0, // px from top to start shrinking
-  scrollEnd = 320, // px where it reaches min scale
-  scaleFrom = 1, // starting scale
-  scaleTo = 0.82, // ending scale
-  fadeTo = 0.85, // final opacity at scrollEnd (1 = no fade)
-  disableBelow = 0, // e.g. 768 to disable on small screens
+  /** scroll shrink */
+  shrinkOnScroll = false,
+  scrollStart = 0,
+  scrollEnd = 320,
+  scaleFrom = 1,
+  scaleTo = 0.82,
+  fadeTo = 0.85,
+  disableBelow = 0,
 
-  /** new: size variant */
-  sizeVariant = "lg", // 'lg' (default) | 'sm' — adjusts typography scale presets
+  /** size preset */
+  sizeVariant = "lg", // 'lg' | 'sm'
+
+  /** NEW: theme-aware color variant */
+  colorVariant = "fg", // 'fg' | 'accent' | 'muted' | 'inverse' | 'accent2' | 'accent3'
 }) {
   const words = String(text ?? "")
     .trim()
@@ -87,14 +95,10 @@ export default function HeroHeading({
     [1, fadeTo]
   );
 
-  // size variant presets
+  // ===== type scale presets
   const sizePresets = {
     lg: { min: minSize, fluid: fluidSize, max: maxSize },
-    sm: {
-      min: "2.4rem",
-      fluid: "5vw",
-      max: "4.5rem",
-    },
+    sm: { min: "2.4rem", fluid: "5vw", max: "4.5rem" },
   };
   const activeSize = sizePresets[sizeVariant] ?? sizePresets.lg;
 
@@ -106,6 +110,29 @@ export default function HeroHeading({
     ? { scale, opacity, ...baseStyle }
     : baseStyle;
 
+  // ===== theme-aware colors via CSS variables
+  const textClassFor = (variant) => {
+    switch (variant) {
+      case "accent":
+        return "text-[var(--accent)]";
+      case "muted":
+        return "text-[var(--muted)]";
+      case "inverse":
+        return "text-[var(--bg)]"; // useful on accent blocks
+      case "accent2":
+        return "text-[var(--accent-2)]";
+      case "accent3":
+        return "text-[var(--accent-3)]";
+      case "fg":
+      default:
+        return "text-[var(--fg)]";
+    }
+  };
+
+  // selection colors with safe fallbacks
+  const selectionBg = "selection:bg-[var(--selection-bg,rgba(0,0,0,0.08))]";
+  const selectionFg = "selection:text-[var(--selection-fg,currentColor)]";
+
   return (
     <MotionTag
       variants={container}
@@ -113,11 +140,12 @@ export default function HeroHeading({
       animate="show"
       aria-label={text}
       className={[
-        colorClass,
+        textClassFor(colorVariant),
         weightClass,
         balance ? "[text-wrap:balance]" : "",
         "leading-none tracking-normal",
-        "selection:bg-neutral-900/10 selection:text-inherit dark:selection:bg-white/15",
+        selectionBg,
+        selectionFg,
         className,
       ].join(" ")}
       style={motionStyle}
@@ -125,8 +153,8 @@ export default function HeroHeading({
       {words.map((w, i) => (
         <span key={`${w}-${i}`} className="inline">
           <motion.span
-            variants={word}
             className="inline-block will-change-transform"
+            variants={word}
           >
             {w}
           </motion.span>

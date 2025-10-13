@@ -4,40 +4,52 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ---------------------------------------
+/* ======================================
    THEME TOKENS
----------------------------------------- */
+   ====================================== */
 
-/* Base (Light) */
+/* Base (Light) — monochrome */
 :root {
   /* Core */
   --bg: #ffffff;
   --fg: #0b0b0b;
-  --muted: #6b7280;
+  --muted: #6b6f76;
   --surface: #f6f7f8;
   --border: #e5e7eb;
-  --accent: #111827; /* pill/nav background */
+
+  /* Accent = neutral in pure light */
+  --accent: var(--fg);
+  --accent-2: var(--fg);
+  --accent-3: var(--fg);
 
   /* UI roles */
-  --chip-bg: #eef2ff;
-  --chip-fg: #111827;
+  --chip-bg: #f2f3f5;
+  --chip-fg: #0b0b0b;
   --meta-bg: #f6f7f8;
 
   /* Theme toggle dot + optional swatch preview */
-  --toggle-color: #f3f2f7;
+  --toggle-color: #e9eaec;
   --swatch-1: #0b0b0b;
   --swatch-2: #f3f2f7;
   --swatch-3: #ffffff;
   --swatch-4: #e5e7eb;
+
+  /* Soft pill for active nav (subtle, monochrome) */
+  --pill-bg: color-mix(in srgb, var(--fg) 8%, transparent);
+  --pill-ring: color-mix(in srgb, var(--fg) 16%, transparent);
+
+  /* Text selection */
+  --selection-bg: rgba(0, 0, 0, 0.08);
+  --selection-fg: currentColor;
 }
 
-/* Dark */
+/* Dark — stronger separation */
 html.dark,
 html[data-theme="dark"] {
   --bg: #0b0d10;
   --fg: #f5f7fa;
   --muted: #a3aab8;
-  --surface: #12151b;
+  --surface: #111315;
   --border: #2a2f3a;
   --accent: #ffffff;
 
@@ -46,10 +58,13 @@ html[data-theme="dark"] {
   --meta-bg: #12151b;
 
   --toggle-color: #d5dadc;
-  --swatch-1: #111827;
-  --swatch-2: #d5dadc;
-  --swatch-3: #0b0d10;
-  --swatch-4: #2a2f3a;
+
+  /* darker, lighter pill */
+  --pill-bg: color-mix(in srgb, var(--accent) 12%, transparent);
+  --pill-ring: color-mix(in srgb, var(--accent) 28%, transparent);
+
+  --selection-bg: rgba(255, 255, 255, 0.15);
+  --selection-fg: var(--fg);
 }
 
 /* High Contrast (WCAG helper) */
@@ -59,45 +74,49 @@ html[data-theme="high-contrast"] {
   --muted: #d1d5db;
   --surface: #000000;
   --border: #4b5563;
-  --accent: #ffffff;
+  --accent: #ffff00; /* yellow for visibility */
 
   --chip-bg: #ffffff;
   --chip-fg: #000000;
   --meta-bg: #000000;
 
   --toggle-color: #ffffff;
-  --swatch-1: #ffffff;
-  --swatch-2: #000000;
-  --swatch-3: #000000;
-  --swatch-4: #4b5563;
+
+  --pill-bg: var(--bg);
+  --pill-ring: var(--accent);
+
+  --selection-bg: #ffff00;
+  --selection-fg: #000000;
 }
 
-/* Color-blind–safe (Okabe–Ito accents) */
+/* Color-blind / Accessible palette (warm) */
 html[data-theme="colorblind"] {
-  --bg: #ffffff;
-  --fg: #0b0b0b;
+  --bg: #fff8f5;
+  --fg: #111111;
   --muted: #4b5563;
-  --surface: #f7fafc;
-  --border: #e5e7eb;
+  --surface: #fbeaea;
+  --border: #e7cfcf;
 
-  --accent: #0072b2; /* blue */
-  --accent-2: #009e73; /* teal */
-  --accent-3: #e69f00; /* orange */
+  --accent: #a3473a; /* muted brick */
+  --accent-2: #0072b2; /* Okabe–Ito blue */
+  --accent-3: #009e73; /* Okabe–Ito teal */
 
-  --chip-bg: #e6f3ff;
-  --chip-fg: #0b0b0b;
-  --meta-bg: #f7fafc;
+  --chip-bg: #ffe9e9;
+  --chip-fg: #111111;
+  --meta-bg: #fbeaea;
 
-  --toggle-color: #8e2a2a; /* deep red cue */
-  --swatch-1: #8e2a2a;
-  --swatch-2: #ebd2d2;
-  --swatch-3: #f6e6e6;
-  --swatch-4: #d9b3b3;
+  --toggle-color: var(--accent);
+
+  --pill-bg: color-mix(in srgb, var(--accent) 16%, transparent);
+  --pill-ring: color-mix(in srgb, var(--accent) 40%, transparent);
+
+  --selection-bg: #f3d6d6;
+  --selection-fg: #111111;
 }
 
-/* Allow per-row preview in the theme menu without changing the page theme */
+/* Menu preview scope for the theme toggle */
 .theme-scope[data-theme="light"] {
-  --toggle-color: #f3f2f7;
+  --toggle-color: #e9eaec;
 }
 .theme-scope[data-theme="dark"] {
   --toggle-color: #d5dadc;
@@ -106,12 +125,12 @@ html[data-theme="colorblind"] {
   --toggle-color: #ffffff;
 }
 .theme-scope[data-theme="colorblind"] {
-  --toggle-color: #8e2a2a;
+  --toggle-color: #a3473a;
 }
 
-/* ---------------------------------------
-   BASE + APP STYLES (token-driven)
----------------------------------------- */
+/* ======================================
+   BASE + GLOBAL
+   ====================================== */
 
 @layer base {
   html,
@@ -119,7 +138,10 @@ html[data-theme="colorblind"] {
     background: var(--bg);
     color: var(--fg);
   }
-
+  ::selection {
+    background: var(--selection-bg);
+    color: var(--selection-fg);
+  }
   @media (prefers-reduced-motion: no-preference) {
     html,
     body,
@@ -128,7 +150,6 @@ html[data-theme="colorblind"] {
         border-color 0.25s ease;
     }
   }
-
   h1,
   h2,
   h3,
@@ -138,21 +159,61 @@ html[data-theme="colorblind"] {
   }
 }
 
+/* Links — explicit per theme to avoid UA blue */
+a {
+  color: var(--fg);
+  text-decoration-color: color-mix(in srgb, var(--fg) 25%, transparent);
+}
+a:hover {
+  color: var(--fg);
+  text-decoration-color: color-mix(in srgb, var(--fg) 55%, transparent);
+}
+a:visited {
+  color: var(--fg);
+}
+
+html[data-theme="dark"] a,
+html.dark a {
+  color: #80bfff;
+  text-decoration-color: color-mix(in srgb, #80bfff 35%, transparent);
+}
+html[data-theme="dark"] a:hover,
+html.dark a:hover {
+  text-decoration-color: color-mix(in srgb, #80bfff 65%, transparent);
+}
+html[data-theme="high-contrast"] a {
+  color: #ffff00;
+  text-decoration-color: #ffff00;
+}
+html[data-theme="high-contrast"] a:hover {
+  text-decoration-color: #ffff00;
+}
+html[data-theme="colorblind"] a {
+  color: var(--accent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+html[data-theme="colorblind"] a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* Active pill uses tokens */
 .app-menu .active-pill {
   background: var(--accent);
 }
 
-/* Base */
+/* ======================================
+   BASE ELEMENTS
+   ====================================== */
+
 body {
   @apply font-sans;
 }
 
-/* Layout */
 .app-container {
   @apply lg:grid md:gap-12 lg:mx-auto my-8 pt-20 max-w-7xl;
 }
 
-/* Typography (sizes via Tailwind, color via tokens) */
+/* Typography sizes via Tailwind; color via tokens */
 h1 {
   @apply font-sans font-semibold text-6xl md:text-8xl lg:text-9xl;
 }
@@ -188,7 +249,7 @@ p {
   @apply mb-16;
 }
 
-/* Tag List */
+/* Tags */
 .tag-list {
   @apply flex flex-wrap gap-2;
 }
@@ -198,7 +259,7 @@ p {
   color: var(--chip-fg);
 }
 
-/* Meta block / callouts */
+/* Meta / callouts */
 .meta {
   @apply px-8 py-6 my-12 rounded-3xl;
   background: var(--meta-bg);
@@ -218,7 +279,51 @@ p {
   border: 1px solid var(--border);
 }
 
-/* Animation helpers */
+/* ======================================
+   NAV PILLS (soft active)
+   ====================================== */
+.nav-pill.is-active {
+  color: var(--accent);
+  background: var(--pill-bg);
+  box-shadow: inset 0 0 0 1px var(--pill-ring);
+}
+.nav-pill:not(.is-active):hover {
+  background: color-mix(in srgb, var(--fg) 6%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 12%, transparent);
+}
+
+/* Brand title theming */
+.brand-title {
+  color: var(--fg);
+}
+html[data-theme="colorblind"] .brand-title,
+html[data-theme="high-contrast"] .brand-title {
+  color: var(--accent);
+}
+
+/* ======================================
+   DEBUG LABEL (opt-in)
+   ====================================== */
+html.show-theme-debug::before {
+  content: attr(data-theme);
+  position: fixed;
+  z-index: 9999;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.4rem;
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* ======================================
+   ANIMATION HELPERS
+   ====================================== */
 .slide-delayed {
   transform: translateX(0);
   animation: fadeInUp 0.6s ease-out 0.1s forwards;
