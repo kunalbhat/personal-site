@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import HeroHeading from "../Components/HeroHeading";
 
 export default function PortfolioPageHeader({ title = "Project" }) {
   return (
@@ -16,7 +17,7 @@ export default function PortfolioPageHeader({ title = "Project" }) {
           className="relative hover:-translate-x-2 transition-transform duration-300"
         />
       </Link>
-      <h1>{title}</h1>
+      <HeroHeading text={title} />
     </header>
   );
 }

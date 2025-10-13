@@ -37,17 +37,24 @@ export default function Home() {
     <PageContainer>
       <div className="app-container">
         <header className="mb-16">
-          <HeroHeading text="Product designer with deep experience in complex domains." />
+          <HeroHeading text="Product designer with 18y spanning design, product, and engineering." />
         </header>
         <section className="md:grid grid-cols-2 mb-16">
-          <motion.h2
-            variants={subheadVariant}
-            initial="hidden"
-            animate="show"
-            className="leading-tight mb-4"
-          >
-            About
-          </motion.h2>
+          <div>
+            <motion.h2
+              variants={subheadVariant}
+              initial="hidden"
+              animate="show"
+              className="leading-tight mb-4"
+            >
+              About
+            </motion.h2>
+            <motion.p
+              variants={subheadVariant}
+              initial="hidden"
+              animate="show"
+            ></motion.p>
+          </div>
           <motion.h2
             variants={subheadVariant}
             initial="hidden"
@@ -75,7 +82,8 @@ export default function Home() {
             animate="show"
             className="leading-tight"
           >
-            From startups to large enterprises, I thrive in 0 &rarr; 1
+            From startups to large enterprises, I thrive in the 0 &rarr; 1 stage
+            of the product process.
           </motion.h2>
         </section>
       </div>

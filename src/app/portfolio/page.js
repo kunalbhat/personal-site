@@ -2,13 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageContainer from "../Components/PageContainer";
+import HeroHeading from "../Components/HeroHeading";
 
 export default function Portfolio() {
   return (
     <PageContainer>
       <div className="app-container">
         <header>
-          <h1 className="mb-6">Portfolio</h1>
+          <HeroHeading text="Portfolio" />
         </header>
         <section className="my-24">
           <header className="flex justify-between items-center">
