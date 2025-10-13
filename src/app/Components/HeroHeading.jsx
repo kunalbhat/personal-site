@@ -14,7 +14,7 @@ export default function HeroHeading({
   balance = true,
 
   /** type scale */
-  minSize = "4.2rem",
+  minSize = "3.6rem",
   fluidSize = "7.5vw",
   maxSize = "7.5rem",
   lineHeight = "0.95",
