@@ -37,7 +37,7 @@ export default function Home() {
     <PageContainer>
       <div className="app-container">
         <header className="mb-16">
-          <HeroHeading text="Product designer with 18 years across design, product & engineering." />
+          <HeroHeading text="Senior product builder across design, product & engineering." />
         </header>
         <section className="md:grid grid-cols-2 mb-16">
           <div>

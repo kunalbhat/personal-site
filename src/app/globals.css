@@ -4,14 +4,31 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Base tokens (default = light) */
+/* ---------------------------------------
+   THEME TOKENS
+---------------------------------------- */
+
+/* Base (Light) */
 :root {
+  /* Core */
   --bg: #ffffff;
   --fg: #0b0b0b;
   --muted: #6b7280;
   --surface: #f6f7f8;
   --border: #e5e7eb;
   --accent: #111827; /* pill/nav background */
+
+  /* UI roles */
+  --chip-bg: #eef2ff;
+  --chip-fg: #111827;
+  --meta-bg: #f6f7f8;
+
+  /* Theme toggle dot + optional swatch preview */
+  --toggle-color: #f3f2f7;
+  --swatch-1: #0b0b0b;
+  --swatch-2: #f3f2f7;
+  --swatch-3: #ffffff;
+  --swatch-4: #e5e7eb;
 }
 
 /* Dark */
@@ -23,6 +40,16 @@ html[data-theme="dark"] {
   --surface: #12151b;
   --border: #2a2f3a;
   --accent: #ffffff;
+
+  --chip-bg: #e5e7eb;
+  --chip-fg: #0b0d10;
+  --meta-bg: #12151b;
+
+  --toggle-color: #d5dadc;
+  --swatch-1: #111827;
+  --swatch-2: #d5dadc;
+  --swatch-3: #0b0d10;
+  --swatch-4: #2a2f3a;
 }
 
 /* High Contrast (WCAG helper) */
@@ -33,35 +60,91 @@ html[data-theme="high-contrast"] {
   --surface: #000000;
   --border: #4b5563;
   --accent: #ffffff;
+
+  --chip-bg: #ffffff;
+  --chip-fg: #000000;
+  --meta-bg: #000000;
+
+  --toggle-color: #ffffff;
+  --swatch-1: #ffffff;
+  --swatch-2: #000000;
+  --swatch-3: #000000;
+  --swatch-4: #4b5563;
 }
 
-/* Color-blind–safe (Okabe–Ito palette base) */
+/* Color-blind–safe (Okabe–Ito accents) */
 html[data-theme="colorblind"] {
   --bg: #ffffff;
   --fg: #0b0b0b;
   --muted: #4b5563;
   --surface: #f7fafc;
   --border: #e5e7eb;
-  /* Use Okabe–Ito colors for interactive accents, focus, links, etc. */
+
   --accent: #0072b2; /* blue */
   --accent-2: #009e73; /* teal */
   --accent-3: #e69f00; /* orange */
+
+  --chip-bg: #e6f3ff;
+  --chip-fg: #0b0b0b;
+  --meta-bg: #f7fafc;
+
+  --toggle-color: #8e2a2a; /* deep red cue */
+  --swatch-1: #8e2a2a;
+  --swatch-2: #ebd2d2;
+  --swatch-3: #f6e6e6;
+  --swatch-4: #d9b3b3;
 }
 
-/* App-wide base styles using tokens */
-html,
-body {
-  background: var(--bg);
-  color: var(--fg);
+/* Allow per-row preview in the theme menu without changing the page theme */
+.theme-scope[data-theme="light"] {
+  --toggle-color: #f3f2f7;
+}
+.theme-scope[data-theme="dark"] {
+  --toggle-color: #d5dadc;
+}
+.theme-scope[data-theme="high-contrast"] {
+  --toggle-color: #ffffff;
+}
+.theme-scope[data-theme="colorblind"] {
+  --toggle-color: #8e2a2a;
+}
+
+/* ---------------------------------------
+   BASE + APP STYLES (token-driven)
+---------------------------------------- */
+
+@layer base {
+  html,
+  body {
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html,
+    body,
+    .themed-surface {
+      transition: background-color 0.25s ease, color 0.25s ease,
+        border-color 0.25s ease;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  ul li {
+    color: var(--fg);
+  }
 }
 
 .app-menu .active-pill {
   background: var(--accent);
 }
 
-/* Base Styles */
+/* Base */
 body {
-  @apply font-sans bg-white text-[#101010] dark:bg-[#101010] dark:text-[#efe5d4];
+  @apply font-sans;
 }
 
 /* Layout */
@@ -69,45 +152,38 @@ body {
   @apply lg:grid md:gap-12 lg:mx-auto my-8 pt-20 max-w-7xl;
 }
 
-/* Typography */
+/* Typography (sizes via Tailwind, color via tokens) */
 h1 {
   @apply font-sans font-semibold text-6xl md:text-8xl lg:text-9xl;
 }
-
 h2 {
   @apply font-serif text-2xl lg:text-3xl leading-normal;
 }
-
 h3 {
   @apply text-xl font-bold;
 }
-
 p,
 ul li {
   @apply text-lg font-medium;
 }
-
 p {
   @apply mb-8;
 }
 
+/* Experience */
 .experience-list {
   @apply md:grid grid-cols-2;
 }
-
 .experience-list dt,
 .experience-list dd {
   @apply text-3xl leading-snug;
 }
-
 .experience-list dt {
   @apply font-bold flex flex-col gap-1;
 }
-
 .experience-list dt span {
   @apply font-normal text-lg;
 }
-
 .experience-list dd {
   @apply mb-16;
 }
@@ -116,15 +192,18 @@ p {
 .tag-list {
   @apply flex flex-wrap gap-2;
 }
-
 .tag-list li {
-  @apply text-sm bg-violet-100 dark:bg-violet-200 dark:text-black rounded-full px-4 py-2;
+  @apply text-sm rounded-full px-4 py-2;
+  background: var(--chip-bg);
+  color: var(--chip-fg);
 }
 
+/* Meta block / callouts */
 .meta {
-  @apply bg-neutral-100 px-8 py-6 my-12 rounded-3xl;
+  @apply px-8 py-6 my-12 rounded-3xl;
+  background: var(--meta-bg);
+  border: 1px solid var(--border);
 }
-
 .meta li {
   @apply my-2;
 }
@@ -133,16 +212,17 @@ p {
 .portfolio-list {
   @apply grid grid-cols-1 md:grid-cols-2 gap-8;
 }
-
 .portfolio-item {
-  @apply h-72 rounded-2xl  overflow-hidden;
+  @apply h-72 rounded-2xl overflow-hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
 }
 
+/* Animation helpers */
 .slide-delayed {
   transform: translateX(0);
-  animation: fadeInUp 0.6s ease-out 0.1s forwards; /* 0.5s delay */
+  animation: fadeInUp 0.6s ease-out 0.1s forwards;
 }
-
 @keyframes fadeInUp {
   to {
     transform: translateX(-100px);
@@ -151,9 +231,8 @@ p {
 
 .grow-delayed {
   transform: scale(2.4);
-  animation: grow 2s ease-in-out 0.1s forwards; /* 0.5s delay */
+  animation: grow 2s ease-in-out 0.1s forwards;
 }
-
 @keyframes grow {
   to {
     transform: scale(2.5) translateX(50px);
@@ -163,9 +242,8 @@ p {
 .fade-in-delayed {
   opacity: 0;
   transform: translateX(-300px);
-  animation: fadeIn 2s ease-out 0.1s forwards; /* 0.5s delay */
+  animation: fadeIn 2s ease-out 0.1s forwards;
 }
-
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -173,6 +251,7 @@ p {
   }
 }
 
+/* Utility background */
 .skyteller-bg {
   background-image: url("/images/skyteller-background.png");
   @apply bg-contain bg-center;

@@ -14,11 +14,10 @@ export default function About() {
           <div>
             <h3 className="mb-4">About</h3>
             <p className="font-serif">
-              I'm a product designer with a passion for creating intuitive and
-              engaging user experiences. With a background in both design and
-              technology, I bridge the gap between aesthetics and functionality
-              to deliver products that not only look great but also perform
-              seamlessly.
+              I'm a product designer with a passion for figuring things out. I
+              thrive in the 0 stages of product development. I have extensive
+              experience designing and facilitating research to help uncover
+              user needs and opportunities.
             </p>
           </div>
           <div>

@@ -1,53 +1,93 @@
 "use client";
-import { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
+/** Add/remove ids here to change available themes */
 export const THEMES = [
   { id: "light", label: "Light" },
   { id: "dark", label: "Dark" },
-  { id: "colorblind", label: "Color-blind Safe" },
-  { id: "high-contrast", label: "High Contrast" },
+  { id: "high-contrast", label: "High contrast" },
+  { id: "colorblind", label: "Color-blind" },
 ];
 
+const STORAGE_KEY = "site-theme";
 const ThemeCtx = createContext(null);
 
-export function ThemeProvider({ children, defaultTheme = "light" }) {
-  const [theme, setTheme] = useState(defaultTheme);
+function applyTheme(themeId) {
+  const root = document.documentElement;
 
-  // load persisted or system
+  // 1) data-theme drives your CSS variables
+  root.setAttribute("data-theme", themeId);
+
+  // 2) Tailwind dark variant
+  if (themeId === "dark") root.classList.add("dark");
+  else root.classList.remove("dark");
+
+  // 3) (Optional) meta theme-color to match the UI
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) {
+    requestAnimationFrame(() => {
+      const cs = getComputedStyle(root);
+      const color =
+        cs.getPropertyValue("--toggle-color").trim() ||
+        cs.getPropertyValue("--bg").trim() ||
+        "#ffffff";
+      meta.setAttribute("content", color);
+    });
+  }
+}
+
+export function ThemeProvider({ children }) {
+  const [theme, setThemeState] = useState("light");
+
+  // initial load
   useEffect(() => {
-    const persisted = localStorage.getItem("theme");
-    if (persisted) setTheme(persisted);
-    else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-    }
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && THEMES.some((t) => t.id === stored)) {
+        setThemeState(stored);
+        applyTheme(stored);
+        return;
+      }
+    } catch {}
+    const prefersDark =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initial = prefersDark ? "dark" : "light";
+    setThemeState(initial);
+    applyTheme(initial);
   }, []);
 
-  // apply + persist
-  useEffect(() => {
-    const html = document.documentElement;
-    // Tailwind dark mode class for `dark:` utilities
-    if (theme === "dark" || theme === "high-contrast")
-      html.classList.add("dark");
-    else html.classList.remove("dark");
-
-    html.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const value = {
-    theme,
-    setTheme,
-    cycle: () => {
-      const idx = THEMES.findIndex((t) => t.id === theme);
-      setTheme(THEMES[(idx + 1) % THEMES.length].id);
-    },
+  const setTheme = (id) => {
+    setThemeState(id);
+    try {
+      localStorage.setItem(STORAGE_KEY, id);
+    } catch {}
+    applyTheme(id);
   };
+
+  const cycle = () => {
+    const idx = Math.max(
+      0,
+      THEMES.findIndex((t) => t.id === theme)
+    );
+    const next = THEMES[(idx + 1) % THEMES.length].id;
+    setTheme(next);
+  };
+
+  const value = useMemo(() => ({ theme, setTheme, cycle }), [theme]);
 
   return <ThemeCtx.Provider value={value}>{children}</ThemeCtx.Provider>;
 }
 
-export function useTheme() {
+export const useTheme = () => {
   const ctx = useContext(ThemeCtx);
-  if (!ctx) throw new Error("useTheme must be used within ThemeProvider");
+  if (!ctx) throw new Error("useTheme must be used within <ThemeProvider>");
   return ctx;
-}
+};

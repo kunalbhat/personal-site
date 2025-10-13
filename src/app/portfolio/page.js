@@ -135,7 +135,7 @@ export default function Portfolio() {
           </figcaption>
         </section>
         <section className="mb-24">
-          <header className="md:flex justify-between items-center">
+          <header className="md:cleaflex justify-between items-center">
             <div>
               <h3>Spotify Dashboard for TMRNL</h3>
               <p>
