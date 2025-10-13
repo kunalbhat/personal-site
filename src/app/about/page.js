@@ -8,9 +8,9 @@ export default function About() {
     <PageContainer>
       <div className="app-container">
         <header className="mb-24">
-          <HeroHeading text="Deep experience in complex domains and early stage product development." />
+          <HeroHeading text="Deep experience in complex systems and early-stage products." />
         </header>
-        <section className="grid gap-16 grid-cols-3 mb-16">
+        <section className="lg:grid gap-16 grid-cols-3 mb-16">
           <div>
             <h3 className="mb-4">About</h3>
             <p className="font-serif">
@@ -23,11 +23,7 @@ export default function About() {
           </div>
           <div>
             <h3 className="mb-4"></h3>
-            <p className="font-serif">
-              Over the years, I've had the opportunity to work on a variety of
-              projects, ranging from mobile apps to web platforms. My approach
-              to design is user-centric, focusing on understanding{" "}
-            </p>
+            <p className="font-serif"></p>
           </div>
           <div>
             <h3>Ambient Me</h3>

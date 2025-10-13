@@ -25,7 +25,7 @@ export default function HeroHeading({
   colorClass = "text-neutral-900 dark:text-yellow-50",
 
   /** new: shrink-on-scroll controls */
-  shrinkOnScroll = true, // toggle effect
+  shrinkOnScroll = false, // toggle effect
   scrollStart = 0, // px from top to start shrinking
   scrollEnd = 320, // px where it reaches min scale
   scaleFrom = 1, // starting scale

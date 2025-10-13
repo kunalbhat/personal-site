@@ -95,7 +95,7 @@ export default function Portfolio() {
               alt="TMRNL Ambient Display"
               width={960}
               height={640}
-              className="rounded-3xl object-cover object-top scale-90"
+              className="object-fit object-top scale-90"
               priority
             />
           </figure>
