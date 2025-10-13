@@ -9,10 +9,46 @@ export default function Portfolio() {
     <PageContainer>
       <div className="app-container">
         <header>
-          <HeroHeading text="What I've built" sizeVariant="sm" />
+          <HeroHeading text="Portfolio" />
         </header>
-        <section className="my-24">
-          <header className="flex justify-between items-center">
+        <section className="mb-24">
+          <header className="md:flex justify-between items-center">
+            <div>
+              <h3>Aura - On-frame Captions</h3>
+              <p>Adding context to the multi-surface world of Aura Frames.</p>
+            </div>
+            <div>
+              <ul className="tag-list">
+                <li>Android</li>
+                <li>iOS</li>
+                <li>Hardware</li>
+              </ul>
+            </div>
+          </header>
+          <figure className="bg-[#f5f6f4] rounded-3xl w-full py-12 items-center justify-center flex overflow-hidden">
+            <Image
+              src={"/images/aura-captions-phone.gif"}
+              alt="Aura Captions app"
+              width={280}
+              height={840}
+              className="relative left-36 lg:left-12"
+              priority
+            />
+            <Image
+              src={"/images/aura-captions-frame.png"}
+              alt="Aura Captions app"
+              width={800}
+              height={840}
+              className="relative -right-48"
+              priority
+            />
+          </figure>
+          <figcaption className="mb-6 italic text-sm opacity-70">
+            A few of the tools and technologies I use regularly.
+          </figcaption>
+        </section>
+        <section className="mb-24">
+          <header className="md:flex justify-between items-center">
             <div>
               <h3>ChatGPT Nutrition Coach</h3>
               <p>
@@ -99,7 +135,7 @@ export default function Portfolio() {
           </figcaption>
         </section>
         <section className="mb-24">
-          <header className="flex justify-between items-center">
+          <header className="md:flex justify-between items-center">
             <div>
               <h3>Spotify Dashboard for TMRNL</h3>
               <p>
