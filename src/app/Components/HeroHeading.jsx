@@ -1,8 +1,14 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useMemo, useEffect, useState } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
 
 export default function HeroHeading({
+  /** original props */
   text,
   as: Tag = "h1",
   balance = true,
@@ -16,25 +22,75 @@ export default function HeroHeading({
   duration = 0.9,
   y = 16,
   className = "",
-  // 👇 theme-aware default colors; override if you want
   colorClass = "text-neutral-900 dark:text-yellow-50",
+
+  /** new: shrink-on-scroll controls */
+  shrinkOnScroll = true, // toggle effect
+  scrollStart = 0, // px from top to start shrinking
+  scrollEnd = 320, // px where it reaches min scale
+  scaleFrom = 1, // starting scale
+  scaleTo = 0.82, // ending scale
+  fadeTo = 0.85, // final opacity at scrollEnd (1 = no fade)
+  disableBelow = 0, // e.g. 768 to disable on small screens
 }) {
   const words = String(text ?? "")
     .trim()
     .split(/\s+/);
   const ease = [0.22, 1, 0.36, 1];
 
-  const container = {
-    hidden: {},
-    show: { transition: { staggerChildren: stagger, delayChildren: delay } },
-  };
-  const word = {
-    hidden: { opacity: 0, y },
-    show: { opacity: 1, y: 0, transition: { duration, ease } },
-  };
+  const container = useMemo(
+    () => ({
+      hidden: {},
+      show: { transition: { staggerChildren: stagger, delayChildren: delay } },
+    }),
+    [stagger, delay]
+  );
 
-  // FM v11 dynamic motion component
+  const word = useMemo(
+    () => ({
+      hidden: { opacity: 0, y },
+      show: { opacity: 1, y: 0, transition: { duration, ease } },
+    }),
+    [y, duration]
+  );
+
+  // Framer Motion v11 dynamic component helper
   const MotionTag = motion.create ? motion.create(Tag) : motion(Tag);
+
+  // ===== Scroll-driven transforms =====
+  const prefersReduced = useReducedMotion();
+  const { scrollY } = useScroll();
+
+  // Optional: disable on small screens
+  const [wideEnough, setWideEnough] = useState(true);
+  useEffect(() => {
+    if (!disableBelow) return;
+    const check = () => setWideEnough(window.innerWidth >= disableBelow);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [disableBelow]);
+
+  const effectEnabled = shrinkOnScroll && !prefersReduced && wideEnough;
+
+  const scale = useTransform(
+    scrollY,
+    [scrollStart, scrollEnd],
+    [scaleFrom, scaleTo]
+  );
+  const opacity = useTransform(
+    scrollY,
+    [scrollStart, scrollStart + (scrollEnd - scrollStart) * 0.6],
+    [1, fadeTo]
+  );
+
+  const baseStyle = {
+    lineHeight,
+    fontSize: `clamp(${minSize}, ${fluidSize}, ${maxSize})`,
+  };
+  const motionStyle = effectEnabled
+    ? { scale, opacity, ...baseStyle }
+    : baseStyle;
 
   return (
     <MotionTag
@@ -43,18 +99,14 @@ export default function HeroHeading({
       animate="show"
       aria-label={text}
       className={[
-        colorClass, // 🎨 theme-aware color
+        colorClass,
         weightClass,
         balance ? "[text-wrap:balance]" : "",
         "leading-none tracking-normal",
-        "selection:bg-neutral-900/10 selection:text-inherit",
-        "dark:selection:bg-white/15",
+        "selection:bg-neutral-900/10 selection:text-inherit dark:selection:bg-white/15",
         className,
       ].join(" ")}
-      style={{
-        lineHeight,
-        fontSize: `clamp(${minSize}, ${fluidSize}, ${maxSize})`,
-      }}
+      style={motionStyle}
     >
       {words.map((w, i) => (
         <span key={`${w}-${i}`} className="inline">

@@ -1,5 +1,7 @@
 import PageContainer from "../Components/PageContainer";
 import GridOverlay from "../Components/GridOverlay";
+import SpotifyNowPlaying from "../Components/SpotifyNowPlaying";
+import HeroHeading from "../Components/HeroHeading";
 
 export default function About() {
   return (
@@ -12,13 +14,14 @@ export default function About() {
         </header>
         <section className="grid gap-16 grid-cols-3 mb-16">
           <div>
-            <h2>
+            <h3 className="mb-4">About</h3>
+            <p className="font-serif">
               I'm a product designer with a passion for creating intuitive and
               engaging user experiences. With a background in both design and
               technology, I bridge the gap between aesthetics and functionality
               to deliver products that not only look great but also perform
               seamlessly.
-            </h2>
+            </p>
           </div>
           <div>
             <h2>
@@ -26,6 +29,11 @@ export default function About() {
               projects, ranging from mobile apps to web platforms. My approach
               to design is user-centric, focusing on understanding{" "}
             </h2>
+          </div>
+          <div>
+            <h3>Ambient Me</h3>
+            <p>Get to know me through my hobbies and live activities.</p>
+            <SpotifyNowPlaying />
           </div>
         </section>
       </div>
