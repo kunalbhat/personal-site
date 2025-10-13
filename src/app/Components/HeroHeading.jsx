@@ -32,6 +32,9 @@ export default function HeroHeading({
   scaleTo = 0.82, // ending scale
   fadeTo = 0.85, // final opacity at scrollEnd (1 = no fade)
   disableBelow = 0, // e.g. 768 to disable on small screens
+
+  /** new: size variant */
+  sizeVariant = "lg", // 'lg' (default) | 'sm' — adjusts typography scale presets
 }) {
   const words = String(text ?? "")
     .trim()
@@ -84,9 +87,20 @@ export default function HeroHeading({
     [1, fadeTo]
   );
 
+  // size variant presets
+  const sizePresets = {
+    lg: { min: minSize, fluid: fluidSize, max: maxSize },
+    sm: {
+      min: "2.4rem",
+      fluid: "5vw",
+      max: "4.5rem",
+    },
+  };
+  const activeSize = sizePresets[sizeVariant] ?? sizePresets.lg;
+
   const baseStyle = {
     lineHeight,
-    fontSize: `clamp(${minSize}, ${fluidSize}, ${maxSize})`,
+    fontSize: `clamp(${activeSize.min}, ${activeSize.fluid}, ${activeSize.max})`,
   };
   const motionStyle = effectEnabled
     ? { scale, opacity, ...baseStyle }

@@ -9,7 +9,7 @@ export default function Portfolio() {
     <PageContainer>
       <div className="app-container">
         <header>
-          <HeroHeading text="What I've built" />
+          <HeroHeading text="What I've built" sizeVariant="sm" />
         </header>
         <section className="my-24">
           <header className="flex justify-between items-center">
@@ -70,6 +70,34 @@ export default function Portfolio() {
             A few of the tools and technologies I use regularly.
           </figcaption>
         </section> */}
+        <section className="mb-24">
+          <header className="flex justify-between items-center">
+            <div>
+              <h3>Skyteller Crypto Off-ramp</h3>
+              <p>Empowering web3 users to easily convert crypto to cash.</p>
+            </div>
+            <div>
+              <ul className="tag-list">
+                <li>ChatGPT</li>
+                <li>iOS</li>
+                <li>Prototype</li>
+              </ul>
+            </div>
+          </header>
+          <figure className="bg-black rounded-3xl w-full py-12 items-center justify-center flex col-span-2 skyteller-bg">
+            <Image
+              src={"/images/skyteller.gif"}
+              alt="TMRNL Ambient Display"
+              width={320}
+              height={840}
+              className="rounded-3xl"
+              priority
+            />
+          </figure>
+          <figcaption className="mb-6 italic text-sm opacity-70">
+            A few of the tools and technologies I use regularly.
+          </figcaption>
+        </section>
         <section className="mb-24">
           <header className="flex justify-between items-center">
             <div>

@@ -172,3 +172,8 @@ p {
     transform: translateX(-250px);
   }
 }
+
+.skyteller-bg {
+  background-image: url("/images/skyteller-background.png");
+  @apply bg-contain bg-center;
+}
