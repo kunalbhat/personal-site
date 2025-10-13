@@ -21,6 +21,22 @@ export default function About() {
             </p>
           </div>
           <div>
+            <h3 className="mb-4">Experience</h3>
+            <dl className="font-serif text-xl font-normal space-y-8">
+              <div>
+                <dt>Aura Home</dt>
+                <dd>Building for the internet's best digital picture frame.</dd>
+              </div>
+              <div>
+                <dt>Magic + Might</dt>
+                <dd>
+                  Designed in-app personalization experiences for the autonomous
+                  ride-hailing space.
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div>
             <h3 className="mb-4">Ambient Me</h3>
             <p className="font-serif">
               Get to know me through my hobbies and live activities.

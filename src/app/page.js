@@ -59,7 +59,7 @@ export default function Home() {
             variants={subheadVariant}
             initial="hidden"
             animate="show"
-            className="leading-snug mr-24"
+            className="leading-snug md:mr-24"
           >
             Hi, I'm Kunal &ndash; a staff-level IC based in Chicago with 18
             years of experience building in roles as a designer, product

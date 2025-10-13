@@ -228,7 +228,11 @@ ul li {
   @apply text-lg font-medium;
 }
 p {
-  @apply mb-8;
+  @apply text-xl mb-8;
+}
+
+dl dt {
+  @apply font-semibold;
 }
 
 /* Experience */
