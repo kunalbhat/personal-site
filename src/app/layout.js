@@ -1,4 +1,4 @@
-import { Albert_Sans } from "next/font/google";
+import { Albert_Sans, Instrument_Serif, Lora } from "next/font/google";
 
 import "./globals.css";
 
@@ -7,6 +7,17 @@ import { Analytics } from "@vercel/analytics/react";
 
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
+  subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const loraSerif = Lora({
+  variable: "--font-lora-serif",
   subsets: ["latin"],
 });
 
@@ -34,7 +45,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${albertSans.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${albertSans.variable} ${instrumentSerif.variable} ${loraSerif.variable} antialiased`}
+    >
       <body>
         {children}
         <SpeedInsights />
