@@ -32,7 +32,10 @@ export default function About() {
           leading Braintree's Identity team during PayPal's platform unification
           efforts.
         </p>
-        <p>2014 &ndash; 2015 I led design at Modest </p>
+        <p>
+          2014 &ndash; 2015 I led design at Modest (acquired by PayPal) where we
+          built a mobile commerce platform.
+        </p>
       </main>
     </>
   );
