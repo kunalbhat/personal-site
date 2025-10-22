@@ -11,6 +11,9 @@ export default function AppHeader() {
         <li>
           <a href="/resume">Resume</a>
         </li>
+        <li>
+          <a href="/work">Work</a>
+        </li>
       </ul>
     </header>
   );

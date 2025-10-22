@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <AppHeader />
-      <main className="max-w-5xl">
+      <main>
         <p>
           I'm a technically inclined builder that thrives in every stage of the
           product process &ndash; from early insights to delivery. My experience
@@ -23,18 +23,43 @@ export default function About() {
           Waymo app.
         </p>
         <p>
-          2021 &ndash; 2023 I spent 2 years at Galactic, an angel-backed
-          startup, exploring crypto and building tools for web3 users.
+          At Galactic, a seed-staged startup (investors included Redpoint,
+          Bloomberg Beta and Betaworks, among others) I explored crypto and
+          building tools for web3 users. During a very rough time for crypto, we
+          pivoted from a debit card product to finally launching a{" "}
+          <a
+            href="https://thedefiant.io/education/infrastructure/off-ramp-crypto-in-one-click-with-skyteller"
+            target="_blank"
+          >
+            crypto off-ramp
+          </a>{" "}
+          for getting crypto assets straight into bank accounts.
         </p>
         <p>
-          2015 &ndash; 2021 I spent 6 years at PayPal building merchant
-          experiences spanning from <a href="#">Braintree's Control Panel</a> to
-          leading Braintree's Identity team during PayPal's platform unification
-          efforts.
+          Prior to that, I spent 6 years at PayPal building merchant experiences
+          spanning from redefining the UX of{" "}
+          <a href="#">Braintree's merchant dashboard</a> to going deep into the
+          Identity domain. I launched Braintree's Enterprise SSO offering, broke
+          ground on a merchant data platform, and led the Identity component of
+          PayPal's cross-organizational platform unification efforts.
         </p>
         <p>
-          2014 &ndash; 2015 I led design at Modest (acquired by PayPal) where we
-          built a mobile commerce platform.
+          Prior to that, I led design at Modest (
+          <a
+            href="https://fortune.com/2015/08/19/paypal-acquisition-ebay-modest/"
+            target="_blank"
+          ></a>
+          acquired by PayPal) where we built a contextual commerce platform to
+          help small and medium businesses launch quickly on native iOS and
+          Android apps.
+        </p>
+        <p>
+          Prior to that, I designed and built the first iterations of{" "}
+          <a href="#">dscout's</a> mobile research platform.
+        </p>
+        <p>
+          Before all that, the formative years of my career were spent in
+          innovation consulting for Samsung and the consumer electronics space.
         </p>
       </main>
     </>
