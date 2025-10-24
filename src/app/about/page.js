@@ -6,21 +6,36 @@ export default function About() {
       <AppHeader />
       <main>
         <p>
-          I'm a technically inclined builder that thrives in every stage of the
-          product process &ndash; from early insights to delivery. My experience
-          of almost two decades in roles in design, product management, and
-          engineering makes me a true end-to-end contributor that leads through
+          I'm a technically inclined builder who thrives in every stage of the
+          product process &ndash; from early insights to delivery. With nearly
+          two decades of experience across design, product management, and
+          engineering, I'm an end-to-end contributor who leads through
           collaboration.
         </p>
         <p>
-          At <a href="#">Aura</a>, I design for growth experimentation and lead
-          product research to uncover our next big strategic opportunities.
+          At{" "}
+          <a
+            href="https://www.auraframes.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Aura
+          </a>
+          , I design for growth experimentation and lead product research to
+          uncover our next big strategic opportunities.
         </p>
         <p>
-          Prior to that, by way of <a href="#">Magic+Might</a>, I dove deep into
-          the autonomous ride-hail space with <a href="#">Waymo</a>,
-          understanding rider sentiments and designing for future states in the
-          Waymo app.
+          Before that, through{" "}
+          <a href="https://www.magicandmight.com">Magic+Might</a>, I worked with
+          <a
+            href="https://www.waymo.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Waymo
+          </a>
+          to understand rider sentiment and design future experiences for
+          autonomous ride-hail.
         </p>
         <p>
           At Galactic, a seed-staged startup (investors included Redpoint,
@@ -30,6 +45,7 @@ export default function About() {
           <a
             href="https://thedefiant.io/education/infrastructure/off-ramp-crypto-in-one-click-with-skyteller"
             target="_blank"
+            rel="noopener noreferrer"
           >
             crypto off-ramp
           </a>{" "}
@@ -38,16 +54,24 @@ export default function About() {
         <p>
           Prior to that, I spent 6 years at PayPal building merchant experiences
           spanning from redefining the UX of{" "}
-          <a href="#">Braintree's merchant dashboard</a> to going deep into the
-          Identity domain. I launched Braintree's Enterprise SSO offering, broke
-          ground on a merchant data platform, and led the Identity component of
-          PayPal's cross-organizational platform unification efforts.
+          <a
+            href="https://medium.com/@skpatterson02/new-panel-who-dis-5e582b665eb5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Braintree's merchant dashboard
+          </a>{" "}
+          to going deep into the Identity domain. I launched Braintree's
+          Enterprise SSO offering, broke ground on a merchant data platform, and
+          led the Identity component of PayPal's cross-organizational platform
+          unification efforts.
         </p>
         <p>
           Prior to that, I led design at Modest (
           <a
             href="https://fortune.com/2015/08/19/paypal-acquisition-ebay-modest/"
             target="_blank"
+            rel="noopener noreferrer"
           ></a>
           acquired by PayPal) where we built a contextual commerce platform to
           help small and medium businesses launch quickly on native iOS and
@@ -55,7 +79,14 @@ export default function About() {
         </p>
         <p>
           Prior to that, I designed and built the first iterations of{" "}
-          <a href="#">dscout's</a> mobile research platform.
+          <a
+            href="https://www.dscout.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            dscout's
+          </a>{" "}
+          mobile research platform.
         </p>
         <p>
           Before all that, the formative years of my career were spent in

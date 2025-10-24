@@ -4,7 +4,7 @@ export default function AppHeader() {
       <span>
         <a href="/">Kunal Bhat</a>
       </span>
-      <ul className="flex gap-8">
+      {/* <ul className="flex gap-8">
         <li>
           <a href="/about">About</a>
         </li>
@@ -14,7 +14,7 @@ export default function AppHeader() {
         <li>
           <a href="/work">Work</a>
         </li>
-      </ul>
+      </ul> */}
     </header>
   );
 }

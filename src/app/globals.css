@@ -10,15 +10,15 @@ body {
 }
 
 h1 {
-  @apply text-7xl font-headlineSerif font-normal leading-snug;
+  @apply text-6xl md:text-8xl font-headlineSerif font-normal leading-tight mb-12;
 }
 
 p {
-  @apply text-xl mb-12 leading-relaxed md:text-2xl md:leading-relaxed;
+  @apply text-xl mb-8 md:mb-12 leading-relaxed md:text-2xl md:leading-relaxed;
 }
 
 p a {
-  @apply underline decoration-wavy decoration-2 underline-offset-4 hover:underline-offset-8 transition-all duration-200 ease-in-out bg-green-50 hover:bg-yellow-200;
+  @apply underline decoration-wavy decoration-2 underline-offset-8 transition-all duration-200 ease-in-out hover:bg-green-50;
 }
 
 main {
