@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  @apply text-6xl md:text-8xl font-headlineSerif font-normal leading-tight mb-12;
+  @apply text-5xl md:text-8xl font-headlineSerif font-normal leading-tight mb-12;
 }
 
 p {
