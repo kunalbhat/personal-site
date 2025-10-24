@@ -35,56 +35,18 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div className="app-container">
-        <header className="mb-8 md:mb-16">
-          <HeroHeading text="Senior product builder across design, product & engineering." />
+      <div>
+        <header>
+          <HeroHeading text="Staff-level IC with 18 years spanning design, product, &amp; engineering." />
         </header>
-        <section className="md:grid grid-cols-2 mb-16">
-          <div>
-            <motion.h2
-              variants={subheadVariant}
-              initial="hidden"
-              animate="show"
-              className="leading-tight mb-4"
-            >
-              About
-            </motion.h2>
-            <motion.p
-              variants={subheadVariant}
-              initial="hidden"
-              animate="show"
-            ></motion.p>
-          </div>
-          <motion.h2
-            variants={subheadVariant}
-            initial="hidden"
-            animate="show"
-            className="leading-snug md:mr-24"
-          >
-            Hi, I'm Kunal &ndash; a staff-level IC based in Chicago with 18
-            years of experience building in roles as a designer, product
-            manager, and engineer. I'm technically inclined, a systems thinker
-            and highly comfortable in new and ambiguous problem spaces.
-          </motion.h2>
-        </section>
-        <section className="md:grid grid-cols-2 mb-16">
-          <motion.h2
-            variants={subheadVariant}
-            initial="hidden"
-            animate="show"
-            className="leading-tight mb-4"
-          >
-            Experience
-          </motion.h2>
-          <motion.h2
-            variants={subheadVariant}
-            initial="hidden"
-            animate="show"
-            className="leading-tight"
-          >
-            From startups to large enterprises, I thrive in the 0 &rarr; 1 stage
-            of the product process.
-          </motion.h2>
+        <section>
+          <motion.p variants={subheadVariant} initial="hidden" animate="show">
+            I'm a technically inclined builder who thrives in every stage of the
+            product process &ndash; from early insights to delivery. With nearly
+            two decades of experience across design, product management, and
+            engineering, I'm an end-to-end contributor who leads through
+            collaboration.
+          </motion.p>
         </section>
       </div>
       <GridOverlay columns={12} gutter={24} baseline={24} />

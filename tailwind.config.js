@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-albert-sans)"],
         serif: ["var(--font-lora-serif)"],
+        headline: ["var(--font-instrument-serif)"],
       },
       keyframes: {
         blink: {

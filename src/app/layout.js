@@ -1,4 +1,4 @@
-import { Albert_Sans, Lora } from "next/font/google";
+import { Albert_Sans, Lora, Instrument_Serif } from "next/font/google";
 
 import "./globals.css";
 
@@ -16,6 +16,12 @@ const albertSans = Albert_Sans({
 
 const loraSerif = Lora({
   variable: "--font-lora-serif",
+  subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -45,7 +51,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${albertSans.variable} ${loraSerif.variable} antialiased`}
+      className={`${albertSans.variable} ${loraSerif.variable} ${instrumentSerif.variable} antialiased`}
     >
       <body>
         <GridOverlayProvider>

@@ -14,14 +14,14 @@ export default function HeroHeading({
   balance = true,
 
   /** type scale */
-  minSize = "3rem",
-  fluidSize = "7.5vw",
-  maxSize = "7.5rem",
-  lineHeight = "0.95",
+  minSize = "4rem",
+  fluidSize = "6vw",
+  maxSize = "7rem",
+  lineHeight = "1.1",
 
   /** weight + classes */
-  weightClass = "font-semibold",
-  className = "",
+  weightClass = "font-normal",
+  className = "leading-loose",
 
   /** animations */
   stagger = 0.08,
@@ -98,7 +98,7 @@ export default function HeroHeading({
   // ===== type scale presets
   const sizePresets = {
     lg: { min: minSize, fluid: fluidSize, max: maxSize },
-    sm: { min: "2.4rem", fluid: "5vw", max: "4.5rem" },
+    sm: { min: "2.4rem", fluid: "6vw", max: "6rem" },
   };
   const activeSize = sizePresets[sizeVariant] ?? sizePresets.lg;
 
@@ -143,7 +143,7 @@ export default function HeroHeading({
         textClassFor(colorVariant),
         weightClass,
         balance ? "[text-wrap:balance]" : "",
-        "leading-none tracking-normal",
+        "leading-loose tracking-normal",
         selectionBg,
         selectionFg,
         className,

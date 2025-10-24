@@ -44,102 +44,28 @@ export default function AppHeader() {
 
   return (
     <header
-      className="app-header fixed left-0 right-0 top-0 z-50 w-full px-4 md:px-8 py-4 md:py-6"
+      className="app-header fixed left-0 right-0 top-0 z-50 w-full p-4 md:p-12"
       style={{ opacity }}
     >
       <div className="mx-auto max-w-8xl flex items-center justify-between">
         {/* Left: brand */}
         <Link
           href="/"
-          className="flex items-center gap-2 transition-colors hover:opacity-90"
+          className="flex items-center gap-3 transition-colors hover:opacity-90"
         >
           <Image
             src="/images/kunal-bhat-avatar.jpg"
             alt="Kunal Bhat"
             width={40}
             height={40}
-            className="rounded-full h-12 w-12 border border-[var(--border)] bg-[var(--surface)] object-cover"
+            className="rounded-full h-10 w-10 border border-[var(--border)] bg-[var(--surface)] object-cover"
           />
-          <span className="hidden sm:inline font-semibold text-lg text-[var(--accent)]">
+          <span className="hidden font-sans sm:inline font-semibold text-[var(--accent)]">
             Kunal Bhat
           </span>
         </Link>
 
-        {/* Center: desktop nav */}
-        <LayoutGroup id="top-nav">
-          <ul className="hidden md:flex gap-4 rounded-full px-2 py-1">
-            {navItems.map(({ href, label }) => {
-              const active = pathname === href;
-              return (
-                <li key={href} className="relative inline-flex isolate">
-                  {active && (
-                    <motion.span
-                      layoutId="nav-pill"
-                      transition={
-                        reduce
-                          ? { duration: 0.12 }
-                          : { type: "spring", stiffness: 520, damping: 40 }
-                      }
-                      className="absolute inset-0 rounded-full "
-                    />
-                  )}
-                  <Link
-                    href={href}
-                    className={`nav-pill ${
-                      active ? "is-active" : ""
-                    } relative z-10 px-4 py-2 rounded-full font-semibold transition-colors
-    ${
-      active
-        ? "text-[var(--accent)]"
-        : "text-[var(--muted)] hover:text-[var(--fg)]"
-    }`}
-                    style={
-                      active
-                        ? {
-                            background: "var(--pill-bg)",
-                            boxShadow: "inset 0 0 0 1px var(--pill-ring)",
-                          }
-                        : undefined
-                    }
-                  >
-                    {label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </LayoutGroup>
-
         <div className="flex items-center gap-4">
-          {/* Grid toggle */}
-          <button
-            onClick={toggle}
-            aria-label="Toggle grid overlay"
-            title="Toggle grid (⌘/Ctrl+G)"
-            className={`inline-flex h-12 w-12 items-center justify-center rounded-full transition
-      ${
-        visible
-          ? "bg-neutral-900 text-white dark:bg-white dark:text-black"
-          : "text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 hover:opacity-90"
-      }`}
-          >
-            {/* Simple grid icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="h-5 w-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 3h7v7H3V3zm0 11h7v7H3v-7zm11-11h7v7h-7V3zm0 11h7v7h-7v-7z"
-              />
-            </svg>
-          </button>
-
           {/* Dark mode toggle */}
           {mounted ? (
             <ThemeToggle />
