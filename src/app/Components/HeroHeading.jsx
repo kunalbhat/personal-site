@@ -14,9 +14,9 @@ export default function HeroHeading({
   balance = true,
 
   /** type scale */
-  minSize = "4rem",
-  fluidSize = "6rem",
-  maxSize = "6rem",
+  minSize = "3rem",
+  fluidSize = "7vw",
+  maxSize = "7rem",
   lineHeight = "1",
 
   /** weight + classes */
@@ -27,7 +27,7 @@ export default function HeroHeading({
   stagger = 0.08,
   delay = 0.05,
   duration = 0.9,
-  y = 16,
+  y = 32,
 
   /** scroll shrink */
   shrinkOnScroll = false,

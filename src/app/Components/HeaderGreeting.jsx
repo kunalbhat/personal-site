@@ -106,7 +106,7 @@ export default function HeaderGreeting({
         variants={textVariants}
         initial="initial"
         animate="enter"
-        className="text-sm sm:text-base leading-none text-[var(--muted,inherit)]"
+        className="font-sans font-bold text-base sm:text-lg leading-none text-[var(--muted,inherit)]"
       >
         {greeting}
         {/* {name ? `, ${name.split(" ")[0]}` : ""} */}

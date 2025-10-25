@@ -4,23 +4,78 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html,
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+img,
+svg {
+  transition: filter 0.3s ease;
+}
+
 /* Base Styles */
 body {
-  @apply font-serif m-8 md:m-12 flex flex-col gap-24;
+  @apply font-serif m-8 md:m-12 flex flex-col gap-24 transition-colors duration-500;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 h1 {
   @apply text-5xl md:text-8xl font-headline font-normal leading-tight mb-12;
+  color: var(--fg);
 }
 
 p {
   @apply text-xl mb-8 md:mb-12 leading-relaxed md:text-2xl md:leading-relaxed;
+  color: var(--muted);
 }
 
 p a {
-  @apply underline decoration-wavy decoration-2 underline-offset-8 transition-all duration-200 ease-in-out hover:bg-green-50;
+  @apply underline decoration-wavy decoration-2 underline-offset-8 transition-all duration-200 ease-in-out;
+  color: var(--accent);
+  background-color: transparent;
+}
+
+p a:hover {
+  background-color: var(--link-bg-hover);
 }
 
 main {
   @apply max-w-6xl;
+}
+
+:root {
+  /* Light mode defaults */
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #666666;
+  --accent: #0077ff;
+  --accent-2: #ffb400;
+  --accent-3: #00c896;
+  --link-bg-hover: #ecfdf5; /* subtle mint tone for links */
+
+  color-scheme: light;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+/* Dark theme overrides */
+.dark {
+  --bg: #0d0d0d;
+  --fg: #f5f5f5;
+  --muted: #a0a0a0;
+  --accent: #5caeff;
+  --accent-2: #ffd464;
+  --accent-3: #2fd6a5;
+  --link-bg-hover: #002a1f;
+
+  color-scheme: dark;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.dark svg,
+.dark img[src$=".svg"] {
+  filter: invert(1);
 }

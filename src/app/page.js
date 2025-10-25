@@ -56,18 +56,16 @@ export default function Home() {
             variants={subheadVariant}
             initial="hidden"
             animate="show"
-            className="flex"
+            className="flex items-center gap-2"
           >
-            <p>
-              <Image
-                src="/images/icon-arrow-back.svg"
-                alt="Arrow Icon"
-                width={32}
-                height={32}
-                className="inline-block mr-2 rotate-180 border border-black"
-              />
-            </p>
-            <span>About Me</span>
+            <span className="text-lg">Learn more about me</span>
+            <Image
+              src="/images/icon-arrow-back.svg"
+              alt="Arrow Icon"
+              width={32}
+              height={32}
+              className="rotate-180 h-8 w-8"
+            />
           </motion.div>
         </section>
       </div>
