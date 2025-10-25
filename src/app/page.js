@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 // Libraries
 import "react-social-icons/github";
@@ -56,16 +57,21 @@ export default function Home() {
             variants={subheadVariant}
             initial="hidden"
             animate="show"
-            className="flex items-center gap-2"
+            className="flex items-center gap-4"
           >
-            <span className="text-lg">Learn more about me</span>
-            <Image
-              src="/images/icon-arrow-back.svg"
-              alt="Arrow Icon"
-              width={32}
-              height={32}
-              className="rotate-180 h-8 w-8"
-            />
+            <span className="text-2xl font-headline">Learn more about me</span>
+            <Link
+              href="/about"
+              className="h-12 w-12 bg-neutral-100 rounded-full flex items-center justify-center"
+            >
+              <Image
+                src="/images/icon-arrow-back.svg"
+                alt="Back arrow"
+                width={32}
+                height={32}
+                className="rotate-180 relative hover:translate-x-2 transition-transform duration-300"
+              />
+            </Link>
           </motion.div>
         </section>
       </div>
