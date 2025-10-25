@@ -104,11 +104,11 @@ export default function HeroHeading({
 
   const baseStyle = {
     lineHeight,
-    fontSize: `clamp(${activeSize.min}, ${activeSize.fluid}, ${activeSize.max})`,
   };
+
   const motionStyle = effectEnabled
-    ? { scale, opacity, ...baseStyle }
-    : baseStyle;
+    ? { scale, opacity, lineHeight }
+    : { lineHeight };
 
   // ===== theme-aware colors via CSS variables
   const textClassFor = (variant) => {
@@ -143,9 +143,10 @@ export default function HeroHeading({
         textClassFor(colorVariant),
         weightClass,
         balance ? "[text-wrap:balance]" : "",
-        "leading-loose tracking-normal",
+        "tracking-normal leading-tight",
         selectionBg,
         selectionFg,
+        "text-6xl sm:text-6xl md:text-7xl lg:text-8xl",
         className,
       ].join(" ")}
       style={motionStyle}

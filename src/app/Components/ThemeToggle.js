@@ -94,7 +94,7 @@ export default function ThemeToggle({
             alt={isLight ? "Sun icon" : "Moon icon"}
             width={24}
             height={24}
-            className="h-5 w-5 sm:h-6 sm:w-6"
+            className="h-8 w-8 sm:h-6 sm:w-6"
             priority
           />
         </motion.div>

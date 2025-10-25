@@ -108,7 +108,8 @@ export default function HeaderGreeting({
         animate="enter"
         className="font-sans font-bold text-base sm:text-lg leading-none text-[var(--muted,inherit)]"
       >
-        {greeting}
+        {/* {greeting} */}
+        {"Kunal Bhat"}
         {/* {name ? `, ${name.split(" ")[0]}` : ""} */}
       </motion.span>
     </div>
