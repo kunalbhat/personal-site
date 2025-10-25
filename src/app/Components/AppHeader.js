@@ -12,6 +12,8 @@ import {
 import ThemeToggle from "./ThemeToggle";
 import { useGridOverlay } from "./GridOverlayProvider";
 
+import HeaderGreeting from "../Components/HeaderGreeting";
+
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/portfolio", label: "Portfolio" },
@@ -53,16 +55,19 @@ export default function AppHeader() {
           href="/"
           className="flex items-center gap-3 transition-colors hover:opacity-90"
         >
-          <Image
+          {/* <Image
             src="/images/kunal-bhat-avatar.jpg"
             alt="Kunal Bhat"
             width={40}
             height={40}
             className="rounded-full h-10 w-10 border border-[var(--border)] bg-[var(--surface)] object-cover"
+          /> */}
+          <HeaderGreeting
+            name="Kunal"
+            sunSrc="/images/icon-sun.svg"
+            moonSrc="/images/icon-moon.svg"
+            className="pr-1"
           />
-          <span className="hidden font-sans sm:inline font-semibold text-[var(--accent)]">
-            Kunal Bhat
-          </span>
         </Link>
 
         <div className="flex items-center gap-4">
@@ -105,7 +110,7 @@ export default function AppHeader() {
               initial={{ y: -16, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -16, opacity: 0 }}
-              transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
               className="md:hidden fixed left-0 right-0 top-16 mx-4 rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white/90 dark:bg-neutral-900/90 backdrop-blur p-2"
             >
               {navItems.map(({ href, label }) => {

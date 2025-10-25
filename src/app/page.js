@@ -3,6 +3,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useState, useEffect } from "react";
 
+import Image from "next/image";
+
 // Libraries
 import "react-social-icons/github";
 import "react-social-icons/linkedin";
@@ -37,16 +39,36 @@ export default function Home() {
     <PageContainer>
       <div>
         <header>
-          <HeroHeading text="Staff-level IC with 18 years spanning design, product, &amp; engineering." />
+          <HeroHeading
+            text="Solving complex product problems through research, design, and technical depth.
+"
+          />
         </header>
         <section>
           <motion.p variants={subheadVariant} initial="hidden" animate="show">
             I'm a technically inclined builder who thrives in every stage of the
-            product process &ndash; from early insights to delivery. With nearly
-            two decades of experience across design, product management, and
+            product process – from early insights to delivery. With nearly two
+            decades of experience across design, product management, and
             engineering, I'm an end-to-end contributor who leads through
             collaboration.
           </motion.p>
+          <motion.div
+            variants={subheadVariant}
+            initial="hidden"
+            animate="show"
+            className="flex"
+          >
+            <p>
+              <Image
+                src="/images/icon-arrow-back.svg"
+                alt="Arrow Icon"
+                width={32}
+                height={32}
+                className="inline-block mr-2 rotate-180 border border-black"
+              />
+            </p>
+            <span>About Me</span>
+          </motion.div>
         </section>
       </div>
       <GridOverlay columns={12} gutter={24} baseline={24} />

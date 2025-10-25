@@ -15,9 +15,9 @@ export default function HeroHeading({
 
   /** type scale */
   minSize = "4rem",
-  fluidSize = "6vw",
-  maxSize = "7rem",
-  lineHeight = "1.1",
+  fluidSize = "6rem",
+  maxSize = "6rem",
+  lineHeight = "1",
 
   /** weight + classes */
   weightClass = "font-normal",
