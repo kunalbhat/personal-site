@@ -32,7 +32,7 @@ export default function AppHeader() {
 
   return (
     <header
-      className="app-header fixed left-0 right-0 top-0 z-50 w-full p-4 md:p-12"
+      className="app-header fixed left-0 right-0 top-0 z-50 w-full p-8 md:p-12"
       style={{ opacity }}
     >
       <div className="mx-auto max-w-8xl flex items-center justify-between">
