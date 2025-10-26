@@ -43,8 +43,8 @@ export default function AppHeader() {
         >
           <HeaderGreeting
             name="Kunal"
-            sunSrc="/images/icon-sun.svg"
-            moonSrc="/images/icon-moon.svg"
+            sunSrc="/images/icon-face-id.svg"
+            moonSrc="/images/icon-face-id.svg"
             className="pr-1"
           />
         </Link>
