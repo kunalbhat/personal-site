@@ -49,7 +49,7 @@ export default function ThemeToggle({
       opacity: 1,
       scale: 1,
       transition: {
-        duration: prefersReduced ? 0 : 1.2,
+        duration: prefersReduced ? 0 : 0.8,
         ease: [0.25, 1, 0.5, 1],
       },
     },
@@ -58,7 +58,7 @@ export default function ThemeToggle({
       opacity: 0,
       scale: 0.95,
       transition: {
-        duration: prefersReduced ? 0 : 1.0,
+        duration: prefersReduced ? 0 : 0.5,
         ease: [0.25, 1, 0.5, 1],
       },
     }),
@@ -75,7 +75,7 @@ export default function ThemeToggle({
       className={[
         "relative h-7 w-7 sm:h-8 sm:w-8 overflow-hidden rounded-full cursor-pointer",
         "flex items-center justify-center select-none",
-        "transition-colors duration-300 hover:bg-[var(--hover-bg,rgba(0,0,0,0.05))]",
+        "transition-colors duration-300 ]",
         className,
       ].join(" ")}
     >
@@ -92,8 +92,8 @@ export default function ThemeToggle({
           <Image
             src={isLight ? sunSrc : moonSrc}
             alt={isLight ? "Sun icon" : "Moon icon"}
-            width={24}
-            height={24}
+            width={32}
+            height={32}
             className="h-8 w-8 sm:h-6 sm:w-6"
             priority
           />

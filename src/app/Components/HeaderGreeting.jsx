@@ -79,7 +79,7 @@ export default function HeaderGreeting({
       ].join(" ")}
       aria-live="polite"
     >
-      <div className="relative h-6 w-6 sm:h-7 sm:w-7 overflow-hidden rounded-full">
+      <div className="relative h-8 w-8 sm:h-7 sm:w-7 overflow-hidden rounded-full">
         <AnimatePresence mode="wait">
           <motion.div
             key={day ? "sun" : "moon"}
@@ -93,8 +93,8 @@ export default function HeaderGreeting({
             <Image
               src={iconSrc}
               alt={iconAlt}
-              width={24}
-              height={24}
+              width={32}
+              height={32}
               className="h-full w-full"
               priority
             />

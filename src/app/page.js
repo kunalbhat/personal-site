@@ -48,8 +48,8 @@ export default function Home() {
         <section>
           <motion.p variants={subheadVariant} initial="hidden" animate="show">
             I'm a technically inclined builder who thrives in every stage of the
-            product process – from early insights to delivery. With nearly two
-            decades of experience across design, product management, and
+            product process &ndash; from early insights to delivery. With nearly
+            two decades of experience across design, product management, and
             engineering, I'm an end-to-end contributor who leads through
             collaboration.
           </motion.p>

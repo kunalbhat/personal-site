@@ -53,7 +53,7 @@ export default function AppHeader() {
         {mounted ? (
           <ThemeToggle />
         ) : (
-          <div className="w-8 h-8 animate-pulse rounded-full" />
+          <div className="w-10 h-10 animate-pulse rounded-full" />
         )}
       </div>
     </header>

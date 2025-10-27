@@ -24,8 +24,13 @@ h1 {
   color: var(--fg);
 }
 
+h3 {
+  @apply font-sans font-bold leading-tight mb-8;
+  color: var(--fg);
+}
+
 p {
-  @apply text-xl mb-8 md:mb-12 leading-relaxed md:text-2xl md:leading-relaxed;
+  @apply text-xl mb-8 md:mb-12 leading-relaxed md:leading-relaxed;
   color: var(--muted);
 }
 
@@ -37,10 +42,6 @@ p a {
 
 p a:hover {
   background-color: var(--link-bg-hover);
-}
-
-main {
-  @apply max-w-6xl;
 }
 
 :root {

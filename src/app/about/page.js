@@ -6,7 +6,7 @@ import HeroHeading from "../Components/HeroHeading";
 export default function About() {
   return (
     <PageContainer>
-      <div className="app-container">
+      <div>
         <header className="mb-24">
           <HeroHeading text="Deep experience in complex systems and early-stage products." />
         </header>
@@ -21,8 +21,8 @@ export default function About() {
             </p>
           </div>
           <div>
-            <h3 className="mb-4">Experience</h3>
-            <dl className="font-serif text-xl font-normal space-y-8">
+            <h3 className="mb-2 md:mb-4">Experience</h3>
+            <dl className="font-serif text-xl md:text-2xl font-normal space-y-8 leading-relaxed">
               <div>
                 <dt>Aura Home</dt>
                 <dd>Building for the internet's best digital picture frame.</dd>

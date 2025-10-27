@@ -13,10 +13,6 @@ export default function HeroHeading({
   as: Tag = "h1",
   balance = true,
 
-  /** type scale */
-  minSize = "3rem",
-  fluidSize = "7vw",
-  maxSize = "7rem",
   lineHeight = "1",
 
   /** weight + classes */
@@ -95,17 +91,6 @@ export default function HeroHeading({
     [1, fadeTo]
   );
 
-  // ===== type scale presets
-  const sizePresets = {
-    lg: { min: minSize, fluid: fluidSize, max: maxSize },
-    sm: { min: "2.4rem", fluid: "6vw", max: "6rem" },
-  };
-  const activeSize = sizePresets[sizeVariant] ?? sizePresets.lg;
-
-  const baseStyle = {
-    lineHeight,
-  };
-
   const motionStyle = effectEnabled
     ? { scale, opacity, lineHeight }
     : { lineHeight };
@@ -146,7 +131,7 @@ export default function HeroHeading({
         "tracking-normal leading-tight",
         selectionBg,
         selectionFg,
-        "text-5xl sm:text-6xl md:text-7xl lg:text-8xl",
+        "text-6xl sm:text-7xl md:text-7xl lg:text-8xl",
         className,
       ].join(" ")}
       style={motionStyle}
