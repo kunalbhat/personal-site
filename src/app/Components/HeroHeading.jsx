@@ -131,7 +131,7 @@ export default function HeroHeading({
         "tracking-normal leading-tight",
         selectionBg,
         selectionFg,
-        "text-6xl sm:text-7xl md:text-7xl lg:text-8xl",
+        "text-6xl sm:text-7xl md:text-7xl lg:text-8xl max-w-6xl",
         className,
       ].join(" ")}
       style={motionStyle}
