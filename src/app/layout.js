@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
 import AppHeader from "./Components/AppHeader";
+import AppFooter from "./Components/AppFooter";
 import { ThemeProvider } from "@/app/Components/ThemeProvider";
 
 const albertSans = Albert_Sans({
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <AppHeader />
           {children}
+          <AppFooter />
           <SpeedInsights />
           <Analytics />
         </ThemeProvider>
