@@ -42,7 +42,7 @@ export default function AppHeader() {
           className="flex items-center gap-3 transition-opacity hover:opacity-90"
         >
           <HeaderGreeting
-            name="Kunal"
+            name="Kunal Bhat"
             sunSrc="/images/icon-face-id.svg"
             moonSrc="/images/icon-face-id.svg"
             className="pr-1"

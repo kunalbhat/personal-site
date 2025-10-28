@@ -31,7 +31,7 @@ h3 {
 
 p {
   @apply text-xl mb-8 md:mb-12 leading-relaxed md:leading-relaxed;
-  color: var(--muted);
+  color: var(--fg);
 }
 
 p a {

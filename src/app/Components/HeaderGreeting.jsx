@@ -3,38 +3,45 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-/**
- * Drop-in replacement for HeaderGreeting
- * - Face icon grows in with a gentle overshoot and settles
- * - Re-animates on page mount and on theme toggle (window 'theme:toggle')
- * - Text fades in softly
- *
- * NOTE: For best results, make your face SVG use fill="currentColor"
- * so it automatically matches --fg in light/dark. If not, your global
- * .dark img[src$=".svg"] { filter: invert(1) } rule will still work.
- */
 export default function HeaderGreeting({
   name = "Kunal Bhat",
   className = "",
-  faceSrc = "../images/icon-face-id.svg", // update path if needed
+  faceSrc = "../images/icon-face-id.svg",
 }) {
   const reduce = useReducedMotion();
-  const [bump, setBump] = useState(0); // increments to retrigger animation
+  const [bump, setBump] = useState(0);
 
-  // Animate on mount
+  // replay on mount + theme toggle
   useEffect(() => setBump((b) => b + 1), []);
-
-  // Animate again when theme toggles (ThemeToggle should dispatch this)
   useEffect(() => {
     const reanimate = () => setBump((b) => b + 1);
     window.addEventListener("theme:toggle", reanimate);
     return () => window.removeEventListener("theme:toggle", reanimate);
   }, []);
 
-  // Gentle, iOS-like pop with small overshoot (spring settles it)
+  // Icon motion (slow + exaggerated)
+  const POP_DURATION = 2.1;
+  const EASE = [0.16, 1, 0.3, 1];
+
+  const iconInitial = reduce
+    ? { opacity: 0, scale: 0.8 }
+    : { opacity: 0, scale: 0.3 };
+  const iconAnimate = reduce
+    ? { opacity: 1, scale: 1 }
+    : { opacity: [0, 1, 1, 1, 1], scale: [0.3, 1.18, 0.94, 1.04, 1.0] };
   const iconTransition = reduce
-    ? { duration: 1, ease: [0.25, 1, 0.5, 1] }
-    : { type: "spring", stiffness: 220, damping: 18, mass: 0.8 };
+    ? { duration: 0.35, ease: EASE }
+    : {
+        duration: POP_DURATION,
+        times: [0, 0.6, 0.82, 0.94, 1],
+        ease: EASE,
+        delay: 0.05,
+      };
+
+  // Text timing: start after ~62% of icon timeline
+  const TEXT_DELAY_RATIO = 0.62;
+  const textDelay = reduce ? 0.12 : 0.05 + POP_DURATION * TEXT_DELAY_RATIO; // aligns with icon delay
+  const textDuration = reduce ? 0.35 : Math.min(POP_DURATION * 0.45, 1.2); // smooth but not sluggish
 
   return (
     <div
@@ -44,26 +51,25 @@ export default function HeaderGreeting({
       ].join(" ")}
       aria-live="polite"
     >
-      {/* Face icon pop-in */}
+      {/* Face icon */}
       <motion.span
         key={bump}
-        initial={{ scale: 0.6, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        initial={iconInitial}
+        animate={iconAnimate}
         transition={iconTransition}
         className="inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center"
         aria-hidden="true"
         style={{ color: "var(--fg)" }}
       >
-        {/* If you prefer next/image, swap to it; <img> keeps it simple */}
-        <img src={faceSrc} alt="" className="h-full w-full" />
+        <img src={faceSrc} alt="Face ID icon" className="h-full w-full" />
       </motion.span>
 
-      {/* Name text fade-in */}
+      {/* Name: follows the icon */}
       <motion.span
-        initial={{ opacity: 0, y: 4 }}
+        initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1], delay: 0.05 }}
-        className="font-sans font-bold text-base sm:text-lg leading-none text-[var(--muted,inherit)]"
+        transition={{ duration: textDuration, ease: EASE, delay: textDelay }}
+        className="font-sans font-bold text-base sm:text-lg leading-none text-[var(--fg,inherit)]"
       >
         {name}
       </motion.span>
