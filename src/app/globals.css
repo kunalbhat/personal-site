@@ -23,7 +23,7 @@ main {
   color: var(--fg);
 
   /* defaults so SSR render is correct before JS runs */
-  --header-h: 80px;
+  --header-h: 88px;
 }
 
 /* Dark theme overrides */

@@ -59,7 +59,7 @@ export default function SpotifyNowPlaying({ limit = 5, refreshMs = 300_000 }) {
   return (
     <div>
       <div className="flex items-center justify-between mb-4">
-        <div className="text-sm font-medium">
+        <div className="text-base font-medium">
           {isPlaying ? (
             <span className="text-green-500 animate-pulse">• LIVE</span>
           ) : (
@@ -89,7 +89,7 @@ export default function SpotifyNowPlaying({ limit = 5, refreshMs = 300_000 }) {
               <div className="text-sm font-semibold truncate">
                 {t.title || "Unknown title"}
               </div>
-              <div className="text-xs text-neutral-600 dark:text-neutral-400 truncate">
+              <div className="text-sm text-neutral-600 dark:text-neutral-400 truncate">
                 {t.artist || (isPlaying && idx === 0 ? "Unknown artist" : "—")}
               </div>
             </div>
