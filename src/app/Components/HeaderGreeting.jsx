@@ -16,7 +16,7 @@ import { motion, useReducedMotion } from "framer-motion";
 export default function HeaderGreeting({
   name = "Kunal Bhat",
   className = "",
-  faceSrc = "/icons/face-outline.svg", // update path if needed
+  faceSrc = "../images/icon-face-id.svg", // update path if needed
 }) {
   const reduce = useReducedMotion();
   const [bump, setBump] = useState(0); // increments to retrigger animation
