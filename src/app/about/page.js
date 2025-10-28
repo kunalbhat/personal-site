@@ -25,8 +25,8 @@ export default function About() {
           </p>
           <p>
             Before that, through{" "}
-            <a href="https://www.magicandmight.com">Magic+Might</a>, I worked
-            with{" "}
+            <a href="https://www.magicandmight.com">Magic+Might</a>, I dove deep
+            into the autonomous ride-hail space working with{" "}
             <a
               href="https://www.waymo.com"
               target="_blank"
@@ -34,8 +34,7 @@ export default function About() {
             >
               Waymo{" "}
             </a>
-            to understand rider sentiment and design future experiences for
-            autonomous ride-hail.
+            to understand rider sentiment and design future experiences.
           </p>
           <p>
             At Galactic, a seed-staged startup (investors included Redpoint,

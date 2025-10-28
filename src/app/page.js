@@ -61,7 +61,7 @@ export default function Home() {
             <span className="text-2xl font-headline">Learn more about me</span>
             <Link
               href="/about"
-              className="h-12 w-12 bg-neutral-100 rounded-full flex items-center justify-center"
+              className="h-12 w-12 bg-[var(--link-bg-hover,inherit)] rounded-full flex items-center justify-center"
             >
               <Image
                 src="/images/icon-arrow-back.svg"
