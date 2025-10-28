@@ -78,7 +78,7 @@ dl {
 }
 
 p {
-  @apply mb-8 md:mb-12 leading-relaxed md:leading-relaxed;
+  @apply mb-8 leading-relaxed md:leading-relaxed;
   color: var(--fg);
 }
 

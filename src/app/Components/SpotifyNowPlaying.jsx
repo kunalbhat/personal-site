@@ -63,8 +63,8 @@ export default function SpotifyNowPlaying({ limit = 5, refreshMs = 300_000 }) {
           {isPlaying ? (
             <span className="text-green-500 animate-pulse">• LIVE</span>
           ) : (
-            <span className="text-neutral-400">
-              {label || "Recently played on Spotify"}
+            <span className="text-neutral-900">
+              {label || "Recently played..."}
             </span>
           )}
         </div>

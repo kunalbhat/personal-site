@@ -14,13 +14,6 @@ export default function About() {
           <div>
             <h3 className="mb-2 md:mb-4">Experience</h3>
             <p>
-              I'm a technically inclined builder who thrives in every stage of
-              the product process &ndash; from early insights to delivery. With
-              nearly two decades of experience across design, product
-              management, and engineering, I'm an end-to-end contributor who
-              leads through collaboration.
-            </p>
-            <p>
               At{" "}
               <a
                 href="https://www.auraframes.com"
@@ -35,13 +28,13 @@ export default function About() {
             <p>
               Before that, through{" "}
               <a href="https://www.magicandmight.com">Magic+Might</a>, I worked
-              with
+              with{" "}
               <a
                 href="https://www.waymo.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Waymo
+                Waymo{" "}
               </a>
               to understand rider sentiment and design future experiences for
               autonomous ride-hail.
