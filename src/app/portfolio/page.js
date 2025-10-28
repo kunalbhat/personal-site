@@ -7,11 +7,11 @@ import HeroHeading from "../Components/HeroHeading";
 export default function Portfolio() {
   return (
     <PageContainer>
-      <div className="app-container">
-        <header>
-          <HeroHeading text="Portfolio" />
-        </header>
-        <section className="mb-24">
+      <header>
+        <HeroHeading text="Portfolio" />
+      </header>
+      <main>
+        <section>
           <header className="md:flex justify-between items-center">
             <div>
               <h3>Aura - On-frame Captions</h3>
@@ -165,7 +165,7 @@ export default function Portfolio() {
             A few of the tools and technologies I use regularly.
           </figcaption>
         </section>
-      </div>
+      </main>
     </PageContainer>
   );
 }

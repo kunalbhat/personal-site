@@ -6,7 +6,6 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
 import AppHeader from "./Components/AppHeader";
-import { GridOverlayProvider } from "@/app/Components/GridOverlayProvider";
 import { ThemeProvider } from "@/app/Components/ThemeProvider";
 
 const albertSans = Albert_Sans({
@@ -54,14 +53,12 @@ export default function RootLayout({ children }) {
       className={`${albertSans.variable} ${loraSerif.variable} ${instrumentSerif.variable} antialiased`}
     >
       <body>
-        <GridOverlayProvider>
-          <ThemeProvider>
-            <AppHeader />
-            {children}
-            <SpeedInsights />
-            <Analytics />
-          </ThemeProvider>
-        </GridOverlayProvider>
+        <ThemeProvider>
+          <AppHeader />
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

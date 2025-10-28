@@ -12,7 +12,6 @@ import "react-social-icons/linkedin";
 
 // Components
 import PageContainer from "./Components/PageContainer";
-import GridOverlay from "./Components/GridOverlay";
 import HeroHeading from "./Components/HeroHeading";
 
 export default function Home() {
@@ -75,7 +74,6 @@ export default function Home() {
           </motion.div>
         </section>
       </div>
-      <GridOverlay columns={12} gutter={24} baseline={24} />
     </PageContainer>
   );
 }

@@ -41,7 +41,7 @@ export default function HeaderGreeting({
   // Text timing: start after ~62% of icon timeline
   const TEXT_DELAY_RATIO = 0.62;
   const textDelay = reduce ? 0.12 : 0.05 + POP_DURATION * TEXT_DELAY_RATIO; // aligns with icon delay
-  const textDuration = reduce ? 0.35 : Math.min(POP_DURATION * 0.45, 1.2); // smooth but not sluggish
+  const textDuration = reduce ? 0.35 : Math.min(POP_DURATION * 0.45, 0.8); // smooth but not sluggish
 
   return (
     <div
