@@ -4,44 +4,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html {
-  transition: none; /* prevent double paint */
-}
-img,
-svg {
-  transition: filter 0.3s ease;
-}
-
-/* Base Styles */
-body {
-  @apply font-serif p-8 md:p-12 flex flex-col gap-24 transition-colors duration-[1000ms];
-  background-color: var(--bg);
-  color: var(--fg);
-}
-
-h1 {
-  @apply text-5xl md:text-8xl font-headline font-normal leading-tight mb-12;
-  color: var(--fg);
-}
-
-h3 {
-  @apply font-sans font-bold leading-tight mb-8;
-  color: var(--fg);
-}
-
-p {
-  @apply text-xl mb-8 md:mb-12 leading-relaxed md:leading-relaxed;
-  color: var(--fg);
-}
-
-p a {
-  @apply underline decoration-wavy decoration-2 underline-offset-8 transition-all duration-200 ease-in-out;
-  color: var(--accent);
-  background-color: transparent;
-}
-
-p a:hover {
-  background-color: var(--link-bg-hover);
+main {
+  padding-top: var(--header-h);
 }
 
 :root {
@@ -57,6 +21,9 @@ p a:hover {
   color-scheme: light;
   background-color: var(--bg);
   color: var(--fg);
+
+  /* defaults so SSR render is correct before JS runs */
+  --header-h: 80px;
 }
 
 /* Dark theme overrides */
@@ -77,4 +44,55 @@ p a:hover {
 .dark svg,
 .dark img[src$=".svg"] {
   filter: invert(1);
+}
+
+html {
+  transition: none; /* prevent double paint */
+}
+img,
+svg {
+  transition: filter 0.3s ease;
+}
+
+/* Base Styles */
+body {
+  @apply font-serif text-base p-8 md:p-12 flex flex-col gap-24 transition-colors duration-[1000ms];
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+h1 {
+  @apply text-5xl md:text-8xl font-headline font-normal leading-tight mb-12;
+  color: var(--fg);
+}
+
+h3 {
+  @apply font-sans font-bold leading-tight mb-8;
+  color: var(--fg);
+}
+
+p,
+ul,
+dl {
+  @apply text-xl;
+}
+
+p {
+  @apply mb-8 md:mb-12 leading-relaxed md:leading-relaxed;
+  color: var(--fg);
+}
+
+p a {
+  @apply underline decoration-wavy decoration-2 underline-offset-8 transition-all duration-200 ease-in-out;
+  color: var(--accent);
+  background-color: transparent;
+}
+
+p a:hover {
+  background-color: var(--link-bg-hover);
+}
+
+dl dt {
+  @apply font-semibold text-lg mb-2;
+  color: var(--fg);
 }

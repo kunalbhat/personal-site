@@ -1,60 +1,56 @@
+// AppHeader.jsx
 "use client";
-
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-
+import { useEffect, useRef } from "react";
 import ThemeToggle from "./ThemeToggle";
-import { useGridOverlay } from "./GridOverlayProvider";
-import HeaderGreeting from "./HeaderGreeting";
+import HeaderGreeting from "../Components/HeaderGreeting";
 
 export default function AppHeader() {
-  const reduce = useReducedMotion();
-  const [mounted, setMounted] = useState(false);
-  const { toggle, visible } = useGridOverlay();
+  const ref = useRef(null);
 
-  useEffect(() => setMounted(true), []);
-
-  // fade-on-scroll effect
-  const [opacity, setOpacity] = useState(1);
   useEffect(() => {
-    const handleScroll = () => {
-      const y = window.scrollY;
-      const start = 0;
-      const end = 50;
-      setOpacity(
-        y <= start ? 1 : y >= end ? 0 : 1 - (y - start) / (end - start)
+    const el = ref.current;
+    if (!el) return;
+
+    // seed a default
+    document.documentElement.style.setProperty(
+      "--header-h",
+      `${el.offsetHeight}px`
+    );
+
+    // keep it in sync on resize/content changes
+    const ro = new ResizeObserver(() => {
+      document.documentElement.style.setProperty(
+        "--header-h",
+        `${el.offsetHeight}px`
+      );
+    });
+    ro.observe(el);
+
+    // also update on window resize for safety
+    const onR = () => {
+      document.documentElement.style.setProperty(
+        "--header-h",
+        `${el.offsetHeight}px`
       );
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", onR);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", onR);
+    };
   }, []);
 
   return (
     <header
-      className="app-header fixed left-0 right-0 top-0 z-50 w-full p-8 md:p-12"
-      style={{ opacity }}
+      ref={ref}
+      className="app-header fixed left-0 right-0 top-0 z-50 w-full p-4 md:p-12"
     >
       <div className="mx-auto max-w-8xl flex items-center justify-between">
-        {/* Left: brand / greeting */}
-        <Link
-          href="/"
-          className="flex items-center gap-3 transition-opacity hover:opacity-90"
-        >
-          <HeaderGreeting
-            name="Kunal Bhat"
-            sunSrc="/images/icon-face-id.svg"
-            moonSrc="/images/icon-face-id.svg"
-            className="pr-1"
-          />
-        </Link>
-
-        {/* Right: theme toggle */}
-        {mounted ? (
-          <ThemeToggle />
-        ) : (
-          <div className="w-10 h-10 animate-pulse rounded-full" />
-        )}
+        <a href="/" className="flex items-center gap-3">
+          <HeaderGreeting />
+        </a>
+        <ThemeToggle />
       </div>
     </header>
   );

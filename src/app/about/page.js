@@ -22,7 +22,7 @@ export default function About() {
           </div>
           <div>
             <h3 className="mb-2 md:mb-4">Experience</h3>
-            <dl className="font-serif text-xl md:text-2xl font-normal space-y-8 leading-relaxed">
+            <dl className="space-y-8 leading-relaxed">
               <div>
                 <dt>Aura Home</dt>
                 <dd>Building for the internet's best digital picture frame.</dd>
