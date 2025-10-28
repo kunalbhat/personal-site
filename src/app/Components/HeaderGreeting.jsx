@@ -33,7 +33,7 @@ export default function HeaderGreeting({
 
   // Gentle, iOS-like pop with small overshoot (spring settles it)
   const iconTransition = reduce
-    ? { duration: 0.25, ease: [0.25, 1, 0.5, 1] }
+    ? { duration: 1, ease: [0.25, 1, 0.5, 1] }
     : { type: "spring", stiffness: 220, damping: 18, mass: 0.8 };
 
   return (
