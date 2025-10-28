@@ -1,75 +1,40 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
-function getGreeting(date = new Date()) {
-  const h = date.getHours();
-  if (h < 12) return "Good morning";
-  if (h < 17) return "Good afternoon";
-  return "Good evening";
-}
-
-function isDay(date = new Date()) {
-  const h = date.getHours();
-  return h >= 6 && h < 18;
-}
-
+/**
+ * Drop-in replacement for HeaderGreeting
+ * - Face icon grows in with a gentle overshoot and settles
+ * - Re-animates on page mount and on theme toggle (window 'theme:toggle')
+ * - Text fades in softly
+ *
+ * NOTE: For best results, make your face SVG use fill="currentColor"
+ * so it automatically matches --fg in light/dark. If not, your global
+ * .dark img[src$=".svg"] { filter: invert(1) } rule will still work.
+ */
 export default function HeaderGreeting({
-  name,
+  name = "Kunal Bhat",
   className = "",
-  sunSrc = "/images/icon-sun.svg",
-  moonSrc = "/images/icon-moon.svg",
+  faceSrc = "/icons/face-outline.svg", // update path if needed
 }) {
-  const prefersReduced = useReducedMotion();
-  const [now, setNow] = useState(() => new Date());
+  const reduce = useReducedMotion();
+  const [bump, setBump] = useState(0); // increments to retrigger animation
 
+  // Animate on mount
+  useEffect(() => setBump((b) => b + 1), []);
+
+  // Animate again when theme toggles (ThemeToggle should dispatch this)
   useEffect(() => {
-    const id = setInterval(() => setNow(new Date()), 5 * 60 * 1000);
-    return () => clearInterval(id);
+    const reanimate = () => setBump((b) => b + 1);
+    window.addEventListener("theme:toggle", reanimate);
+    return () => window.removeEventListener("theme:toggle", reanimate);
   }, []);
 
-  const greeting = useMemo(() => getGreeting(now), [now]);
-  const day = useMemo(() => isDay(now), [now]);
-  const iconSrc = day ? sunSrc : moonSrc;
-  const iconAlt = day ? "Sun" : "Moon";
-
-  // 🌄 come-from-below or above animation
-  const iconVariants = {
-    initial: {
-      y: day ? 30 : -30, // below if day (sun rises), above if night (moon drops)
-      opacity: 0,
-      scale: 0.9,
-    },
-    enter: {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1.4,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-    exit: {
-      y: day ? -30 : 30, // reverse direction when switching
-      opacity: 0,
-      scale: 0.95,
-      transition: {
-        duration: 1.2,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-  };
-
-  const textVariants = {
-    initial: { opacity: 0, y: 6 },
-    enter: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1], delay: 0.1 },
-    },
-  };
+  // Gentle, iOS-like pop with small overshoot (spring settles it)
+  const iconTransition = reduce
+    ? { duration: 0.25, ease: [0.25, 1, 0.5, 1] }
+    : { type: "spring", stiffness: 220, damping: 18, mass: 0.8 };
 
   return (
     <div
@@ -79,38 +44,28 @@ export default function HeaderGreeting({
       ].join(" ")}
       aria-live="polite"
     >
-      <div className="relative h-8 w-8 sm:h-7 sm:w-7 overflow-hidden rounded-full">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={day ? "sun" : "moon"}
-            variants={iconVariants}
-            initial="initial"
-            animate="enter"
-            exit="exit"
-            className="absolute inset-0 flex items-center justify-center"
-            aria-hidden="true"
-          >
-            <Image
-              src={iconSrc}
-              alt={iconAlt}
-              width={32}
-              height={32}
-              className="h-full w-full"
-              priority
-            />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
+      {/* Face icon pop-in */}
       <motion.span
-        variants={textVariants}
-        initial="initial"
-        animate="enter"
+        key={bump}
+        initial={{ scale: 0.6, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={iconTransition}
+        className="inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center"
+        aria-hidden="true"
+        style={{ color: "var(--fg)" }}
+      >
+        {/* If you prefer next/image, swap to it; <img> keeps it simple */}
+        <img src={faceSrc} alt="" className="h-full w-full" />
+      </motion.span>
+
+      {/* Name text fade-in */}
+      <motion.span
+        initial={{ opacity: 0, y: 4 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1], delay: 0.05 }}
         className="font-sans font-bold text-base sm:text-lg leading-none text-[var(--muted,inherit)]"
       >
-        {/* {greeting} */}
-        {"Kunal Bhat"}
-        {/* {name ? `, ${name.split(" ")[0]}` : ""} */}
+        {name}
       </motion.span>
     </div>
   );
