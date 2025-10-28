@@ -37,13 +37,13 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div>
-        <header>
-          <HeroHeading
-            text="Solving complex product problems through research, design, and technical depth.
+      <header>
+        <HeroHeading
+          text="Solving complex product problems through research, design, and technical depth.
 "
-          />
-        </header>
+        />
+      </header>
+      <main className="grid grid-cols-2">
         <section>
           <motion.p variants={subheadVariant} initial="hidden" animate="show">
             I'm a technically inclined builder who thrives in every stage of the
@@ -73,7 +73,7 @@ export default function Home() {
             </Link>
           </motion.div>
         </section>
-      </div>
+      </main>
     </PageContainer>
   );
 }

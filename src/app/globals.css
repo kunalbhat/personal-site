@@ -5,7 +5,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 main {
-  padding-top: var(--header-h);
+  /* padding-top: var(--header-h); */
 }
 
 :root {
