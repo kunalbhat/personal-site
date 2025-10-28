@@ -90,6 +90,7 @@ p a {
 
 p a:hover {
   background-color: var(--link-bg-hover);
+  text-underline-offset: 10px;
 }
 
 dl dt {

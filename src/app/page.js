@@ -43,7 +43,7 @@ export default function Home() {
 "
         />
       </header>
-      <main className="grid grid-cols-2">
+      <main className="max-w-5xl">
         <section>
           <motion.p variants={subheadVariant} initial="hidden" animate="show">
             I'm a technically inclined builder who thrives in every stage of the
