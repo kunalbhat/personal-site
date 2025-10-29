@@ -74,6 +74,31 @@ export default function Home() {
           </motion.div>
         </section>
       </main>
+      <section className="mt-24">
+        <figure className="rounded-3xl overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center">
+          <Image
+            src="/images/aura-rcs-test.gif"
+            alt="Aura RCS"
+            width={320}
+            height={320}
+            className="p-8"
+          />
+        </figure>
+        <figcaption className="text-sm mt-2 mb-6 text-center">
+          Google RBM conversation with Aura's Agent.
+        </figcaption>
+        <figure className="rounded-3xl overflow-hidden">
+          <Image
+            src="/images/aura-rcs-1.jpg"
+            alt="Aura RCS"
+            width={1920}
+            height={1080}
+          />
+        </figure>
+        <figcaption className="text-sm mt-2 mb-6 text-center">
+          Google RBM conversation with Aura's Agent.
+        </figcaption>
+      </section>
     </PageContainer>
   );
 }

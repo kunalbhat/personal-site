@@ -8,13 +8,35 @@ export default function Portfolio() {
   return (
     <PageContainer>
       <header>
-        <HeroHeading text="Portfolio" />
+        <HeroHeading text="My Work" />
       </header>
       <main>
+        <section className="mt-24">
+          <header>
+            <h2>Conversational UX</h2>
+            <p>
+              I designed conversational UX for the Aura RCS Agent. This feature
+              opened up a brand new path for Aura users to easily contribute
+              photos by meeting them where they already area &mdash; in their
+              messaging apps.
+            </p>
+          </header>
+          <figure className="rounded-3xl overflow-hidden">
+            <Image
+              src="/images/aura-rcs-1.jpg"
+              alt="Aura RCS"
+              width={1920}
+              height={1080}
+            />
+          </figure>
+          <figcaption className="text-sm mt-2 mb-6 text-center">
+            Google RBM conversation with Aura's Agent.
+          </figcaption>
+        </section>
         <section>
           <header className="md:flex justify-between items-center">
             <div>
-              <h3>Aura - On-frame Captions</h3>
+              <h2>Aura - On-frame Captions</h2>
               <p>Adding context to the multi-surface world of Aura Frames.</p>
             </div>
             <div>
