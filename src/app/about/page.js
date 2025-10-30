@@ -1,6 +1,8 @@
 import PageContainer from "../Components/PageContainer";
 import SpotifyNowPlaying from "../Components/SpotifyNowPlaying";
+import YourMoveCard from "../Components/YourMoveCard";
 import HeroHeading from "../Components/HeroHeading";
+import DailyRating from "../Components/DailyRating";
 
 export default function About() {
   return (
@@ -8,8 +10,8 @@ export default function About() {
       <header>
         <HeroHeading text="Deep experience in complex systems and early-stage products." />
       </header>
-      <main className="lg:grid gap-16 grid-cols-2">
-        <div>
+      <section className="lg:grid gap-32 grid-cols-2 md:pt-24">
+        <main>
           <h3 className="mb-2 md:mb-4">Experience</h3>
           <p>
             At{" "}
@@ -92,15 +94,20 @@ export default function About() {
             innovation consulting for Samsung and the consumer electronics
             space.
           </p>
-        </div>
-        <div>
+        </main>
+        <aside>
           <h3 className="mb-4">Ambient Me</h3>
           <p className="font-serif">
             Get to know me through my hobbies and live activities.
           </p>
           <SpotifyNowPlaying />
-        </div>
-      </main>
+
+          <div className="mt-12">
+            <DailyRating />
+            <YourMoveCard />
+          </div>
+        </aside>
+      </section>
     </PageContainer>
   );
 }
