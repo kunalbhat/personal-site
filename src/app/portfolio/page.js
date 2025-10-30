@@ -13,12 +13,13 @@ export default function Portfolio() {
       <main>
         <section className="mt-24">
           <header>
-            <h2>Conversational UX</h2>
+            <h2>Designing Aura's Conversational Photo-Sharing Experience</h2>
             <p>
-              I designed conversational UX for the Aura RCS Agent. This feature
-              opened up a brand new path for Aura users to easily contribute
-              photos by meeting them where they already area &mdash; in their
-              messaging apps.
+              Aura's RCS Agent started with a simple idea: what if contributing
+              photos could be as easy as sending a text? I designed the
+              conversational UX that brought that to life, turning everyday
+              message threads into a seamless way to add photos to an Aura
+              frame.
             </p>
           </header>
           <figure className="rounded-3xl overflow-hidden">
