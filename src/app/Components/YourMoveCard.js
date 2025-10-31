@@ -1,3 +1,4 @@
+// /app/components/YourMoveCard.jsx
 "use client";
 import { useEffect, useState } from "react";
 
@@ -26,6 +27,12 @@ function fenToRows(fen) {
         /\d/.test(ch) ? Array(parseInt(ch, 10)).fill("") : ch
       )
     );
+}
+
+function activeColor(fen) {
+  if (!fen) return null;
+  const parts = fen.split(" ");
+  return parts[1] || null; // 'w' or 'b'
 }
 
 function TinyBoard({ fen }) {
@@ -69,14 +76,12 @@ export default function YourMoveCard() {
 
   if (games === null)
     return <div className="text-sm text-neutral-500">Loading…</div>;
-  if (!games.length) return <div className="text-sm">All caught up ✅</div>;
+  if (!games.length)
+    return <div className="text-sm">No current Daily games.</div>;
 
   return (
     <div className="grid gap-3">
-      <h3>
-        Currently playing {games.length} game{games.length > 1 ? "s" : ""} on
-        chess.com
-      </h3>
+      <div className="font-semibold">Current Daily games</div>
 
       {games.map((g) => {
         const youAreWhite =
@@ -86,19 +91,49 @@ export default function YourMoveCard() {
           ? new Date(g.move_by * 1000).toLocaleString()
           : null;
 
+        const turn = activeColor(g.fen); // 'w' or 'b'
+        const isYourTurn = turn
+          ? (turn === "w" && youAreWhite) || (turn === "b" && !youAreWhite)
+          : null;
+
         return (
           <a
             key={g.url}
             href={g.url}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 rounded-xl border border-neutral-200 dark:border-neutral-800 p-3 hover:shadow-sm transition-shadow"
           >
             <TinyBoard fen={g.fen} />
+
             <div className="grid gap-1">
               <div className="font-semibold">
                 {opp?.username}
                 {opp?.rating ? ` (${opp.rating})` : ""}
+              </div>
+
+              <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400">
+                <span
+                  className={`inline-flex items-center gap-1 rounded-full border px-2 py-[2px]
+                              border-neutral-200 dark:border-neutral-700`}
+                >
+                  <span
+                    className={`inline-block h-2 w-2 rounded-full ${
+                      isYourTurn === null
+                        ? "bg-neutral-400"
+                        : isYourTurn
+                        ? "bg-emerald-500"
+                        : "bg-neutral-400"
+                    }`}
+                  />
+                  <span>
+                    {isYourTurn === null
+                      ? "Turn: —"
+                      : isYourTurn
+                      ? "Your turn"
+                      : "Their turn"}
+                  </span>
+                </span>
               </div>
             </div>
           </a>

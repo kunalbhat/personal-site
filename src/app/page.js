@@ -74,8 +74,8 @@ export default function Home() {
           </motion.div>
         </section>
       </main>
-      <section className="mt-24">
-        <figure className="rounded-3xl overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center">
+      <section className="grid grid-cols-2 gap-8 mt-24">
+        <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center">
           <Image
             src="/images/aura-rcs-test.gif"
             alt="Aura RCS"
@@ -84,10 +84,10 @@ export default function Home() {
             className="p-8"
           />
         </figure>
-        <figcaption className="text-sm mt-2 mb-6 text-center">
+        {/* <figcaption className="text-sm mt-2 mb-6 text-center">
           Google RBM conversation with Aura's Agent.
-        </figcaption>
-        <figure className="rounded-3xl overflow-hidden">
+        </figcaption> */}
+        <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee]">
           <Image
             src="/images/aura-rcs-1.jpg"
             alt="Aura RCS"
@@ -95,9 +95,9 @@ export default function Home() {
             height={1080}
           />
         </figure>
-        <figcaption className="text-sm mt-2 mb-6 text-center">
+        {/* <figcaption className="text-sm mt-2 mb-6 text-center">
           Google RBM conversation with Aura's Agent.
-        </figcaption>
+        </figcaption> */}
       </section>
     </PageContainer>
   );
