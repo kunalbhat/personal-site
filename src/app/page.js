@@ -74,7 +74,7 @@ export default function Home() {
           </motion.div>
         </section>
       </main>
-      <section className="grid grid-cols-2 gap-8 mt-24">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
         <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center">
           <Image
             src="/images/aura-rcs-test.gif"
