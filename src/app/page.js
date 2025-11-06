@@ -13,6 +13,7 @@ import "react-social-icons/linkedin";
 // Components
 import PageContainer from "./Components/PageContainer";
 import HeroHeading from "./Components/HeroHeading";
+import ThemedImage from "./Components/ThemedImage";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -88,9 +89,12 @@ export default function Home() {
           Google RBM conversation with Aura's Agent.
         </figcaption> */}
         <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee]">
-          <Image
-            src="/images/aura-rcs-1.jpg"
-            alt="Aura RCS"
+          <ThemedImage
+            lightSrc="/images/aura-rcs-light.jpg"
+            darkSrc="/images/aura-rcs-dark.jpg"
+            altLight="Dashboard hero in light theme"
+            altDark="Dashboard hero in dark theme with muted chrome"
+            className="w-full h-auto rounded-2xl shadow"
             width={1920}
             height={1080}
           />
