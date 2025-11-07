@@ -77,6 +77,14 @@ export default function AppHeader() {
         >
           <HeaderGreeting />
         </a>
+        <ul className="nav-links">
+          <li>
+            <a href="/portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </ul>
         <ThemeToggle />
       </div>
     </header>

@@ -106,3 +106,11 @@ dl dt {
 figcaption {
   @apply text-sm mt-2 mb-6 text-center;
 }
+
+.nav-links {
+  @apply flex gap-8 md:gap-16 font-sans font-bold text-base sm:text-lg leading-none text-[var(--fg,inherit)];
+}
+
+.nav-links li {
+  @apply underline decoration-transparent underline-offset-4 hover:underline decoration-wavy hover:underline-offset-8 hover:decoration-[var(--accent)] transition-all;
+}
