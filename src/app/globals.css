@@ -102,3 +102,7 @@ dl dt {
   @apply font-semibold text-lg mb-2;
   color: var(--fg);
 }
+
+figcaption {
+  @apply text-sm mt-2 mb-6 text-center;
+}

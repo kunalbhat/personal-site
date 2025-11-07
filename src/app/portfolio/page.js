@@ -11,7 +11,7 @@ export default function Portfolio() {
         <HeroHeading text="My Work" />
       </header>
       <main>
-        <section className="mt-24">
+        <article className="my-24">
           <header>
             <h2>Designing Aura's Conversational Photo-Sharing Experience</h2>
             <p>
@@ -30,23 +30,15 @@ export default function Portfolio() {
               height={1080}
             />
           </figure>
-          <figcaption className="text-sm mt-2 mb-6 text-center">
-            Google RBM conversation with Aura's Agent.
-          </figcaption>
-        </section>
-        <section>
-          <header className="md:flex justify-between items-center">
-            <div>
-              <h2>Aura - On-frame Captions</h2>
-              <p>Adding context to the multi-surface world of Aura Frames.</p>
-            </div>
-            <div>
-              <ul className="tag-list">
-                <li>Android</li>
-                <li>iOS</li>
-                <li>Hardware</li>
-              </ul>
-            </div>
+          <figcaption>Google RBM conversation with Aura's Agent.</figcaption>
+        </article>
+        <article className="my-24">
+          <header>
+            <h2>Aura &ndash; On-frame Captions</h2>
+            <p>
+              Telling the story behind photos - captions help add context to the
+              multi-surface world of Aura Frames.
+            </p>
           </header>
           <figure className="bg-[#f5f6f4] rounded-3xl w-full py-12 items-center justify-center flex overflow-hidden">
             <Image
@@ -66,25 +58,16 @@ export default function Portfolio() {
               priority
             />
           </figure>
-          <figcaption className="mb-6 italic text-sm opacity-70">
+          <figcaption>
             A few of the tools and technologies I use regularly.
           </figcaption>
-        </section>
-        <section className="mb-24">
-          <header className="md:flex justify-between items-center">
-            <div>
-              <h3>ChatGPT Nutrition Coach</h3>
-              <p>
-                AI-powered nutrition coach to help lower my blood sugar levels.
-              </p>
-            </div>
-            <div>
-              <ul className="tag-list">
-                <li>ChatGPT</li>
-                <li>iOS</li>
-                <li>Prototype</li>
-              </ul>
-            </div>
+        </article>
+        <article className="my-16">
+          <header>
+            <h2>ChatGPT Nutrition Coach</h2>
+            <p>
+              AI-powered nutrition coach to help lower my blood sugar levels.
+            </p>
           </header>
           <figure className="bg-neutral-100 rounded-3xl w-full py-12 items-center justify-center flex">
             <Image
@@ -96,24 +79,17 @@ export default function Portfolio() {
               priority
             />
           </figure>
-          <figcaption className="mb-6 italic text-sm opacity-70">
+          <figcaption>
             A few of the tools and technologies I use regularly.
           </figcaption>
-        </section>
-        {/* <section>
-          <header className="flex justify-between items-center">
-            <div>
-              <h3>Waymo &ndash; My Car</h3>
-              <p>
-                Bringing personalization to Waymo &ndash; Google's autonomous
-                ride-hailing service.
-              </p>
-            </div>
-            <div>
-              <ul className="tag-list">
-                <li>iOS</li>
-              </ul>
-            </div>
+        </article>
+        <article className="my-16">
+          <header>
+            <h2>Waymo &ndash; My Car</h2>
+            <p>
+              Bringing personalization to Waymo &ndash; Google's autonomous
+              ride-hailing service.
+            </p>
           </header>
           <figure className="bg-neutral-100 rounded-3xl w-full py-12 items-center justify-center flex">
             <Image
@@ -128,20 +104,11 @@ export default function Portfolio() {
           <figcaption className="mb-6 italic text-sm opacity-70">
             A few of the tools and technologies I use regularly.
           </figcaption>
-        </section> */}
-        <section className="mb-24">
-          <header className="flex justify-between items-center">
-            <div>
-              <h3>Skyteller Crypto Off-ramp</h3>
-              <p>Empowering web3 users to easily convert crypto to cash.</p>
-            </div>
-            <div>
-              <ul className="tag-list">
-                <li>ChatGPT</li>
-                <li>iOS</li>
-                <li>Prototype</li>
-              </ul>
-            </div>
+        </article>
+        <article className="my-16">
+          <header>
+            <h2>Skyteller Crypto Off-ramp</h2>
+            <p>Empowering web3 users to easily convert crypto to cash.</p>
           </header>
           <figure className="bg-black rounded-3xl w-full py-12 items-center justify-center flex col-span-2 skyteller-bg">
             <Image
@@ -153,30 +120,21 @@ export default function Portfolio() {
               priority
             />
           </figure>
-          <figcaption className="mb-6 italic text-sm opacity-70">
+          <figcaption>
             A few of the tools and technologies I use regularly.
           </figcaption>
-        </section>
-        <section className="mb-24">
+        </article>
+        <article className="mb-16">
           <header className="md:cleaflex justify-between items-center">
-            <div>
-              <h3>Spotify Dashboard for TMRNL</h3>
-              <p>
-                A Spotify Recently Played plug-in for TRMNL, an ambient e-ink
-                display.
-              </p>
-            </div>
-            <div>
-              <ul className="tag-list">
-                <li>ChatGPT</li>
-                <li>iOS</li>
-                <li>Prototype</li>
-              </ul>
-            </div>
+            <h2>Spotify Dashboard for TMRNL</h2>
+            <p>
+              A Spotify Recently Played plug-in for TRMNL, an ambient e-ink
+              display.
+            </p>
           </header>
-          <figure className="bg-fuchsia-50 rounded-3xl w-full py-12 items-center justify-center flex col-span-2">
+          <figure className="bg-[#e7e7e7] rounded-3xl w-full py-12 items-center justify-center flex col-span-2">
             <Image
-              src={"/images/trmnl-spotify.png"}
+              src={"/images/trmnl-dashboard-light.jpg"}
               alt="TMRNL Ambient Display"
               width={960}
               height={840}
@@ -184,10 +142,10 @@ export default function Portfolio() {
               priority
             />
           </figure>
-          <figcaption className="mb-6 italic text-sm opacity-70">
+          <figcaption>
             A few of the tools and technologies I use regularly.
           </figcaption>
-        </section>
+        </article>
       </main>
     </PageContainer>
   );

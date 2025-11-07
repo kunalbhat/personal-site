@@ -85,23 +85,17 @@ export default function Home() {
             className="p-8"
           />
         </figure>
-        {/* <figcaption className="text-sm mt-2 mb-6 text-center">
-          Google RBM conversation with Aura's Agent.
-        </figcaption> */}
-        <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee]">
+        <figure className="rounded-[2.5rem] overflow-hidden flex items-center justify-center bg-[#1d1929]">
           <ThemedImage
             lightSrc="/images/aura-rcs-light.jpg"
             darkSrc="/images/aura-rcs-dark.jpg"
             altLight="Dashboard hero in light theme"
             altDark="Dashboard hero in dark theme with muted chrome"
-            className="w-full h-auto rounded-2xl shadow"
+            className="w-full h-auto rounded-2xl shadow rounded-"
             width={1920}
             height={1080}
           />
         </figure>
-        {/* <figcaption className="text-sm mt-2 mb-6 text-center">
-          Google RBM conversation with Aura's Agent.
-        </figcaption> */}
       </section>
     </PageContainer>
   );
