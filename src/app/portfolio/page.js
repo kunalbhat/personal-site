@@ -48,6 +48,7 @@ export default function Portfolio() {
               height={840}
               className="relative left-36 lg:left-12"
               priority
+              unoptimized
             />
             <Image
               src={"/images/aura-captions-frame.png"}
@@ -91,18 +92,30 @@ export default function Portfolio() {
               ride-hailing service.
             </p>
           </header>
-          <figure className="bg-neutral-100 rounded-3xl w-full py-12 items-center justify-center flex">
+          <figure className="bg-neutral-100 rounded-3xl w-full py-12 items-center justify-center flex gap-12">
             <Image
               src={"/images/waymo-my-car.png"}
               alt="Waymo personalization"
-              width={340}
-              height={360}
-              className="rounded-3xl object-cover object-top scale-90"
+              width={240}
+              height={480}
+              className="rounded-3xl scale-90 shadow-lg hidden md:visible"
               priority
             />
+            <video
+              height={480}
+              width={640}
+              controls
+              muted
+              playsInline
+              className="rounded-xl shadow-2xl border-8 border-white"
+            >
+              <source src="/images/waymo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </figure>
           <figcaption className="mb-6 italic text-sm opacity-70">
-            A few of the tools and technologies I use regularly.
+            The My Car tab launched in the Waymo app at the end of summer in
+            2025.
           </figcaption>
         </article>
         <article className="my-16">
@@ -118,6 +131,7 @@ export default function Portfolio() {
               height={840}
               className="rounded-3xl"
               priority
+              unoptimized
             />
           </figure>
           <figcaption>

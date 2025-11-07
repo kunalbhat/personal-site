@@ -47,21 +47,27 @@ export default function Home() {
       <main className="max-w-5xl">
         <section>
           <motion.p variants={subheadVariant} initial="hidden" animate="show">
-            I'm a technically inclined builder who thrives in every stage of the
-            product process &ndash; from early insights to delivery. With nearly
-            two decades of experience across design, product management, and
-            engineering, I'm an end-to-end contributor who leads through
-            collaboration.
+            First and foremost a designer, I'm a technically inclined builder
+            who thrives in every stage of the product process &ndash; from early
+            insights to delivery. With nearly two decades of experience across
+            design, product management, and engineering, I'm an end-to-end
+            contributor who leads through collaboration.
           </motion.p>
-          <motion.div
-            variants={subheadVariant}
-            initial="hidden"
-            animate="show"
-            className="flex items-center gap-4"
-          >
-            <span className="text-2xl font-headline">Learn more about me</span>
+        </section>
+      </main>
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
+        <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center relative">
+          <div className="bg-opacity-65 bg-black p-12 absolute top-0 right-0 h-full w-full">
+            <h2 className="text-white">Aura RCS</h2>
+            <p className="text-white">
+              Aura's RCS Agent started with a simple idea: what if contributing
+              photos could be as easy as sending a text? I designed the
+              conversational UX that brought that to life, turning everyday
+              message threads into a seamless way to add photos to an Aura
+              frame.
+            </p>
             <Link
-              href="/about"
+              href="/portfolio"
               className="h-12 w-12 bg-[var(--link-bg-hover,inherit)] rounded-full flex items-center justify-center"
             >
               <Image
@@ -72,11 +78,7 @@ export default function Home() {
                 className="rotate-180 relative hover:translate-x-2 transition-transform duration-300"
               />
             </Link>
-          </motion.div>
-        </section>
-      </main>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
-        <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center">
+          </div>
           <Image
             src="/images/aura-rcs-test.gif"
             alt="Aura RCS"
