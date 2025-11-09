@@ -52,10 +52,15 @@ export default function Home() {
             design, product management, and engineering, I'm an end-to-end
             contributor who leads through collaboration.
           </motion.p>
+          <motion.span className="flex gap-8">
+            <Link className="" href="/about">
+              Learn more about me
+            </Link>
+          </motion.span>
         </section>
       </main>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-24">
-        <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 mt-12 md:mt-24">
+        <figure className="rounded-md md:rounded-[2.5rem] overflow-hidden bg-[#ebe7ee] items-center flex justify-center">
           <Image
             src="/images/aura-rcs-test.gif"
             alt="Aura RCS"
@@ -65,7 +70,7 @@ export default function Home() {
             unoptimized
           />
         </figure>
-        <figure className="rounded-[2.5rem] overflow-hidden bg-[#000000] w-full items-center flex justify-center">
+        <figure className="rounded-md md:rounded-[2.5rem] overflow-hidden bg-[#000000] items-center flex justify-center">
           <Image
             src="/images/skyteller.gif"
             alt="Crypto off-ramp with Skyteller"
@@ -75,7 +80,7 @@ export default function Home() {
             unoptimized
           />
         </figure>
-        <figure className="rounded-[2.5rem] col-span-2 overflow-hidden flex items-center justify-center bg-[#f6f9f6]">
+        <figure className="rounded-md md:rounded-[2.5rem] col-span-2 overflow-hidden flex items-center justify-center bg-[#f6f9f6]">
           <Image
             src="/images/a1c-tracker-screens.png"
             alt="Aura RCS"
@@ -84,7 +89,7 @@ export default function Home() {
             className="px-8 py-16"
           />
         </figure>
-        <figure className="rounded-[2.5rem] overflow-hidden bg-[#171717] w-full items-center flex justify-center">
+        <figure className="rounded-md md:rounded-[2.5rem] overflow-hidden bg-[#171717] items-center flex justify-center">
           <Image
             src="/images/trmnl-dashboard-dark.jpg"
             alt="Recently played Spotify plugin for TRMNL"
@@ -94,7 +99,7 @@ export default function Home() {
             unoptimized
           />
         </figure>
-        <figure className="rounded-[2.5rem] overflow-hidden bg-[#e7e7e7] w-full items-center flex justify-center">
+        <figure className="rounded-md md:rounded-[2.5rem] overflow-hidden bg-[#e7e7e7] items-center flex justify-center">
           <Image
             src="/images/trmnl-dashboard-light.jpg"
             alt="Recently played Spotify plugin for TRMNL"
@@ -104,7 +109,7 @@ export default function Home() {
             unoptimized
           />
         </figure>
-        <figure className="rounded-[2.5rem] col-span-2 overflow-hidden py-16 flex items-center justify-center bg-[#f6f6f4]">
+        <figure className="rounded-md md:rounded-[2.5rem] col-span-2 overflow-hidden py-16 flex items-center justify-center bg-[#f6f6f4]">
           <Image
             src="/images/aura-captions-phone.gif"
             alt="Aura Captions app (phone)"
