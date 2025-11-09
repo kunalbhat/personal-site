@@ -14,6 +14,7 @@ import "react-social-icons/linkedin";
 import PageContainer from "./Components/PageContainer";
 import HeroHeading from "./Components/HeroHeading";
 import ThemedImage from "./Components/ThemedImage";
+import CycleHeader from "./Components/CycleHeader";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -39,7 +40,7 @@ export default function Home() {
   return (
     <PageContainer>
       <header>
-        <HeroHeading text="Kunal is a product designer." />
+        <HeroHeading text="Kunal is a product designer" />
       </header>
       <main className="max-w-5xl">
         <section>
@@ -60,6 +61,7 @@ export default function Home() {
             width={320}
             height={320}
             className="p-8"
+            unoptimized
           />
         </figure>
         <figure className="rounded-[2.5rem] overflow-hidden flex items-center justify-center bg-[#1d1929]">
@@ -69,6 +71,26 @@ export default function Home() {
             width={640}
             height={320}
             className="p-8"
+          />
+        </figure>
+        <figure className="rounded-[2.5rem] overflow-hidden bg-[#000000] w-full items-center flex justify-center">
+          <Image
+            src="/images/skyteller.gif"
+            alt="Crypto off-ramp with Skyteller"
+            width={320}
+            height={320}
+            className="p-8"
+            unoptimized
+          />
+        </figure>
+        <figure className="rounded-[2.5rem] overflow-hidden bg-[#f6f6f4] w-full items-center flex justify-center">
+          <Image
+            src="/images/aura-captions-phone.gif"
+            alt="Aura Captions"
+            width={320}
+            height={320}
+            className="p-8"
+            unoptimized
           />
         </figure>
       </section>
