@@ -54,7 +54,7 @@ export default function Home() {
           </motion.p>
         </section>
       </main>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-24">
         <figure className="rounded-[2.5rem] overflow-hidden bg-[#ebe7ee] w-full items-center flex justify-center">
           <Image
             src="/images/aura-rcs-test.gif"
@@ -63,15 +63,6 @@ export default function Home() {
             height={320}
             className="p-8"
             unoptimized
-          />
-        </figure>
-        <figure className="rounded-[2.5rem] overflow-hidden flex items-center justify-center bg-[#1d1929]">
-          <Image
-            src="/images/a1c-tracker-screens.png"
-            alt="Aura RCS"
-            width={640}
-            height={320}
-            className="p-8"
           />
         </figure>
         <figure className="rounded-[2.5rem] overflow-hidden bg-[#000000] w-full items-center flex justify-center">
@@ -84,14 +75,52 @@ export default function Home() {
             unoptimized
           />
         </figure>
-        <figure className="rounded-[2.5rem] overflow-hidden bg-[#f6f6f4] w-full items-center flex justify-center">
+        <figure className="rounded-[2.5rem] col-span-2 overflow-hidden flex items-center justify-center bg-[#f6f9f6]">
           <Image
-            src="/images/aura-captions-phone.gif"
-            alt="Aura Captions"
-            width={320}
+            src="/images/a1c-tracker-screens.png"
+            alt="Aura RCS"
+            width={1024}
+            height={640}
+            className="px-8 py-16"
+          />
+        </figure>
+        <figure className="rounded-[2.5rem] overflow-hidden bg-[#171717] w-full items-center flex justify-center">
+          <Image
+            src="/images/trmnl-dashboard-dark.jpg"
+            alt="Recently played Spotify plugin for TRMNL"
+            width={1024}
             height={320}
             className="p-8"
             unoptimized
+          />
+        </figure>
+        <figure className="rounded-[2.5rem] overflow-hidden bg-[#e7e7e7] w-full items-center flex justify-center">
+          <Image
+            src="/images/trmnl-dashboard-light.jpg"
+            alt="Recently played Spotify plugin for TRMNL"
+            width={1024}
+            height={320}
+            className="p-8"
+            unoptimized
+          />
+        </figure>
+        <figure className="rounded-[2.5rem] col-span-2 overflow-hidden py-16 flex items-center justify-center bg-[#f6f6f4]">
+          <Image
+            src="/images/aura-captions-phone.gif"
+            alt="Aura Captions app (phone)"
+            width={280}
+            height={840}
+            className="relative left-36 lg:left-12 rounded-3xl"
+            priority
+            unoptimized
+          />
+          <Image
+            src="/images/aura-captions-frame.png"
+            alt="Aura Captions app (frame)"
+            width={800}
+            height={840}
+            className="relative -right-48 rounded-3xl"
+            priority
           />
         </figure>
       </section>
