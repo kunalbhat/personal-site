@@ -14,7 +14,7 @@ export default function RotatingTitle() {
   }, []);
 
   return (
-    <h1 className="text-6xl md:text-8xl font-serif leading-tight">
+    <h1 className="text-6xl md:text-8xl font-headline leading-tight">
       Kunal is a product{" "}
       {/* Reserve space for the longest word so layout never reflows */}
       <span

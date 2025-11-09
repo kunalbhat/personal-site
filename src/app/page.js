@@ -40,7 +40,8 @@ export default function Home() {
   return (
     <PageContainer>
       <header>
-        <HeroHeading text="Kunal is a product designer" />
+        {/* <HeroHeading text="Kunal is a product designer" /> */}
+        <CycleHeader />
       </header>
       <main className="max-w-5xl">
         <section>
