@@ -25,19 +25,39 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
+// app/layout.js
 export const metadata = {
   title: "Kunal Bhat - Product Designer",
   description:
-    "Kunal is a technically-oriented, fullstack product designer in Chicago with 15 years of experience.",
+    "Kunal is a technically-oriented, fullstack product designer in Chicago with 18 years of experience.",
+  metadataBase: new URL("https://kunalbhat.com"),
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    shortcut: "/favicon.ico",
+    other: [
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#111111" },
+    ],
+  },
+
+  manifest: "/site.webmanifest",
+  themeColor: "#ffffff",
+
   openGraph: {
     title: "Kunal Bhat - Product Designer",
     description:
-      "Kunal is a technically-oriented, fullstack product designer in Chicago with 15 years of experience.",
+      "Kunal is a technically-oriented, fullstack product designer in Chicago with 18 years of experience.",
     url: "https://kunalbhat.com",
     siteName: "Kunal Bhat",
     images: [
       {
-        url: "https://kunalbhat.com/images/og-image.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Kunal Bhat - Product Designer",

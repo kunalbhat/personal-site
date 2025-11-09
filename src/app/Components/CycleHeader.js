@@ -9,7 +9,7 @@ export default function RotatingTitle() {
   const [i, setI] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setI((n) => (n + 1) % words.length), 2200);
+    const id = setInterval(() => setI((n) => (n + 1) % words.length), 3600);
     return () => clearInterval(id);
   }, []);
 
