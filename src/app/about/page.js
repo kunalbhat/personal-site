@@ -8,7 +8,7 @@ export default function About() {
   return (
     <PageContainer>
       <header>
-        <HeroHeading text="Deep experience in complex systems and early-stage products." />
+        <HeroHeading text="Solving complex product problems through research, design, and technical depth." />
       </header>
       <section className="lg:grid gap-32 grid-cols-2 md:pt-24">
         <main>

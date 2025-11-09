@@ -39,10 +39,7 @@ export default function Home() {
   return (
     <PageContainer>
       <header>
-        <HeroHeading
-          text="Solving complex product problems through research, design, and technical depth.
-"
-        />
+        <HeroHeading text="Kunal is a product designer." />
       </header>
       <main className="max-w-5xl">
         <section>
@@ -66,14 +63,12 @@ export default function Home() {
           />
         </figure>
         <figure className="rounded-[2.5rem] overflow-hidden flex items-center justify-center bg-[#1d1929]">
-          <ThemedImage
-            lightSrc="/images/aura-rcs-light.jpg"
-            darkSrc="/images/aura-rcs-dark.jpg"
-            altLight="Dashboard hero in light theme"
-            altDark="Dashboard hero in dark theme with muted chrome"
-            className="w-full h-auto rounded-2xl shadow rounded-"
-            width={1920}
-            height={1080}
+          <Image
+            src="/images/a1c-tracker-screens.png"
+            alt="Aura RCS"
+            width={640}
+            height={320}
+            className="p-8"
           />
         </figure>
       </section>
