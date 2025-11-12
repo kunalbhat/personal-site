@@ -124,7 +124,7 @@ export default function Home() {
             alt="Aura Captions app (frame)"
             width={800}
             height={840}
-            className="relative -right-48 rounded-3xl"
+            className="relative -right-36"
             priority
           />
         </figure>
