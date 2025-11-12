@@ -40,18 +40,11 @@ export default function Home() {
   return (
     <PageContainer>
       <header>
-        <HeroHeading text="Hi, I'm Kunal &ndash; a Chicago-based product designer with 18 years of experience in roles as a designer, PM, and engineer." />
+        <HeroHeading text="Product designer with 18 years of experience in roles as a designer, PM, and engineer." />
         {/* <CycleHeader /> */}
       </header>
       <main className="max-w-5xl">
         <section>
-          <motion.p variants={subheadVariant} initial="hidden" animate="show">
-            First and foremost a designer, I'm a technically inclined builder
-            who thrives in every stage of the product process &ndash; from early
-            insights to delivery. With nearly two decades of experience across
-            design, product management, and engineering, I'm an end-to-end
-            contributor who leads through collaboration.
-          </motion.p>
           <div className="flex flex-col gap-4">
             <motion.span>
               <Link

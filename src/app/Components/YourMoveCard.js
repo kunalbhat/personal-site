@@ -81,8 +81,6 @@ export default function YourMoveCard() {
 
   return (
     <div className="grid gap-3">
-      <div className="font-semibold">Current Daily games</div>
-
       {games.map((g) => {
         const youAreWhite =
           (g.white?.username || "").toLowerCase() === "kunal332";
@@ -102,7 +100,7 @@ export default function YourMoveCard() {
             href={g.url}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-3 rounded-xl border border-neutral-200 dark:border-neutral-800 p-3 hover:shadow-sm transition-shadow"
+            className="flex items-center gap-3 p-3"
           >
             <TinyBoard fen={g.fen} />
 

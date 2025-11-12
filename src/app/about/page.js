@@ -12,7 +12,13 @@ export default function About() {
       </header>
       <section className="lg:grid gap-32 grid-cols-2 md:pt-24">
         <main>
-          <h3 className="mb-2 md:mb-4">Experience</h3>
+          <p>
+            First and foremost a designer, I'm a technically inclined builder
+            who thrives in every stage of the product process &ndash; from early
+            insights to delivery. With nearly two decades of experience across
+            design, product management, and engineering, I'm an end-to-end
+            contributor who leads through collaboration.
+          </p>
           <p>
             At{" "}
             <a
@@ -97,9 +103,6 @@ export default function About() {
         </main>
         <aside>
           <h3 className="mb-4">Ambient Me</h3>
-          <p className="font-serif">
-            Get to know me through my hobbies and live activities.
-          </p>
           <SpotifyNowPlaying />
 
           <div className="mt-12">

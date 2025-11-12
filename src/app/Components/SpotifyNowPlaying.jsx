@@ -115,7 +115,7 @@ function normalizeToListModel(p) {
       artist: it?.subtitle ?? null,
       albumImageUrl: it?.image_url ?? null,
     }));
-    return { isPlaying: false, label: "Recently played on Spotify", tracks };
+    return { isPlaying: false, label: "Listening to", tracks };
   }
 
   // Spotify Web API: currently playing
@@ -146,7 +146,7 @@ function normalizeToListModel(p) {
   ) {
     return {
       isPlaying: !!p.isPlaying,
-      label: p.isPlaying ? "Now playing" : "Recently played on Spotify",
+      label: p.isPlaying ? "Now playing" : "Listening to",
       tracks: [
         {
           title: p.title ?? null,

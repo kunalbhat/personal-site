@@ -22,13 +22,9 @@ export default function DailyRating() {
         display: "inline-flex",
         alignItems: "center",
         gap: 6,
-        padding: "6px 10px",
-        borderRadius: 999,
-        border: "1px solid #eee",
-        background: "#f8f8f8",
       }}
     >
-      <strong>Daily</strong>
+      <h3>Daily Chess</h3>
       <span>{daily ? daily : "—"}</span>
     </span>
   );
