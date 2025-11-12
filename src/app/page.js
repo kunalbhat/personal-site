@@ -40,8 +40,8 @@ export default function Home() {
   return (
     <PageContainer>
       <header>
-        {/* <HeroHeading text="Kunal is a product designer" /> */}
-        <CycleHeader />
+        <HeroHeading text="Hi, I'm Kunal &ndash; a Chicago-based product designer with 18 years of experience in roles as a designer, PM, and engineer." />
+        {/* <CycleHeader /> */}
       </header>
       <main className="max-w-5xl">
         <section>
@@ -52,11 +52,39 @@ export default function Home() {
             design, product management, and engineering, I'm an end-to-end
             contributor who leads through collaboration.
           </motion.p>
-          <motion.span className="flex gap-8">
-            <Link className="" href="/about">
-              Learn more about me
-            </Link>
-          </motion.span>
+          <div className="flex flex-col gap-4">
+            <motion.span>
+              <Link
+                className="text-xl flex gap-2 items-center font-semibold"
+                href="/portfolio"
+              >
+                Projects &amp; Case Studies
+                <Image
+                  src="/images/icon-arrow-back.svg"
+                  alt="Back arrow"
+                  width={32}
+                  height={32}
+                  className="relative rotate-180 hover:translate-x-2 transition-transform duration-300 bg-green-50 rounded-full p-1"
+                />
+              </Link>
+            </motion.span>
+
+            <motion.span>
+              <Link
+                className="text-xl flex gap-2 items-center font-semibold"
+                href="/about"
+              >
+                About Me
+                <Image
+                  src="/images/icon-arrow-back.svg"
+                  alt="Back arrow"
+                  width={32}
+                  height={32}
+                  className="relative rotate-180 hover:translate-x-2 transition-transform duration-300 bg-green-50 rounded-full p-1"
+                />
+              </Link>
+            </motion.span>
+          </div>
         </section>
       </main>
       <section className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 mt-12 md:mt-24">

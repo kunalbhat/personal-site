@@ -4,10 +4,10 @@ import HeroHeading from "../Components/HeroHeading";
 
 export default function PortfolioPageHeader({ title = "Project" }) {
   return (
-    <header className="content-inset flex items-center gap-4">
+    <header className="flex items-center gap-4">
       <Link
         href="/portfolio"
-        className="back-button h-12 w-12 bg-neutral-100 rounded-full flex items-center justify-center"
+        className="back-button h-12 w-12 bg-neutral-100 -top-6 relative rounded-full flex items-center justify-center"
       >
         <Image
           src="/images/icon-arrow-back.svg"

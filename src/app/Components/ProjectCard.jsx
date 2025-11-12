@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectCard({
   title,
   description,
   caption,
+  projectLink = "/portfolio",
   // Simple media path (image OR video) — ignored if children provided:
   mediaType = "image", // "image" | "video"
   mediaSrc,
@@ -30,7 +32,22 @@ export default function ProjectCard({
   return (
     <article className={`my-16 ${className}`}>
       <header className="mb-4">
-        <h2>{title}</h2>
+        <span className="flex items-center gap-2 mb-2">
+          <h2 className="mb-0">{title}</h2>
+          <Link
+            href={projectLink ? projectLink : "#"}
+            aria-label={`View project: ${title}`}
+          >
+            <Image
+              src="./images/icon-arrow-back.svg"
+              alt="Arrow right"
+              width={36}
+              height={36}
+              className="inline-block rotate-180 relative left-0 hover:left-1 transition-all h-10 w-10"
+            />
+          </Link>
+        </span>
+
         {description && <p>{description}</p>}
       </header>
 

@@ -13,9 +13,10 @@ export default function ProjectsList() {
         bgClass=""
         figureClass="rounded-3xl overflow-hidden"
         caption="Google RBM conversation with Aura's Agent."
+        projectLink="/portfolio/aura-text-to-frame"
       >
         <Image
-          src="/images/aura-rcs-1.jpg"
+          src="/images/aura-rcs-light.jpg"
           alt="Aura RCS"
           width={1920}
           height={1080}
@@ -30,6 +31,7 @@ export default function ProjectsList() {
         description="Telling the story behind photos &ndash; captions help add context to the multi-surface world of Aura Frames."
         bgClass="bg-[#f5f6f4]"
         figureClass="overflow-hidden gap-6"
+        projectLink="/portfolio/aura-text-to-frame"
         caption="A few of the tools and technologies I use regularly."
       >
         <Image
@@ -66,6 +68,7 @@ export default function ProjectsList() {
           priority: true,
         }}
         caption="A few of the tools and technologies I use regularly."
+        projectLink="/portfolio/aura-text-to-frame"
       />
 
       {/* 4) Waymo — My Car */}
@@ -75,6 +78,7 @@ export default function ProjectsList() {
         bgClass="bg-neutral-100"
         figureClass="gap-12"
         caption="The My Car tab launched in the Waymo app at the end of summer in 2025."
+        projectLink="/portfolio/aura-text-to-frame"
         visible={false}
       >
         <Image
@@ -114,6 +118,7 @@ export default function ProjectsList() {
           unoptimized: true,
         }}
         caption="A few of the tools and technologies I use regularly."
+        projectLink="/portfolio/aura-text-to-frame"
       />
 
       {/* 6) Spotify Dashboard for TRMNL */}
@@ -131,6 +136,7 @@ export default function ProjectsList() {
           priority: true,
         }}
         caption="A few of the tools and technologies I use regularly."
+        projectLink="/portfolio/aura-text-to-frame"
         className="mb-16"
       />
     </section>
