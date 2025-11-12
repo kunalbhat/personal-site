@@ -47,7 +47,6 @@ export const metadata = {
   },
 
   manifest: "/site.webmanifest",
-  themeColor: "#ffffff",
 
   openGraph: {
     title: "Kunal Bhat - Product Designer",
