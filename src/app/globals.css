@@ -62,7 +62,7 @@ body {
 }
 
 h1 {
-  @apply text-5xl md:text-8xl font-headline font-normal leading-tight mb-12;
+  @apply text-6xl md:text-8xl font-serif font-normal leading-tight mb-12;
   color: var(--fg);
 }
 
