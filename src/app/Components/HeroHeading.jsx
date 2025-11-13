@@ -16,7 +16,7 @@ export default function HeroHeading({
   lineHeight = "1",
 
   /** weight + classes */
-  weightClass = "font-normal",
+  weightClass = "font-semibold",
   className = "leading-loose",
 
   /** animations */

@@ -69,7 +69,7 @@ export default function HeaderGreeting({
         initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: textDuration, ease: EASE, delay: textDelay }}
-        className="font-sans font-bold text-base sm:text-lg leading-none text-[var(--fg,inherit)] underline decoration-transparent underline-offset-4 hover:underline decoration-wavy hover:underline-offset-8 hover:decoration-[var(--accent)] transition-all"
+        className="font-sans font-bold text-base sm:text-lg leading-none text-[var(--fg,inherit)] hover:bg-[var(--link-bg-hover)] transition-colors"
       >
         {name}
       </motion.span>
